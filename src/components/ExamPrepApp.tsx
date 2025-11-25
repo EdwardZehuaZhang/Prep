@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, ArrowRight, RotateCcw, BookOpen, ChevronDown, Check } from 'lucide-react';
+import { CheckCircle, XCircle, ArrowRight, RotateCcw, BookOpen, ChevronDown, Check, SkipForward } from 'lucide-react';
 import { questions } from '../data/questions';
 import { Question } from '../types/Question';
 import { checkAnswer } from '../utils/answerChecker';
@@ -11,7 +11,7 @@ interface SavedProgress {
   score: number;
   attempted: number;
   selectedTopic: string;
-  answeredQuestions: Record<string, boolean>;
+  answeredQuestions: Record<string, boolean | 'skipped'>;
   lastUpdated: string;
 }
 
@@ -37,7 +37,7 @@ const ExamPrepApp = () => {
     const saved = localStorage.getItem(STORAGE_KEY);
     return saved ? JSON.parse(saved).selectedTopic : 'all';
   });
-  const [answeredQuestions, setAnsweredQuestions] = useState<Record<string, boolean>>(() => {
+  const [answeredQuestions, setAnsweredQuestions] = useState<Record<string, boolean | 'skipped'>>(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
     return saved ? JSON.parse(saved).answeredQuestions : {};
   });
@@ -83,15 +83,39 @@ const ExamPrepApp = () => {
 
   const handleCheckAnswer = () => {
     const answerToCheck = currentQ.type === 'multiple-choice' ? selectedOption : userAnswer;
-    const correct = checkAnswer(answerToCheck, currentQ);
-    setIsCorrect(correct);
-    setShowFeedback(true);
-    setAttempted(attempted + 1);
-    if (correct) setScore(score + 1);
     
-    // Mark question as answered
+    // Check if the answer is empty (skipped)
+    const isEmpty = currentQ.type === 'multiple-choice' ? !selectedOption : !userAnswer.trim();
+    
+    if (isEmpty) {
+      // Mark as skipped
+      setIsCorrect(false);
+      setShowFeedback(true);
+      setAttempted(attempted + 1);
+      const questionId = `${selectedTopic}-${currentQuestion}`;
+      setAnsweredQuestions(prev => ({ ...prev, [questionId]: 'skipped' }));
+    } else {
+      // Normal answer checking
+      const correct = checkAnswer(answerToCheck, currentQ);
+      setIsCorrect(correct);
+      setShowFeedback(true);
+      setAttempted(attempted + 1);
+      if (correct) setScore(score + 1);
+      
+      // Mark question as answered
+      const questionId = `${selectedTopic}-${currentQuestion}`;
+      setAnsweredQuestions(prev => ({ ...prev, [questionId]: correct }));
+    }
+  };
+
+  const handleSkip = () => {
+    // Mark question as skipped
     const questionId = `${selectedTopic}-${currentQuestion}`;
-    setAnsweredQuestions(prev => ({ ...prev, [questionId]: correct }));
+    setAnsweredQuestions(prev => ({ ...prev, [questionId]: 'skipped' }));
+    setAttempted(attempted + 1);
+    
+    // Move to next question
+    nextQuestion();
   };
 
   const nextQuestion = () => {
@@ -322,34 +346,47 @@ const ExamPrepApp = () => {
           )}
 
           {/* Feedback */}
-          {showFeedback && (
-            <div className={`mt-5 p-5 rounded-2xl border-2 ${isCorrect ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}`}>
-              <div className="flex items-center gap-3">
-                {isCorrect ? (
-                  <CheckCircle className="text-green-600 flex-shrink-0" size={24} />
-                ) : (
-                  <XCircle className="text-red-600 flex-shrink-0" size={24} />
-                )}
-                <div className="flex-1">
-                  <span className={`font-bold text-base block ${!isCorrect ? 'mb-2' : ''} ${isCorrect ? 'text-green-800' : 'text-red-800'}`}>
-                    {isCorrect ? 'Correct! 🎉' : 'Not quite right'}
-                  </span>
-                  {!isCorrect && (
-                    <div className="text-gray-800">
-                      <p className="font-semibold text-sm mb-2">Correct answer:</p>
-                      <p className="text-sm font-semibold bg-white px-3 py-2 rounded-lg inline-block">
-                        {currentQ.type === 'fill' 
-                          ? Array.isArray(currentQ.answer) ? currentQ.answer.join(', ') : currentQ.answer
-                          : typeof currentQ.answer === 'string' && currentQ.answer.includes(',')
-                            ? currentQ.answer
-                            : currentQ.acceptableAnswers?.[currentQ.acceptableAnswers.length > 1 ? 1 : 0] || currentQ.answer}
-                      </p>
-                    </div>
+          {showFeedback && (() => {
+            const questionId = `${selectedTopic}-${currentQuestion}`;
+            const wasSkipped = answeredQuestions[questionId] === 'skipped';
+            
+            return (
+              <div className={`mt-5 p-5 rounded-2xl border-2 ${
+                wasSkipped ? 'bg-gray-50 border-gray-300' : 
+                isCorrect ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'
+              }`}>
+                <div className="flex items-center gap-3">
+                  {wasSkipped ? (
+                    <SkipForward className="text-gray-500 flex-shrink-0" size={24} />
+                  ) : isCorrect ? (
+                    <CheckCircle className="text-green-600 flex-shrink-0" size={24} />
+                  ) : (
+                    <XCircle className="text-red-600 flex-shrink-0" size={24} />
                   )}
+                  <div className="flex-1">
+                    <span className={`font-bold text-base block ${!isCorrect && !wasSkipped ? 'mb-2' : ''} ${
+                      wasSkipped ? 'text-gray-700' : 
+                      isCorrect ? 'text-green-800' : 'text-red-800'
+                    }`}>
+                      {wasSkipped ? 'Question Skipped' : isCorrect ? 'Correct! 🎉' : 'Not quite right'}
+                    </span>
+                    {!isCorrect && (
+                      <div className="text-gray-800">
+                        <p className="font-semibold text-sm mb-2">Correct answer:</p>
+                        <p className="text-sm font-semibold bg-white px-3 py-2 rounded-lg inline-block">
+                          {currentQ.type === 'fill' 
+                            ? Array.isArray(currentQ.answer) ? currentQ.answer.join(', ') : currentQ.answer
+                            : typeof currentQ.answer === 'string' && currentQ.answer.includes(',')
+                              ? currentQ.answer
+                              : currentQ.acceptableAnswers?.[currentQ.acceptableAnswers.length > 1 ? 1 : 0] || currentQ.answer}
+                        </p>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            );
+          })()}
 
           {/* Action Buttons */}
           <div className="mt-8 flex gap-3">
@@ -357,13 +394,16 @@ const ExamPrepApp = () => {
               <>
                 <button
                   onClick={handleCheckAnswer}
-                  disabled={currentQ.type === 'multiple-choice' ? !selectedOption : !userAnswer.trim()}
-                  className="flex-1 bg-black text-white py-4 px-6 rounded-2xl font-semibold text-base hover:bg-gray-800 active:scale-[0.98] transition-all disabled:bg-gray-300 disabled:cursor-not-allowed disabled:active:scale-100"
+                  className={`flex-1 py-4 px-6 rounded-2xl font-semibold text-base active:scale-[0.98] transition-all ${
+                    (currentQ.type === 'multiple-choice' ? selectedOption : userAnswer.trim())
+                      ? 'bg-black text-white hover:bg-gray-800'
+                      : 'bg-gray-300 text-white cursor-pointer'
+                  }`}
                 >
                   Check Answer
                 </button>
                 <button
-                  onClick={nextQuestion}
+                  onClick={handleSkip}
                   disabled={currentQuestion >= filteredQuestions.length - 1}
                   className="border-2 border-gray-200 text-gray-700 bg-white py-4 px-5 rounded-2xl font-semibold text-base hover:border-gray-300 hover:bg-gray-50 active:scale-[0.98] transition-all disabled:bg-gray-50 disabled:text-gray-400 disabled:border-gray-200 disabled:cursor-not-allowed disabled:active:scale-100"
                   title="Skip this question"
@@ -418,11 +458,15 @@ const ExamPrepApp = () => {
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Answered Questions</h3>
               <div className="flex items-center gap-3 text-xs font-semibold">
                 <span className="text-green-700">
-                  {Object.values(answeredQuestions).filter(Boolean).length} Right
+                  {Object.values(answeredQuestions).filter(v => v === true).length} Right
                 </span>
                 <span className="text-gray-300">|</span>
                 <span className="text-red-700">
                   {Object.values(answeredQuestions).filter(v => v === false).length} Wrong
+                </span>
+                <span className="text-gray-300">|</span>
+                <span className="text-gray-600">
+                  {Object.values(answeredQuestions).filter(v => v === 'skipped').length} Skipped
                 </span>
               </div>
             </div>
@@ -433,6 +477,7 @@ const ExamPrepApp = () => {
                 const questionId = `${selectedTopic}-${index}`;
                 const isAnswered = answeredQuestions[questionId] !== undefined;
                 const wasCorrect = answeredQuestions[questionId];
+                const wasSkipped = answeredQuestions[questionId] === 'skipped';
                 const isExpanded = expandedQuestionId === questionId;
                 
                 if (!isAnswered) return null;
@@ -473,7 +518,9 @@ const ExamPrepApp = () => {
                         <span className="text-sm font-bold text-gray-900">
                           Q{index + 1}
                         </span>
-                        {wasCorrect ? (
+                        {wasSkipped ? (
+                          <SkipForward className="text-gray-500 flex-shrink-0" size={20} />
+                        ) : wasCorrect ? (
                           <CheckCircle className="text-green-600 flex-shrink-0" size={20} />
                         ) : (
                           <XCircle className="text-red-600 flex-shrink-0" size={20} />
@@ -487,19 +534,25 @@ const ExamPrepApp = () => {
                       if (expandedIdx === -1) return null;
                       const expandedQuestion = filteredQuestions[expandedIdx];
                       const expandedWasCorrect = answeredQuestions[expandedQuestionId];
+                      const expandedWasSkipped = answeredQuestions[expandedQuestionId] === 'skipped';
                       
                       return (
                         <div className="col-span-4 mt-1">
                           <div className={`p-5 rounded-2xl border-2 ${
-                            expandedWasCorrect 
+                            expandedWasSkipped
+                              ? 'border-gray-300 bg-gray-50'
+                              : expandedWasCorrect 
                               ? 'border-green-300 bg-green-50' 
                               : 'border-red-300 bg-red-50'
                           }`}>
                             <div className="flex items-start gap-3 mb-3">
                               <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
+                                expandedWasSkipped ? 'bg-gray-500' :
                                 expandedWasCorrect ? 'bg-green-500' : 'bg-red-500'
                               }`}>
-                                {expandedWasCorrect ? (
+                                {expandedWasSkipped ? (
+                                  <SkipForward className="text-white" size={20} />
+                                ) : expandedWasCorrect ? (
                                   <CheckCircle className="text-white" size={20} />
                                 ) : (
                                   <XCircle className="text-white" size={20} />
@@ -508,6 +561,7 @@ const ExamPrepApp = () => {
                               <div className="flex-1">
                                 <div className="flex items-center gap-2 mb-2">
                                   <span className={`text-xs font-semibold px-2 py-1 rounded-full ${
+                                    expandedWasSkipped ? 'bg-gray-200 text-gray-800' :
                                     expandedWasCorrect ? 'bg-green-200 text-green-800' : 'bg-red-200 text-red-800'
                                   }`}>
                                     Question {expandedIdx + 1}
@@ -517,6 +571,7 @@ const ExamPrepApp = () => {
                                   </span>
                                 </div>
                                 <p className={`text-sm font-semibold leading-relaxed ${
+                                  expandedWasSkipped ? 'text-gray-900' :
                                   expandedWasCorrect ? 'text-green-900' : 'text-red-900'
                                 }`}>
                                   {expandedQuestion.question}

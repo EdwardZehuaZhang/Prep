@@ -1058,8 +1058,8 @@ export const questions: Question[] = [
     topic: 'Method Selection',
     question: 'For applications requiring moisture resistance with good impact resistance, which adhesive is BEST?',
     type: 'multiple-choice',
-    options: ['Cyanoacrylate (Fair moisture/Fair impact)', 'Anaerobic (Good/Good)', 'Epoxy (Excellent/Good)', 'Acrylic (Good/Good)'],
-    answer: 'Anaerobic (Good/Good)',
+    options: ['Cyanoacrylate', 'Anaerobic', 'Epoxy', 'Acrylic'],
+    answer: 'Anaerobic',
     hint: 'Check the adhesive families comparison table'
   },
   {
