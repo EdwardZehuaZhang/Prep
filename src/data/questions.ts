@@ -1306,14 +1306,6 @@ export const questions: Question[] = [
   },
   {
     topic: 'Joining Processes',
-    question: 'What is the main disadvantage of molding-in inserts?',
-    type: 'short',
-    answer: 'high molded-in stress',
-    acceptableAnswers: ['high stress', 'molded in stress', 'thermal expansion mismatch', 'increased cycle time'],
-    hint: 'Due to different coefficients of thermal expansion'
-  },
-  {
-    topic: 'Joining Processes',
     question: 'What are the two weakest insert installation methods?',
     type: 'short',
     answer: 'press fit and expansion',
@@ -3969,13 +3961,6 @@ export const questions: Question[] = [
   },
   {
     topic: 'Thermosets',
-    question: 'Once thermosets are formed they cannot be ________.',
-    type: 'fill',
-    answer: ['remelted'],
-    hint: 'Irreversible cross-linking'
-  },
-  {
-    topic: 'Thermosets',
     question: 'Why are thermoset screws expensive?',
     type: 'short',
     answer: 'can cost 50000 dollars',
@@ -4021,13 +4006,6 @@ export const questions: Question[] = [
   },
   {
     topic: 'Thermosets',
-    question: 'Transfer molding is a modification of ________ molding.',
-    type: 'fill',
-    answer: ['compression'],
-    hint: 'Material transferred under pressure'
-  },
-  {
-    topic: 'Thermosets',
     question: 'RTM stands for ________ ________ ________.',
     type: 'fill',
     answer: ['resin', 'transfer', 'molding'],
@@ -4046,14 +4024,6 @@ export const questions: Question[] = [
     type: 'fill',
     answer: ['irreversible'],
     hint: 'Permanent cross-linking'
-  },
-  {
-    topic: 'Thermosets',
-    question: 'Who first used sulfur to vulcanize rubber?',
-    type: 'short',
-    answer: 'charles goodyear',
-    acceptableAnswers: ['goodyear', 'c goodyear'],
-    hint: 'Famous American inventor 1800-1860'
   },
   {
     topic: 'Thermosets',
@@ -4173,13 +4143,6 @@ export const questions: Question[] = [
     type: 'fill',
     answer: ['100'],
     hint: 'Extremely stiff material'
-  },
-  {
-    topic: 'Composites',
-    question: 'Glass fiber diameters range from ________ to ________ mm.',
-    type: 'fill',
-    answer: ['0.005', '0.025'],
-    hint: 'Very fine filaments'
   },
   {
     topic: 'Composites',
@@ -4619,21 +4582,6 @@ export const questions: Question[] = [
     type: 'fill',
     answer: ['hardness'],
     hint: 'Used for bulletproof armor'
-  },
-  {
-    topic: 'Ceramics',
-    question: 'What are the three basic ceramic forming processes?',
-    type: 'short',
-    answer: 'casting plastic forming pressing',
-    acceptableAnswers: ['slip casting plastic pressing', 'liquid plastic solid'],
-    hint: 'LSF PSF SSF categories'
-  },
-  {
-    topic: 'Ceramics',
-    question: 'Slip casting uses a ________ mold.',
-    type: 'fill',
-    answer: ['porous', 'plaster'],
-    hint: 'Absorbs water from slip'
   },
   {
     topic: 'Ceramics',
