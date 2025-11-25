@@ -1771,5 +1771,930 @@ export const questions: Question[] = [
     answer: 'mating surfaces must be parallel in single plane',
     acceptableAnswers: ['parallel surfaces', 'single plane', 'flat surfaces', 'planar joint'],
     hint: 'Consider the reciprocating motion direction'
+  },
+
+  // Casting Processes - Additional Questions
+  {
+    topic: 'Casting Processes',
+    question: 'What is the main advantage of gray iron for machine parts?',
+    type: 'short',
+    answer: 'self-lubricating wear characteristics',
+    acceptableAnswers: ['self-lubricating', 'good wear resistance', 'metal-to-metal wear', 'damping capacity'],
+    hint: 'Think about friction and wear applications'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'What distinguishes ductile iron from gray iron?',
+    type: 'short',
+    answer: 'higher strength and shock load resistance',
+    acceptableAnswers: ['higher strength', 'shock resistance', 'impact resistance', 'better toughness'],
+    hint: 'Consider mechanical properties under impact'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'Investment casting uses a ________ pattern that is melted out.',
+    type: 'fill',
+    answer: ['wax'],
+    hint: 'Material that can be easily removed by heat'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'Die casting is limited to ________ metals.',
+    type: 'fill',
+    answer: ['nonferrous'],
+    hint: 'Materials with lower melting temperatures'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'The cavity in sand casting is contained in an aggregate housed in a box called the ________.',
+    type: 'fill',
+    answer: ['flask'],
+    hint: 'Container for the sand mold'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'What is the typical cycle time for die casting?',
+    type: 'short',
+    answer: '10 seconds',
+    acceptableAnswers: ['10 seconds', 'very fast', 'seconds', 'under 15 seconds'],
+    hint: 'It is the fastest casting process'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'What causes columnar grain structure in castings?',
+    type: 'short',
+    answer: 'dendrites growing from cold mold walls',
+    acceptableAnswers: ['dendrite growth', 'directional solidification', 'mold wall cooling', 'grain growth from surface'],
+    hint: 'Consider directional heat flow'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'A ________ is an extra void created in the mold to feed molten metal during shrinkage.',
+    type: 'fill',
+    answer: ['riser'],
+    hint: 'Prevents voids in the main casting'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'What is the typical shrinkage allowance range for cast metals?',
+    type: 'short',
+    answer: '1% to 5%',
+    acceptableAnswers: ['1-5%', '1 to 5 percent', 'up to 5%'],
+    hint: 'Volume change during solidification'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'Centrifugal casting is best suited for making ________ pipes.',
+    type: 'fill',
+    answer: ['cast-iron'],
+    hint: 'Common application for this process'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'What is the main disadvantage of permanent mold casting?',
+    type: 'short',
+    answer: 'expensive molds',
+    acceptableAnswers: ['high mold cost', 'expensive tooling', 'costly molds'],
+    hint: 'Think about initial investment'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'Shell molding uses sand bonded with ________ resin.',
+    type: 'fill',
+    answer: ['resin'],
+    hint: 'Organic binder material'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'What happens during the solidification of a casting?',
+    type: 'short',
+    answer: 'grains form, chemistry changes, shrinkage occurs',
+    acceptableAnswers: ['grain formation', 'shrinkage', 'dendrite growth', 'crystallization'],
+    hint: 'Three major transformations'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'White iron is used primarily for ________ resistance.',
+    type: 'fill',
+    answer: ['abrasion', 'wear'],
+    hint: 'Extremely hard cast iron application'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'What is the purpose of draft angle in pattern design?',
+    type: 'short',
+    answer: 'allow pattern removal without breaking mold',
+    acceptableAnswers: ['pattern removal', 'easy extraction', 'prevent mold damage', 'facilitate demolding'],
+    hint: 'Minimum 1° offset from vertical'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'Investment casting provides the best ________ and ________ finish of ferrous casting processes.',
+    type: 'fill',
+    answer: ['tolerance', 'surface'],
+    hint: 'Two quality characteristics'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'What material is commonly used for permanent mold construction?',
+    type: 'short',
+    answer: 'gray cast iron',
+    acceptableAnswers: ['cast iron', 'gray iron', 'steel', 'bronze'],
+    hint: 'Must withstand thermal fatigue'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'Malleable iron is best suited for ________ parts production.',
+    type: 'fill',
+    answer: ['quantity', 'production'],
+    hint: 'Volume manufacturing application'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'What causes porosity in castings?',
+    type: 'short',
+    answer: 'gas bubbles or shrinkage voids',
+    acceptableAnswers: ['gas entrapment', 'shrinkage', 'trapped air', 'voids'],
+    hint: 'Two main sources of defects'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'Sand casting requires a minimum of ________ month(s) lead time.',
+    type: 'fill',
+    answer: ['1', 'one'],
+    hint: 'Typical delivery time'
+  },
+
+  // Polymers - Additional Questions
+  {
+    topic: 'Polymers',
+    question: 'Injection molding cycle consists of ________ major steps.',
+    type: 'fill',
+    answer: ['6', 'six'],
+    hint: 'Clamping through ejection'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What distinguishes thermoplastics from thermosets?',
+    type: 'short',
+    answer: 'thermoplastics can be remelted and reused',
+    acceptableAnswers: ['remeltable', 'recyclable', 'reversible', 'can remelt'],
+    hint: 'Think about recyclability'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Blow molding is primarily used to make ________.',
+    type: 'fill',
+    answer: ['bottles', 'containers'],
+    hint: 'Hollow thin-walled products'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What is the main advantage of thermoforming?',
+    type: 'short',
+    answer: 'low tooling costs',
+    acceptableAnswers: ['cheap tooling', 'low cost tools', 'economical tooling', 'inexpensive molds'],
+    hint: 'Economic benefit'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Calendering produces ________ or ________ from thermoplastics.',
+    type: 'fill',
+    answer: ['sheet', 'film'],
+    hint: 'Flat products from heated rollers'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What process is used to make continuous plastic shapes by pulling through a die?',
+    type: 'short',
+    answer: 'extrusion',
+    acceptableAnswers: ['extrusion', 'extruding'],
+    hint: 'Constant cross-section products'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Rotational molding is ideal for making ________ containers.',
+    type: 'fill',
+    answer: ['large hollow', 'hollow'],
+    hint: 'Fuel tanks, water tanks'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What is bi-injection molding used for?',
+    type: 'short',
+    answer: 'cosmetic effects or altering use properties',
+    acceptableAnswers: ['two colors', 'two materials', 'aesthetic', 'multi-material'],
+    hint: 'Two different polymers in one part'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Co-injection creates a ________ structure in the molded part.',
+    type: 'fill',
+    answer: ['sandwich', 'layered'],
+    hint: 'Core and skin structure'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What is the main limitation of injection molding?',
+    type: 'short',
+    answer: 'expensive equipment and tooling',
+    acceptableAnswers: ['high cost', 'expensive tools', 'costly equipment', 'expensive molds'],
+    hint: 'Initial investment'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Stretch blow molding is used for high-quality ________ containers.',
+    type: 'fill',
+    answer: ['PET', 'plastic'],
+    hint: 'Common beverage bottle material'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What advantage does structural foam molding provide?',
+    type: 'short',
+    answer: 'increased stiffness without more material',
+    acceptableAnswers: ['higher stiffness', 'rigid with less material', 'lightweight rigidity', 'cellular core'],
+    hint: 'Mechanical property benefit'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Thermoforming uses ________ to draw plastic sheet into mold.',
+    type: 'fill',
+    answer: ['vacuum', 'heat'],
+    hint: 'Negative pressure forming method'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What is the typical injection molding machine cost?',
+    type: 'short',
+    answer: 'over $100,000',
+    acceptableAnswers: ['100000 dollars', 'hundred thousand', 'very expensive', '100k+'],
+    hint: 'Six-figure investment'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Film extrusion can use ________ die or ________ process.',
+    type: 'fill',
+    answer: ['slit', 'tubular'],
+    hint: 'Two main forming methods'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What polymer property allows thermoforming to work?',
+    type: 'short',
+    answer: 'softens when heated below melting point',
+    acceptableAnswers: ['thermoplastic', 'heat softening', 'plastic state', 'formable when heated'],
+    hint: 'Solid-phase forming characteristic'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Rotational molding cost advantage comes from ________ mold costs.',
+    type: 'fill',
+    answer: ['low', 'lower'],
+    hint: 'No internal core needed'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What is the purpose of barrel rotation in injection molding?',
+    type: 'short',
+    answer: 'mix and melt polymer',
+    acceptableAnswers: ['melting', 'mixing', 'plasticizing', 'homogenizing'],
+    hint: 'Screw function'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Extrusion requires ________ cross-section products.',
+    type: 'fill',
+    answer: ['constant', 'uniform'],
+    hint: 'Geometric limitation'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What defect can occur from excessive injection speed?',
+    type: 'short',
+    answer: 'flash or burn marks',
+    acceptableAnswers: ['flash', 'burning', 'degradation', 'flow lines'],
+    hint: 'Process parameter issue'
+  },
+
+  // Materials Properties - Additional Questions
+  {
+    topic: 'Materials Properties',
+    question: 'Density equals ________ divided by ________.',
+    type: 'fill',
+    answer: ['mass', 'volume'],
+    hint: 'Basic physical property formula'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What property measures resistance to penetration or scratching?',
+    type: 'short',
+    answer: 'hardness',
+    acceptableAnswers: ['hardness'],
+    hint: 'Brinell, Vickers, Rockwell scales'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'The modulus of elasticity measures material ________.',
+    type: 'fill',
+    answer: ['stiffness'],
+    hint: 'Resistance to elastic deformation'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What test measures impact strength?',
+    type: 'short',
+    answer: 'Charpy or Izod test',
+    acceptableAnswers: ['Charpy', 'Izod', 'impact test', 'pendulum test'],
+    hint: 'Pendulum striking notched specimen'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Ductility allows material to undergo ________ deformation by tension.',
+    type: 'fill',
+    answer: ['plastic'],
+    hint: 'Permanent shape change without fracture'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What is the opposite property of ductility?',
+    type: 'short',
+    answer: 'brittleness',
+    acceptableAnswers: ['brittleness', 'brittle'],
+    hint: 'Fractures with no plastic deformation'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Creep is plastic deformation under prolonged ________ and ________.',
+    type: 'fill',
+    answer: ['stress', 'temperature'],
+    hint: 'Two conditions causing time-dependent deformation'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What causes fatigue failure?',
+    type: 'short',
+    answer: 'repeated or cyclic stressing',
+    acceptableAnswers: ['cyclic stress', 'repeated loading', 'vibration', 'alternating stress'],
+    hint: 'Wire bent back and forth many times'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Toughness depends on ________ and ________ of material.',
+    type: 'fill',
+    answer: ['ductility', 'strength'],
+    hint: 'Two mechanical properties combined'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What is the unit of stress?',
+    type: 'short',
+    answer: 'MPa or N/mm²',
+    acceptableAnswers: ['MPa', 'N/mm2', 'pascal', 'megapascal'],
+    hint: 'Force per unit area'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Malleability is associated with ________ deformation.',
+    type: 'fill',
+    answer: ['compressive'],
+    hint: 'Contrast with ductility (tensile)'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What property makes copper suitable for electrical wires?',
+    type: 'short',
+    answer: 'electrical conductivity',
+    acceptableAnswers: ['conductivity', 'conductive', 'good conductor'],
+    hint: 'Ability to conduct current'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'The yield point indicates transition from ________ to ________ deformation.',
+    type: 'fill',
+    answer: ['elastic', 'plastic'],
+    hint: 'Two deformation regions on stress-strain curve'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What three types of strength exist in materials?',
+    type: 'short',
+    answer: 'tensile, compressive, shear',
+    acceptableAnswers: ['tensile compressive shear', 'tension compression shear'],
+    hint: 'Different loading directions'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Strain is expressed as ________ per ________ of length.',
+    type: 'fill',
+    answer: ['millimetre', 'millimetre'],
+    hint: 'Deformation measurement'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What happens to material properties at the elastic limit?',
+    type: 'short',
+    answer: 'material can still recover to original shape',
+    acceptableAnswers: ['recoverable', 'reversible', 'returns to shape', 'elastic recovery'],
+    hint: 'Below yield point behavior'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Thermal conductivity is measured in ________.',
+    type: 'fill',
+    answer: ['W/(m°K)', 'watts per meter kelvin'],
+    hint: 'Heat transfer property unit'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What property describes ability to withstand plastic deformation without rupture?',
+    type: 'short',
+    answer: 'ductility or malleability',
+    acceptableAnswers: ['ductility', 'malleability', 'formability'],
+    hint: 'Important for forming processes'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Proof stress is equivalent to ________ strength.',
+    type: 'fill',
+    answer: ['yield'],
+    hint: 'Alternative measure when yield point not apparent'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What are the six major property groups for material selection?',
+    type: 'short',
+    answer: 'physical, mechanical, technological, chemical, economic, aesthetic',
+    acceptableAnswers: ['physical mechanical technological chemical economic aesthetic'],
+    hint: 'Comprehensive selection criteria'
+  },
+
+  // Metals - Additional Questions
+  {
+    topic: 'Metals',
+    question: 'Ferrous metals contain primarily ________.',
+    type: 'fill',
+    answer: ['iron'],
+    hint: 'Main element in steels and cast irons'
+  },
+  {
+    topic: 'Metals',
+    question: 'What distinguishes wrought iron from cast iron?',
+    type: 'short',
+    answer: 'very low carbon content',
+    acceptableAnswers: ['low carbon', 'less than 0.08% carbon', 'pure iron with slag'],
+    hint: 'Carbon percentage difference'
+  },
+  {
+    topic: 'Metals',
+    question: 'Steel emerged in the ________ century.',
+    type: 'fill',
+    answer: ['19th', 'nineteenth'],
+    hint: 'Along with improved cast iron techniques'
+  },
+  {
+    topic: 'Metals',
+    question: 'What makes aluminum preferred for aircraft structures?',
+    type: 'short',
+    answer: 'light weight and good strength',
+    acceptableAnswers: ['lightweight', 'low density', 'strength to weight ratio', 'high specific strength'],
+    hint: 'Weight-critical applications'
+  },
+  {
+    topic: 'Metals',
+    question: 'Copper has excellent ________ and ________ conductivity.',
+    type: 'fill',
+    answer: ['thermal', 'electrical'],
+    hint: 'Two related transport properties'
+  },
+  {
+    topic: 'Metals',
+    question: 'What property makes titanium valuable in aerospace?',
+    type: 'short',
+    answer: 'high strength at high temperature',
+    acceptableAnswers: ['temperature resistance', 'high strength', 'heat resistance', 'corrosion resistance'],
+    hint: 'High-performance applications'
+  },
+  {
+    topic: 'Metals',
+    question: 'Silver has a relative electrical conductivity of ________.',
+    type: 'fill',
+    answer: ['106'],
+    hint: 'Highest conductor reference value'
+  },
+  {
+    topic: 'Metals',
+    question: 'What causes grain formation in metals during solidification?',
+    type: 'short',
+    answer: 'atoms attaching to nuclei forming dendrites',
+    acceptableAnswers: ['dendrite growth', 'crystallization', 'nucleation and growth'],
+    hint: 'Microstructure development'
+  },
+  {
+    topic: 'Metals',
+    question: 'Aluminum rivets are preferred over steel because aluminum ________.',
+    type: 'fill',
+    answer: ['deforms more readily', 'is more ductile'],
+    hint: 'Deformation under stress'
+  },
+  {
+    topic: 'Metals',
+    question: 'What is the main advantage of using metal inserts in plastics?',
+    type: 'short',
+    answer: 'repeated assembly and disassembly capability',
+    acceptableAnswers: ['repeated use', 'multiple cycles', 'thread durability', 'reusability'],
+    hint: 'Fastener longevity'
+  },
+
+  // Machining - Additional Questions
+  {
+    topic: 'Machining',
+    question: 'Machining is a ________ process that follows forming.',
+    type: 'fill',
+    answer: ['secondary'],
+    hint: 'Process sequence in manufacturing'
+  },
+  {
+    topic: 'Machining',
+    question: 'What tool material is used for machining polymers and composites?',
+    type: 'short',
+    answer: 'carbide or diamond',
+    acceptableAnswers: ['carbide', 'diamond', 'special tools'],
+    hint: 'Hard, wear-resistant materials'
+  },
+  {
+    topic: 'Machining',
+    question: 'Machining provides ________ and ________ accuracy.',
+    type: 'fill',
+    answer: ['dimensional', 'surface'],
+    hint: 'Two quality improvements'
+  },
+  {
+    topic: 'Machining',
+    question: 'What is the risk of drilling holes in composites?',
+    type: 'short',
+    answer: 'ruptures fibers and disturbs bonding structure',
+    acceptableAnswers: ['fiber damage', 'delamination', 'bond disruption', 'structural damage'],
+    hint: 'Material integrity concern'
+  },
+  {
+    topic: 'Machining',
+    question: 'Threads in composites have relatively low ________ and ________ resistance.',
+    type: 'fill',
+    answer: ['strength', 'wear'],
+    hint: 'Two mechanical limitations'
+  },
+  {
+    topic: 'Machining',
+    question: 'What precaution is needed when machining polymers?',
+    type: 'short',
+    answer: 'control heat and cutting parameters',
+    acceptableAnswers: ['temperature control', 'avoid overheating', 'proper cooling', 'sharp tools'],
+    hint: 'Material sensitivity issue'
+  },
+  {
+    topic: 'Machining',
+    question: 'Phenolic laminates have good ________ properties.',
+    type: 'fill',
+    answer: ['machinability'],
+    hint: 'Ease of cutting with tools'
+  },
+  {
+    topic: 'Machining',
+    question: 'What causes excessive tool wear when machining glass-reinforced plastics?',
+    type: 'short',
+    answer: 'abrasive glass fibers',
+    acceptableAnswers: ['glass abrasion', 'fiber hardness', 'abrasive reinforcement'],
+    hint: 'Inorganic reinforcement effect'
+  },
+
+  // Forging - Additional Questions
+  {
+    topic: 'Forging',
+    question: 'Forging relies on material ________.',
+    type: 'fill',
+    answer: ['malleability', 'ductility'],
+    hint: 'Ability to deform plastically'
+  },
+  {
+    topic: 'Forging',
+    question: 'What temperature condition is forging typically performed at?',
+    type: 'short',
+    answer: 'elevated temperature or hot',
+    acceptableAnswers: ['hot', 'high temperature', 'heated', 'above recrystallization'],
+    hint: 'Makes metal more formable'
+  },
+  {
+    topic: 'Forging',
+    question: 'Forging improves material ________ and ________.',
+    type: 'fill',
+    answer: ['strength', 'toughness'],
+    hint: 'Two mechanical property benefits'
+  },
+  {
+    topic: 'Forging',
+    question: 'What is the main limitation of forging?',
+    type: 'short',
+    answer: 'expensive dies and equipment',
+    acceptableAnswers: ['high tooling cost', 'expensive', 'costly dies', 'capital investment'],
+    hint: 'Economic consideration'
+  },
+  {
+    topic: 'Forging',
+    question: 'Forging produces ________ grain flow aligned with part shape.',
+    type: 'fill',
+    answer: ['continuous', 'favorable'],
+    hint: 'Microstructure advantage'
+  },
+  {
+    topic: 'Forging',
+    question: 'What metals are commonly forged?',
+    type: 'short',
+    answer: 'steel, aluminum, titanium, copper alloys',
+    acceptableAnswers: ['steel aluminum titanium', 'ferrous and nonferrous', 'most ductile metals'],
+    hint: 'Materials with good malleability'
+  },
+
+  // Ceramics - Additional Questions
+  {
+    topic: 'Ceramics',
+    question: 'Ceramic materials are ________ and ________ compounds.',
+    type: 'fill',
+    answer: ['inorganic', 'nonmetallic'],
+    hint: 'Two defining characteristics'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'What is the main disadvantage of ceramics?',
+    type: 'short',
+    answer: 'brittleness',
+    acceptableAnswers: ['brittle', 'low toughness', 'fracture easily', 'impact sensitive'],
+    hint: 'Mechanical property limitation'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Firing gives ceramic parts ________ and ________.',
+    type: 'fill',
+    answer: ['strength', 'hardness'],
+    hint: 'Two properties from high-temperature treatment'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'What are the three basic ceramic forming processes?',
+    type: 'short',
+    answer: 'casting, plastic forming, pressing',
+    acceptableAnswers: ['slip casting plastic forming pressing', 'casting forming pressing'],
+    hint: 'Similar to metal/polymer categories'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Slip casting uses a ________ mold.',
+    type: 'fill',
+    answer: ['porous', 'plaster'],
+    hint: 'Absorbs water from suspension'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'What causes warping and cracking during ceramic drying?',
+    type: 'short',
+    answer: 'variations in moisture content and wall thickness',
+    acceptableAnswers: ['moisture variation', 'uneven drying', 'thickness differences', 'shrinkage variation'],
+    hint: 'Non-uniform water loss'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Ceramic shrinkage during drying and firing can be up to ________ percent.',
+    type: 'fill',
+    answer: ['20', 'twenty'],
+    hint: 'Significant dimensional change'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'What is the purpose of glazing ceramics?',
+    type: 'short',
+    answer: 'improve appearance, strength, and make impermeable',
+    acceptableAnswers: ['surface finish', 'waterproofing', 'aesthetic', 'sealing'],
+    hint: 'Final coating application'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Aluminas can serve at temperatures up to ________ °C.',
+    type: 'fill',
+    answer: ['1650'],
+    hint: 'High-temperature ceramic capability'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'What ceramic process uses pressure and temperature simultaneously?',
+    type: 'short',
+    answer: 'hot pressing or pressure sintering',
+    acceptableAnswers: ['hot pressing', 'pressure sintering', 'hot isostatic pressing'],
+    hint: 'Reduces porosity'
+  },
+
+  // Composites - Additional Questions
+  {
+    topic: 'Composites',
+    question: 'A composite is made of ________ or more different materials.',
+    type: 'fill',
+    answer: ['two', '2'],
+    hint: 'Minimum number of constituents'
+  },
+  {
+    topic: 'Composites',
+    question: 'What are the two main components of polymer composites?',
+    type: 'short',
+    answer: 'matrix and reinforcement',
+    acceptableAnswers: ['matrix reinforcement', 'resin fiber', 'polymer reinforcement'],
+    hint: 'Binder and strengthening elements'
+  },
+  {
+    topic: 'Composites',
+    question: 'Continuous fiber reinforcement is more effective for ________ strength.',
+    type: 'fill',
+    answer: ['long-term', 'creep'],
+    hint: 'Time-dependent properties'
+  },
+  {
+    topic: 'Composites',
+    question: 'What is the most common reinforcement for polymer composites?',
+    type: 'short',
+    answer: 'glass fibers',
+    acceptableAnswers: ['glass', 'fiberglass', 'E-glass', 'glass fiber'],
+    hint: 'Widely used inorganic fiber'
+  },
+  {
+    topic: 'Composites',
+    question: 'Kevlar fiber has tensile strength of about ________ MPa.',
+    type: 'fill',
+    answer: ['3102'],
+    hint: 'Much higher than steel'
+  },
+  {
+    topic: 'Composites',
+    question: 'What advantage do carbon-reinforced composites provide?',
+    type: 'short',
+    answer: 'high stiffness and weight reduction',
+    acceptableAnswers: ['high modulus', 'lightweight', 'stiffness', 'strength to weight'],
+    hint: 'Performance benefit over glass'
+  },
+  {
+    topic: 'Composites',
+    question: 'Epoxy matrix has ________ shrinkage rate.',
+    type: 'fill',
+    answer: ['low', 'minimal'],
+    hint: 'Can be as low as 0.01%'
+  },
+  {
+    topic: 'Composites',
+    question: 'What is the main matrix material for fiberglass boats?',
+    type: 'short',
+    answer: 'unsaturated polyester',
+    acceptableAnswers: ['polyester', 'UP resin', 'polyester resin'],
+    hint: 'Low-cost general-purpose thermoset'
+  },
+  {
+    topic: 'Composites',
+    question: 'Phenolic composites are used for ________ boards.',
+    type: 'fill',
+    answer: ['circuit', 'electrical'],
+    hint: 'Electronics application'
+  },
+  {
+    topic: 'Composites',
+    question: 'What composite fabrication technique is used for pipes and tanks?',
+    type: 'short',
+    answer: 'filament winding',
+    acceptableAnswers: ['filament winding', 'winding', 'fiber winding'],
+    hint: 'Continuous strand around mandrel'
+  },
+  {
+    topic: 'Composites',
+    question: 'Hand lay-up maximum thickness is usually ________ mm.',
+    type: 'fill',
+    answer: ['9'],
+    hint: 'Contact molding limitation'
+  },
+  {
+    topic: 'Composites',
+    question: 'What does SMC stand for?',
+    type: 'short',
+    answer: 'sheet molding compound',
+    acceptableAnswers: ['sheet molding compound'],
+    hint: 'Resin and reinforcement in sheet form'
+  },
+  {
+    topic: 'Composites',
+    question: 'Pultrusion produces ________ cross-section shapes.',
+    type: 'fill',
+    answer: ['constant', 'continuous'],
+    hint: 'Pulling process characteristic'
+  },
+  {
+    topic: 'Composites',
+    question: 'What problem exists with two-dimensional fabric weaves in laminates?',
+    type: 'short',
+    answer: 'anisotropic strength characteristics',
+    acceptableAnswers: ['anisotropic', 'directional properties', 'weak direction', 'non-uniform strength'],
+    hint: 'Directional property variation'
+  },
+  {
+    topic: 'Composites',
+    question: 'Wood is a ________ composite.',
+    type: 'fill',
+    answer: ['natural'],
+    hint: 'Cellulose fiber reinforcement'
+  },
+
+  // Natural Materials - Additional Questions
+  {
+    topic: 'Natural Materials',
+    question: 'Natural materials come from ________, ________, or the ground.',
+    type: 'fill',
+    answer: ['plants', 'animals'],
+    hint: 'Three main sources'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'What material is harvested from cork oak tree?',
+    type: 'short',
+    answer: 'cork',
+    acceptableAnswers: ['cork', 'cork tissue'],
+    hint: 'Elastic, impermeable material'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'Hardwoods have ________ leaves and produce fruit or nuts.',
+    type: 'fill',
+    answer: ['broad'],
+    hint: 'Deciduous tree characteristic'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'What are softwood trees also called?',
+    type: 'short',
+    answer: 'conifers or cone-bearing',
+    acceptableAnswers: ['conifers', 'evergreens', 'cone bearing'],
+    hint: 'Pine, spruce, cedar, fir'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'Leather is created through ________ of animal hides.',
+    type: 'fill',
+    answer: ['tanning'],
+    hint: 'Chemical process with acidic compounds'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'What is the main use of leather in industry?',
+    type: 'short',
+    answer: 'footwear',
+    acceptableAnswers: ['shoes', 'footwear', 'boots'],
+    hint: 'Primary application'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'MDF stands for ________ Density Fibre board.',
+    type: 'fill',
+    answer: ['Medium'],
+    hint: 'Wood composite product'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'What prevents leather from decomposing?',
+    type: 'short',
+    answer: 'tanning with acidic compounds',
+    acceptableAnswers: ['tanning', 'chemical treatment', 'tannins'],
+    hint: 'Preservation process'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'Cork's key properties are ________ and near-impermeability.',
+    type: 'fill',
+    answer: ['elasticity'],
+    hint: 'Makes it suitable for bottle stoppers'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'What natural fiber is used in high-strength ropes?',
+    type: 'short',
+    answer: 'hemp or jute',
+    acceptableAnswers: ['hemp', 'jute', 'sisal', 'manila'],
+    hint: 'Plant-based cordage material'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'Plywood is made by ________ wood veneers together.',
+    type: 'fill',
+    answer: ['laminating', 'gluing'],
+    hint: 'Layered construction method'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'What property makes granite suitable for countertops?',
+    type: 'short',
+    answer: 'high durability and aesthetic qualities',
+    acceptableAnswers: ['durable', 'hard', 'attractive', 'weather resistant'],
+    hint: 'Natural stone application'
   }
 ];
