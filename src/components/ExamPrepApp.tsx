@@ -133,7 +133,7 @@ const ExamPrepApp = () => {
     <div className="min-h-screen bg-gray-50 py-6 px-4 sm:px-6">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
-        <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-6 sm:p-8 mb-6 sticky top-6 z-10">
+        <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-6 sm:p-8 mb-6 sm:sticky sm:top-6 sm:z-10">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
               <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-2xl">
@@ -474,9 +474,9 @@ const ExamPrepApp = () => {
                           Q{index + 1}
                         </span>
                         {wasCorrect ? (
-                          <CheckCircle className="text-green-600" size={18} />
+                          <CheckCircle className="text-green-600 flex-shrink-0" size={20} />
                         ) : (
-                          <XCircle className="text-red-600" size={18} />
+                          <XCircle className="text-red-600 flex-shrink-0" size={20} />
                         )}
                       </div>
                     </button>
@@ -500,9 +500,9 @@ const ExamPrepApp = () => {
                                 expandedWasCorrect ? 'bg-green-500' : 'bg-red-500'
                               }`}>
                                 {expandedWasCorrect ? (
-                                  <CheckCircle className="text-white" size={18} />
+                                  <CheckCircle className="text-white" size={20} />
                                 ) : (
-                                  <XCircle className="text-white" size={18} />
+                                  <XCircle className="text-white" size={20} />
                                 )}
                               </div>
                               <div className="flex-1">
