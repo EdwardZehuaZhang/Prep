@@ -2669,7 +2669,7 @@ export const questions: Question[] = [
   },
   {
     topic: 'Natural Materials',
-    question: 'Cork's key properties are ________ and near-impermeability.',
+    question: 'Cork\'s key properties are ________ and near-impermeability.',
     type: 'fill',
     answer: ['elasticity'],
     hint: 'Makes it suitable for bottle stoppers'
@@ -2696,5 +2696,961 @@ export const questions: Question[] = [
     answer: 'high durability and aesthetic qualities',
     acceptableAnswers: ['durable', 'hard', 'attractive', 'weather resistant'],
     hint: 'Natural stone application'
+  },
+
+  // Additional Casting Processes Questions
+  {
+    topic: 'Casting Processes',
+    question: 'What is the purpose of a core in sand casting?',
+    type: 'short',
+    answer: 'produce internal features like holes',
+    acceptableAnswers: ['internal features', 'holes', 'cavities', 'hollow sections'],
+    hint: 'Creates internal geometry'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'The parting line separates the ________ and ________ halves of a mold.',
+    type: 'fill',
+    answer: ['cope', 'drag'],
+    hint: 'Upper and lower mold sections'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'What is the main application of centrifugal casting?',
+    type: 'short',
+    answer: 'cast iron pipes',
+    acceptableAnswers: ['pipes', 'tubes', 'cylindrical parts', 'pipe production'],
+    hint: 'Symmetrical hollow products'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'Die casting tolerances are the ________ of any casting process.',
+    type: 'fill',
+    answer: ['lowest', 'tightest', 'best'],
+    hint: 'Dimensional accuracy superiority'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'What causes solidification porosity in castings?',
+    type: 'short',
+    answer: 'shrinkage voids during cooling',
+    acceptableAnswers: ['shrinkage', 'volume reduction', 'cooling contraction', 'voids'],
+    hint: 'Material contraction issue'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'Typical cast-iron pipe lengths are ________ ft or ________ m.',
+    type: 'fill',
+    answer: ['20', '6'],
+    hint: 'Standard centrifugally cast pipe dimension'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'What distinguishes investment casting from sand casting?',
+    type: 'short',
+    answer: 'uses wax pattern and better tolerances',
+    acceptableAnswers: ['wax pattern', 'precision', 'tighter tolerances', 'lost wax'],
+    hint: 'Pattern material and accuracy'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'Cupola furnaces are used to melt ________.',
+    type: 'fill',
+    answer: ['cast iron', 'iron'],
+    hint: 'Continuous melting process'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'What is the advantage of computer simulation in casting design?',
+    type: 'short',
+    answer: 'ensures proper solidification sequence',
+    acceptableAnswers: ['predict solidification', 'optimize gating', 'reduce defects', 'heat transfer analysis'],
+    hint: 'Predicts metal flow and cooling'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'Investment casting can be ganged to make ________ parts in single pour.',
+    type: 'fill',
+    answer: ['hundreds', 'many'],
+    hint: 'Multiple cavity advantage'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'What material are investment casting molds made from?',
+    type: 'short',
+    answer: 'plaster or ceramic',
+    acceptableAnswers: ['plaster', 'ceramic', 'investment material', 'refractory'],
+    hint: 'Heat-resistant mold material'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'Die casting requires quantities of ________ to justify tooling costs.',
+    type: 'fill',
+    answer: ['thousands'],
+    hint: 'High volume production'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'What causes coarse grain structure in slowly solidified castings?',
+    type: 'short',
+    answer: 'extended time for grain growth',
+    acceptableAnswers: ['slow cooling', 'long solidification', 'grain growth time'],
+    hint: 'Cooling rate effect'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'Shell molding uses ________ bonded sand.',
+    type: 'fill',
+    answer: ['resin'],
+    hint: 'Organic binder creates shell'
+  },
+  {
+    topic: 'Casting Processes',
+    question: 'What is the typical lead time for die castings?',
+    type: 'short',
+    answer: '6 months',
+    acceptableAnswers: ['6 months', 'half year', 'long lead time'],
+    hint: 'Time to produce first part'
+  },
+
+  // Additional Polymers Questions
+  {
+    topic: 'Polymers',
+    question: 'Phenol formaldehyde is also known by the trade name ________.',
+    type: 'fill',
+    answer: ['Bakelite'],
+    hint: 'First synthetic plastic discovered 1907'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What limitation exists for Bakelite colors?',
+    type: 'short',
+    answer: 'limited to black and dark shades',
+    acceptableAnswers: ['dark colors only', 'black brown green red', 'no bright colors'],
+    hint: 'Color restriction of phenolic'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Urea formaldehyde improved phenolic by allowing ________ colors.',
+    type: 'fill',
+    answer: ['bright', 'decorative'],
+    hint: 'Color advantage over Bakelite'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What happens if thermoset is left in molding barrel?',
+    type: 'short',
+    answer: 'screw becomes integral part of barrel',
+    acceptableAnswers: ['screw stuck', 'cross-links in barrel', 'machine damaged', 'solidifies'],
+    hint: 'Expensive cleanup problem'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Compression molding is the most widely used process for ________.',
+    type: 'fill',
+    answer: ['thermosetting', 'thermosets'],
+    hint: 'Material type preference'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What is the cycle time comparison between thermoset injection and compression molding?',
+    type: 'short',
+    answer: '2 to 3 times faster',
+    acceptableAnswers: ['2-3x faster', 'much faster', 'twice as fast'],
+    hint: 'Speed advantage'
+  },
+  {
+    topic: 'Polymers',
+    question: 'RIM stands for ________ Injection Molding.',
+    type: 'fill',
+    answer: ['Reaction'],
+    hint: 'Reactive polymer system'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What is the most common foam material in RIM?',
+    type: 'short',
+    answer: 'polyurethane',
+    acceptableAnswers: ['polyurethane', 'PU foam', 'urethane'],
+    hint: 'Auto parts and furniture'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Transfer molding is a modification of ________ molding.',
+    type: 'fill',
+    answer: ['compression'],
+    hint: 'Related thermoset process'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What makes PTFE (Teflon) difficult to process?',
+    type: 'short',
+    answer: 'can only be sintered under pressure',
+    acceptableAnswers: ['sintering only', 'no melting', 'powder process', 'high cost processing'],
+    hint: 'Fabricability limitation'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Vulcanization of rubber uses ________ for cross-linking.',
+    type: 'fill',
+    answer: ['sulfur'],
+    hint: 'Chemical element for curing'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Who first used sulfur to vulcanize rubber?',
+    type: 'short',
+    answer: 'Charles Goodyear',
+    acceptableAnswers: ['Goodyear', 'Charles Goodyear'],
+    hint: '1800-1860 inventor'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What happens to uncured natural rubber?',
+    type: 'short',
+    answer: 'turns smelly and crumbly perishes',
+    acceptableAnswers: ['perishes', 'degrades', 'decomposes', 'breaks down'],
+    hint: 'Degradation without treatment'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Calendering is used to make ________ sheets and ________.',
+    type: 'fill',
+    answer: ['vinyl', 'gaskets'],
+    hint: 'Flat rolled products'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What process makes plastic bags?',
+    type: 'short',
+    answer: 'film blowing or extrusion',
+    acceptableAnswers: ['blown film', 'film extrusion', 'tubular extrusion'],
+    hint: 'Tubular film process'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Injection molding produces over ________ parts per minute for light bulbs.',
+    type: 'fill',
+    answer: ['1000'],
+    hint: 'High-speed automated process'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What is the dwelling step in injection molding?',
+    type: 'short',
+    answer: 'maintaining pressure during cooling',
+    acceptableAnswers: ['pack pressure', 'hold pressure', 'packing phase'],
+    hint: 'After injection before cooling'
+  },
+  {
+    topic: 'Polymers',
+    question: 'PET bottles use ________ blow molding.',
+    type: 'fill',
+    answer: ['stretch'],
+    hint: 'Biaxial orientation process'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What advantage does rotational molding have over injection molding?',
+    type: 'short',
+    answer: 'no internal core needed lower mold cost',
+    acceptableAnswers: ['cheaper tooling', 'simpler molds', 'no pressure needed'],
+    hint: 'Tooling cost benefit'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Sagging process shapes glass using ________.',
+    type: 'fill',
+    answer: ['gravity', 'weight'],
+    hint: 'Sheet droops into shallow mold'
+  },
+
+  // Additional Materials Properties Questions
+  {
+    topic: 'Materials Properties',
+    question: 'The slope of the stress-strain curve in elastic region is the ________.',
+    type: 'fill',
+    answer: ['modulus of elasticity', 'Young\'s modulus'],
+    hint: 'Stiffness measure'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What are the three Brinell, Vickers, and Rockwell used to measure?',
+    type: 'short',
+    answer: 'hardness',
+    acceptableAnswers: ['hardness'],
+    hint: 'Surface resistance property'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Ultimate tensile strength occurs at point ________ on stress-strain curve.',
+    type: 'fill',
+    answer: ['D', 'maximum'],
+    hint: 'Before fracture point E'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What property describes material ability to return to original shape?',
+    type: 'short',
+    answer: 'elasticity',
+    acceptableAnswers: ['elastic', 'elastic recovery', 'resilience'],
+    hint: 'Rubber band behavior'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Plasticity is ability to undergo ________ deformation without rupture.',
+    type: 'fill',
+    answer: ['permanent'],
+    hint: 'Non-recoverable shape change'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What causes necking in plastic deformation?',
+    type: 'short',
+    answer: 'cross-section reduction during stretching',
+    acceptableAnswers: ['thinning', 'cross-section change', 'localized deformation'],
+    hint: 'Bubble gum stretching example'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Copper has thermal conductivity of ________ W/mK.',
+    type: 'fill',
+    answer: ['401'],
+    hint: 'Excellent heat conductor'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What is the hardest natural material?',
+    type: 'short',
+    answer: 'diamond',
+    acceptableAnswers: ['diamond'],
+    hint: 'Hardness 10 on Mohs scale'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Talc has a Mohs hardness of ________.',
+    type: 'fill',
+    answer: ['1'],
+    hint: 'Softest on scale'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What property makes polyethylene suitable for wire coating?',
+    type: 'short',
+    answer: 'electrical insulation and flexibility',
+    acceptableAnswers: ['insulation', 'insulator', 'flexibility', 'dielectric'],
+    hint: 'Electrical and mechanical properties'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Percent elongation measures ________.',
+    type: 'fill',
+    answer: ['ductility'],
+    hint: 'Tensile test measurement'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What test uses a pendulum to measure toughness?',
+    type: 'short',
+    answer: 'Charpy or Izod impact test',
+    acceptableAnswers: ['Charpy', 'Izod', 'impact test'],
+    hint: 'Energy absorption measurement'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Lead is malleable but not ________.',
+    type: 'fill',
+    answer: ['ductile'],
+    hint: 'Cannot be drawn into wire'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What property is important for turbine blades at high temperature?',
+    type: 'short',
+    answer: 'creep resistance',
+    acceptableAnswers: ['creep resistance', 'high temperature strength', 'thermal stability'],
+    hint: 'Time-dependent deformation'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Coefficient of thermal expansion is inversely proportional to ________.',
+    type: 'fill',
+    answer: ['melting point'],
+    hint: 'Higher melt temperature less expansion'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What causes fatigue failure in wire bent repeatedly?',
+    type: 'short',
+    answer: 'cyclic stress reversals',
+    acceptableAnswers: ['repeated bending', 'cyclic loading', 'alternating stress'],
+    hint: 'Back and forth stress application'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Opacity describes ability to ________ light.',
+    type: 'fill',
+    answer: ['block', 'transmit'],
+    hint: 'Opposite of transparency'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What are ranking parameters used for?',
+    type: 'short',
+    answer: 'order materials by superiority cannot use in calculations',
+    acceptableAnswers: ['ranking', 'comparison', 'qualitative assessment'],
+    hint: 'Machinability, corrosion resistance'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Fundamental parameters can be used directly in ________ calculations.',
+    type: 'fill',
+    answer: ['design'],
+    hint: 'Quantitative engineering use'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What six property groups are considered in material selection?',
+    type: 'short',
+    answer: 'physical mechanical technological chemical economic aesthetic',
+    acceptableAnswers: ['physical mechanical technological chemical economic aesthetic'],
+    hint: 'Comprehensive selection criteria'
+  },
+
+  // Additional Metals Questions
+  {
+    topic: 'Metals',
+    question: 'Atoms are the ________ blocks of engineering materials.',
+    type: 'fill',
+    answer: ['building'],
+    hint: 'Fundamental construction units'
+  },
+  {
+    topic: 'Metals',
+    question: 'What melting point defines the boundary between soldering and brazing?',
+    type: 'short',
+    answer: '455°C or 850°F',
+    acceptableAnswers: ['455°C', '850°F', '455 degrees'],
+    hint: 'Temperature threshold'
+  },
+  {
+    topic: 'Metals',
+    question: 'Brazing uses filler metals with ________ melting temperature than base metal.',
+    type: 'fill',
+    answer: ['lower'],
+    hint: 'Must not melt workpiece'
+  },
+  {
+    topic: 'Metals',
+    question: 'What causes intergranular penetration in brazing?',
+    type: 'short',
+    answer: 'limited alloying at elevated temperatures',
+    acceptableAnswers: ['alloying', 'diffusion', 'atomic bonding', 'grain boundary penetration'],
+    hint: 'Creates stronger bond than soldering'
+  },
+  {
+    topic: 'Metals',
+    question: 'Torch brazing uses ________ flame.',
+    type: 'fill',
+    answer: ['reducing', 'slightly reducing'],
+    hint: 'Prevents oxidation'
+  },
+  {
+    topic: 'Metals',
+    question: 'What atmosphere is used in furnace brazing?',
+    type: 'short',
+    answer: 'hydrogen',
+    acceptableAnswers: ['hydrogen', 'H2', 'inert gas'],
+    hint: 'No flux needed'
+  },
+  {
+    topic: 'Metals',
+    question: 'Arc welding uses ________ to create heat.',
+    type: 'fill',
+    answer: ['electrical current', 'electricity'],
+    hint: 'Electric discharge method'
+  },
+  {
+    topic: 'Metals',
+    question: 'What protects molten weld metal from oxidation in SMAW?',
+    type: 'short',
+    answer: 'flux coating on electrode',
+    acceptableAnswers: ['flux', 'electrode coating', 'slag'],
+    hint: 'Stick welding protection'
+  },
+  {
+    topic: 'Metals',
+    question: 'MIG welding stands for Metal ________ Gas welding.',
+    type: 'fill',
+    answer: ['Inert'],
+    hint: 'Gas shielding method'
+  },
+  {
+    topic: 'Metals',
+    question: 'What element has the highest relative electrical conductivity?',
+    type: 'short',
+    answer: 'silver',
+    acceptableAnswers: ['silver', 'Ag'],
+    hint: 'Conductivity reference 106'
+  },
+  {
+    topic: 'Metals',
+    question: 'TIG welding uses ________ electrode.',
+    type: 'fill',
+    answer: ['tungsten'],
+    hint: 'Non-consumable high melt temperature'
+  },
+  {
+    topic: 'Metals',
+    question: 'What welding process forces plasma through small orifice?',
+    type: 'short',
+    answer: 'plasma arc welding',
+    acceptableAnswers: ['PAW', 'plasma welding', 'plasma arc'],
+    hint: 'Concentrated arc energy'
+  },
+  {
+    topic: 'Metals',
+    question: 'Resistance spot welding uses ________ and ________ to create weld.',
+    type: 'fill',
+    answer: ['current', 'pressure'],
+    hint: 'Two electrodes clamp and conduct'
+  },
+  {
+    topic: 'Metals',
+    question: 'What automotive industry process welds many sheet metal joints?',
+    type: 'short',
+    answer: 'resistance spot welding',
+    acceptableAnswers: ['spot welding', 'RESW', 'resistance welding'],
+    hint: 'Rapid economical sheet joining'
+  },
+  {
+    topic: 'Metals',
+    question: 'Ultrasonic bonding uses frequencies of ________ kHz.',
+    type: 'fill',
+    answer: ['10-75'],
+    hint: 'High frequency vibrations'
+  },
+  {
+    topic: 'Metals',
+    question: 'What solid-state process joins cylindrical parts by rotation?',
+    type: 'short',
+    answer: 'friction bonding',
+    acceptableAnswers: ['friction welding', 'friction bonding', 'inertia welding'],
+    hint: 'Frictional heat generation'
+  },
+  {
+    topic: 'Metals',
+    question: 'Laser beam welding abbreviation is ________.',
+    type: 'fill',
+    answer: ['LBW'],
+    hint: 'High-tech precision joining'
+  },
+  {
+    topic: 'Metals',
+    question: 'What advantage does LBW have over EBW?',
+    type: 'short',
+    answer: 'no vacuum required',
+    acceptableAnswers: ['no vacuum', 'atmospheric operation', 'no x-rays'],
+    hint: 'Operational simplification'
+  },
+  {
+    topic: 'Metals',
+    question: 'Flash welding uses ________ amp current.',
+    type: 'fill',
+    answer: ['2000-5000'],
+    hint: 'High current creates fusion'
+  },
+  {
+    topic: 'Metals',
+    question: 'What welding method is used for bandsaw blade repair?',
+    type: 'short',
+    answer: 'flash welding',
+    acceptableAnswers: ['flash welding', 'butt welding', 'resistance welding'],
+    hint: 'End joining technique'
+  },
+
+  // Additional Machining Questions
+  {
+    topic: 'Machining',
+    question: 'Machining normally ________ forming processes.',
+    type: 'fill',
+    answer: ['follows', 'precedes joining'],
+    hint: 'Process sequence position'
+  },
+  {
+    topic: 'Machining',
+    question: 'What happens to hole edges in composites after drilling?',
+    type: 'short',
+    answer: 'rupture and bond disturbance near hole',
+    acceptableAnswers: ['delamination', 'fiber breakage', 'bond damage'],
+    hint: 'Structural integrity issue'
+  },
+  {
+    topic: 'Machining',
+    question: 'Annealing is used to remove effects of ________ work.',
+    type: 'fill',
+    answer: ['cold'],
+    hint: 'Reverses strain hardening'
+  },
+  {
+    topic: 'Machining',
+    question: 'What is the purpose of stress-relief heat treatment?',
+    type: 'short',
+    answer: 'remove internal residual stresses',
+    acceptableAnswers: ['relieve stress', 'reduce distortion', 'dimensional stability'],
+    hint: 'Applicable to all material types'
+  },
+  {
+    topic: 'Machining',
+    question: 'Grinding and polishing improve ceramic ________.',
+    type: 'fill',
+    answer: ['strength', 'surface finish'],
+    hint: 'Removes surface flaws'
+  },
+  {
+    topic: 'Machining',
+    question: 'What secondary process can increase ceramic part strength?',
+    type: 'short',
+    answer: 'surface finishing removes flaws',
+    acceptableAnswers: ['grinding', 'polishing', 'surface treatment', 'finishing'],
+    hint: 'Flaw removal effect'
+  },
+
+  // Additional Forging Questions
+  {
+    topic: 'Forging',
+    question: 'Forging is performed at ________ temperatures.',
+    type: 'fill',
+    answer: ['elevated', 'high'],
+    hint: 'Above recrystallization temperature'
+  },
+  {
+    topic: 'Forging',
+    question: 'What microstructure advantage does forging provide?',
+    type: 'short',
+    answer: 'favorable grain flow alignment',
+    acceptableAnswers: ['grain flow', 'directional structure', 'oriented grains'],
+    hint: 'Strength in load direction'
+  },
+  {
+    topic: 'Forging',
+    question: 'Forging eliminates ________ found in castings.',
+    type: 'fill',
+    answer: ['porosity', 'voids'],
+    hint: 'Densification benefit'
+  },
+  {
+    topic: 'Forging',
+    question: 'What material property is required for successful forging?',
+    type: 'short',
+    answer: 'ductility or malleability',
+    acceptableAnswers: ['ductility', 'malleability', 'plastic deformability'],
+    hint: 'Ability to flow without cracking'
+  },
+  {
+    topic: 'Forging',
+    question: 'Hot forging reduces ________ required to deform metal.',
+    type: 'fill',
+    answer: ['force', 'pressure'],
+    hint: 'Temperature effect on flow stress'
+  },
+  {
+    topic: 'Forging',
+    question: 'What typical products are made by forging?',
+    type: 'short',
+    answer: 'crankshafts connecting rods gears',
+    acceptableAnswers: ['automotive parts', 'shafts', 'structural components'],
+    hint: 'High-strength mechanical parts'
+  },
+
+  // Additional Ceramics Questions
+  {
+    topic: 'Ceramics',
+    question: 'Ceramic word comes from Greek keramikos meaning ________.',
+    type: 'fill',
+    answer: ['burnt stuff'],
+    hint: 'Indicates heat treatment necessity'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'What temperature can zirconia serve at?',
+    type: 'short',
+    answer: '2204°C',
+    acceptableAnswers: ['2204°C', '2200°C', 'over 2000°C'],
+    hint: 'Highest strength refractory'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Glass transition temperature Tg for soda-lime glass is ________.',
+    type: 'fill',
+    answer: ['520-600°C'],
+    hint: 'Softening temperature range'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'What percentage of all glass is soda-lime?',
+    type: 'short',
+    answer: '90%',
+    acceptableAnswers: ['90', '90 percent', 'ninety percent'],
+    hint: 'Commodity glass dominance'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Pyrex is a ________ glass.',
+    type: 'fill',
+    answer: ['borosilicate'],
+    hint: 'Heat-resistant laboratory ware'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'What makes borosilicate glass thermal shock resistant?',
+    type: 'short',
+    answer: 'low coefficient of thermal expansion',
+    acceptableAnswers: ['low expansion', 'thermal stability', 'minimal expansion'],
+    hint: 'Temperature change resistance'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Fused silica consists simply of ________.',
+    type: 'fill',
+    answer: ['silica', 'silicon dioxide'],
+    hint: 'Purest most expensive glass'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'What glass darkens in sunlight and fades when removed?',
+    type: 'short',
+    answer: 'photochromic glass',
+    acceptableAnswers: ['photochromic', 'transition glass', 'light-sensitive'],
+    hint: 'Sunglasses application'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Float glass is formed on bath of molten ________.',
+    type: 'fill',
+    answer: ['tin'],
+    hint: 'Dense liquid metal support'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'What process makes glass stronger by surface compression?',
+    type: 'short',
+    answer: 'tempering or thermal treatment',
+    acceptableAnswers: ['tempering', 'thermal tempering', 'heat treatment'],
+    hint: 'Rapid cooling creates residual stress'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Dry pressing produces ceramic ________, ________, and ________.',
+    type: 'fill',
+    answer: ['whiteware', 'refractories', 'abrasives'],
+    hint: 'Three product categories'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'What is jiggering used for?',
+    type: 'short',
+    answer: 'making symmetrical ceramic ware',
+    acceptableAnswers: ['plates', 'dishes', 'pottery', 'tableware'],
+    hint: 'Rotating mold process'
+  },
+
+  // Additional Composites Questions
+  {
+    topic: 'Composites',
+    question: 'Composite properties are ________ to individual materials.',
+    type: 'fill',
+    answer: ['superior'],
+    hint: 'Synergistic combination benefit'
+  },
+  {
+    topic: 'Composites',
+    question: 'What natural composite demonstrates remarkable mechanical properties?',
+    type: 'short',
+    answer: 'wood',
+    acceptableAnswers: ['wood', 'timber', 'cellulose fiber'],
+    hint: 'Cellulose reinforced plant material'
+  },
+  {
+    topic: 'Composites',
+    question: 'E-glass stands for ________ applications.',
+    type: 'fill',
+    answer: ['electrical'],
+    hint: 'Lower cost glass fiber type'
+  },
+  {
+    topic: 'Composites',
+    question: 'What is S-glass advantage over E-glass?',
+    type: 'short',
+    answer: 'higher tensile strength',
+    acceptableAnswers: ['stronger', 'higher strength', 'better mechanical properties'],
+    hint: 'Magnesia alumina silica composition'
+  },
+  {
+    topic: 'Composites',
+    question: 'Glass fiber diameters range from ________ to ________ mm.',
+    type: 'fill',
+    answer: ['0.005', '0.025'],
+    hint: 'Very thin continuous filaments'
+  },
+  {
+    topic: 'Composites',
+    question: 'What is the main disadvantage of chopped fiber reinforcement?',
+    type: 'short',
+    answer: 'weaker than continuous fiber',
+    acceptableAnswers: ['lower strength', 'not as strong', 'reduced properties'],
+    hint: 'Compared to continuous reinforcement'
+  },
+  {
+    topic: 'Composites',
+    question: 'Carbon fiber modulus can exceed ________ MPa.',
+    type: 'fill',
+    answer: ['758000', '758,000'],
+    hint: 'Extremely high stiffness'
+  },
+  {
+    topic: 'Composites',
+    question: 'What makes Nomex different from Kevlar?',
+    type: 'short',
+    answer: 'not as strong easier to process lower cost',
+    acceptableAnswers: ['lower strength', 'easier processing', 'cheaper'],
+    hint: 'High-temperature nylon trade-offs'
+  },
+  {
+    topic: 'Composites',
+    question: 'Paper and cotton reinforcements advantage is ________.',
+    type: 'fill',
+    answer: ['low cost', 'machinability'],
+    hint: 'Less tool wear than glass'
+  },
+  {
+    topic: 'Composites',
+    question: 'What composite reinforcement is used in aircraft honeycomb panels?',
+    type: 'short',
+    answer: 'aluminum foil',
+    acceptableAnswers: ['aluminum', 'metal honeycomb', 'Al honeycomb'],
+    hint: 'Beehive pattern structure'
+  },
+  {
+    topic: 'Composites',
+    question: 'BMC stands for ________ Molding Compound.',
+    type: 'fill',
+    answer: ['Bulk'],
+    hint: 'Dough-like compression material'
+  },
+  {
+    topic: 'Composites',
+    question: 'What process makes continuous composite structural shapes?',
+    type: 'short',
+    answer: 'pultrusion',
+    acceptableAnswers: ['pultrusion', 'pulling through die'],
+    hint: 'Channels I-beams pipes'
+  },
+  {
+    topic: 'Composites',
+    question: 'Resin transfer molding requires ________ mold.',
+    type: 'fill',
+    answer: ['close-fitting', 'evacuated'],
+    hint: 'Two finished surfaces'
+  },
+  {
+    topic: 'Composites',
+    question: 'What is the purpose of vacuum bag forming?',
+    type: 'short',
+    answer: 'use atmospheric pressure for forming',
+    acceptableAnswers: ['atmospheric forming', 'eliminate metal molds', 'low cost forming'],
+    hint: 'Eliminates expensive matched molds'
+  },
+
+  // Additional Natural Materials Questions
+  {
+    topic: 'Natural Materials',
+    question: 'Organic materials contain ________ and are capable of decay.',
+    type: 'fill',
+    answer: ['carbon'],
+    hint: 'Element defining organic chemistry'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'What three main sources provide natural materials?',
+    type: 'short',
+    answer: 'plants animals ground',
+    acceptableAnswers: ['plants animals minerals', 'biological and geological'],
+    hint: 'Organic and inorganic origins'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'Softwood trees are also called ________.',
+    type: 'fill',
+    answer: ['conifers'],
+    hint: 'Cone-bearing evergreens'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'What fiber acts as structural reinforcement in wood?',
+    type: 'short',
+    answer: 'cellulose',
+    acceptableAnswers: ['cellulose', 'cellulose fibers'],
+    hint: 'Natural plant polymer'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'Portugal produces ________ percent of cork worldwide.',
+    type: 'fill',
+    answer: ['50'],
+    hint: 'Major cork oak producer'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'What makes ostrich leather valuable?',
+    type: 'short',
+    answer: 'finest and most durable leather',
+    acceptableAnswers: ['durable', 'high quality', 'strong flexible'],
+    hint: 'Premium exotic leather'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'The leather industry uses meat industry ________.',
+    type: 'fill',
+    answer: ['by-products'],
+    hint: 'Hides from food production'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'What makes stingray leather unique?',
+    type: 'short',
+    answer: 'tough as hard plastic',
+    acceptableAnswers: ['very tough', 'durable', 'hard', 'plastic-like'],
+    hint: 'Used in wallets and belts'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'A mineral must be a ________ with crystal structure.',
+    type: 'fill',
+    answer: ['solid'],
+    hint: 'Three mineral requirements'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'What is the study of minerals called?',
+    type: 'short',
+    answer: 'mineralogy',
+    acceptableAnswers: ['mineralogy'],
+    hint: 'Mineral science discipline'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'Granite resists ________ rain better than marble.',
+    type: 'fill',
+    answer: ['acid'],
+    hint: 'Chemical weathering resistance'
+  },
+  {
+    topic: 'Natural Materials',
+    question: 'What natural material is used for high-wear cutting tools?',
+    type: 'short',
+    answer: 'diamond',
+    acceptableAnswers: ['diamond', 'industrial diamond'],
+    hint: 'Hardest natural substance'
   }
 ];
