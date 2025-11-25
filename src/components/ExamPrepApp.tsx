@@ -42,6 +42,8 @@ const ExamPrepApp = () => {
     return saved ? JSON.parse(saved).answeredQuestions : {};
   });
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [expandedQuestionId, setExpandedQuestionId] = useState<string | null>(null);
+  const [showHint, setShowHint] = useState(false);
 
   // Save progress to localStorage whenever key state changes
   useEffect(() => {
@@ -98,6 +100,7 @@ const ExamPrepApp = () => {
       setUserAnswer('');
       setSelectedOption('');
       setShowFeedback(false);
+      setShowHint(false);
     }
   };
 
@@ -171,7 +174,7 @@ const ExamPrepApp = () => {
         {/* Topic Filter */}
         <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-6 sm:p-8 mb-6">
           <div className="mb-3">
-            <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-3">
+            <label className="text-sm font-semibold text-gray-500 uppercase tracking-wide block mb-3">
               Filter by Topic
             </label>
           </div>
@@ -226,9 +229,12 @@ const ExamPrepApp = () => {
             <span className="inline-block bg-black text-white text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wide">
               {currentQ.topic}
             </span>
-            <span className="text-sm font-semibold text-gray-500">
-              {currentQuestion + 1} / {filteredQuestions.length}
-            </span>
+            <button
+              onClick={() => setShowHint(!showHint)}
+              className="text-sm font-semibold text-amber-600 hover:text-amber-700 px-4 py-2 rounded-full hover:bg-amber-50 transition-all"
+            >
+              {showHint ? 'Hide Hint' : 'Show Hint'}
+            </button>
           </div>
 
           <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-8 leading-relaxed">
@@ -304,7 +310,7 @@ const ExamPrepApp = () => {
             </div>
           )}
 
-          {!showFeedback && (
+          {!showFeedback && showHint && (
             <div className="mt-5 p-4 bg-amber-50 rounded-2xl border border-amber-100">
               <div className="flex gap-2">
                 <span className="text-amber-600 text-base font-medium">💡</span>
@@ -334,7 +340,9 @@ const ExamPrepApp = () => {
                       <p className="text-sm font-semibold bg-white px-3 py-2 rounded-lg inline-block">
                         {currentQ.type === 'fill' 
                           ? Array.isArray(currentQ.answer) ? currentQ.answer.join(', ') : currentQ.answer
-                          : currentQ.acceptableAnswers?.[0] || currentQ.answer}
+                          : typeof currentQ.answer === 'string' && currentQ.answer.includes(',')
+                            ? currentQ.answer
+                            : currentQ.acceptableAnswers?.[currentQ.acceptableAnswers.length > 1 ? 1 : 0] || currentQ.answer}
                       </p>
                     </div>
                   )}
@@ -386,11 +394,12 @@ const ExamPrepApp = () => {
         </div>
 
         {/* Progress Bar */}
-        <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-6">
+        <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-6 mb-6">
           <div className="mb-3 flex justify-between items-center">
-            <span className="text-sm font-semibold text-gray-700">Overall Progress</span>
+            <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Overall Progress</span>
             <div className="flex items-center gap-2">
               <span className="text-sm font-semibold text-gray-500">{currentQuestion} / {filteredQuestions.length}</span>
+              <span className="text-sm font-semibold text-gray-300">|</span>
               <span className="text-sm font-bold text-gray-900">{Math.round((currentQuestion / filteredQuestions.length) * 100)}%</span>
             </div>
           </div>
@@ -401,6 +410,132 @@ const ExamPrepApp = () => {
             />
           </div>
         </div>
+
+        {/* Answered Questions List */}
+        {Object.keys(answeredQuestions).length > 0 && (
+          <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-6">
+            <div className="mb-4 flex items-center justify-between">
+              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Answered Questions</h3>
+              <div className="flex items-center gap-3 text-xs font-semibold">
+                <span className="text-green-700">
+                  {Object.values(answeredQuestions).filter(Boolean).length} Right
+                </span>
+                <span className="text-gray-300">|</span>
+                <span className="text-red-700">
+                  {Object.values(answeredQuestions).filter(v => v === false).length} Wrong
+                </span>
+              </div>
+            </div>
+            
+            {/* Grid of Question Numbers */}
+            <div className="grid grid-cols-4 gap-2">
+              {filteredQuestions.map((question, index) => {
+                const questionId = `${selectedTopic}-${index}`;
+                const isAnswered = answeredQuestions[questionId] !== undefined;
+                const wasCorrect = answeredQuestions[questionId];
+                const isExpanded = expandedQuestionId === questionId;
+                
+                if (!isAnswered) return null;
+                
+                // Calculate which row this question is in (0-indexed)
+                const answeredIndices = filteredQuestions
+                  .map((_, i) => answeredQuestions[`${selectedTopic}-${i}`] !== undefined ? i : -1)
+                  .filter(i => i !== -1);
+                const positionInAnswered = answeredIndices.indexOf(index);
+                const currentRow = Math.floor(positionInAnswered / 4);
+                const expandedIndex = expandedQuestionId ? answeredIndices.indexOf(
+                  filteredQuestions.findIndex((_, i) => `${selectedTopic}-${i}` === expandedQuestionId)
+                ) : -1;
+                const expandedRow = expandedIndex !== -1 ? Math.floor(expandedIndex / 4) : -1;
+                const isLastInRow = (positionInAnswered + 1) % 4 === 0 || positionInAnswered === answeredIndices.length - 1;
+                const shouldShowExpanded = isExpanded || (expandedRow === currentRow && isLastInRow);
+                
+                return (
+                  <React.Fragment key={questionId}>
+                    <button
+                      onClick={() => {
+                        if (isExpanded) {
+                          // Second click - jump to question
+                          setCurrentQuestion(index);
+                          setUserAnswer('');
+                          setSelectedOption('');
+                          setShowFeedback(false);
+                          setExpandedQuestionId(null);
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        } else {
+                          // First click - expand
+                          setExpandedQuestionId(questionId);
+                        }
+                      }}
+                      className="py-2 px-3 transition-all text-left hover:bg-gray-100 rounded-lg"
+                    >
+                      <div className="flex items-center gap-2">
+                        <span className="text-sm font-bold text-gray-900">
+                          Q{index + 1}
+                        </span>
+                        {wasCorrect ? (
+                          <CheckCircle className="text-green-600" size={18} />
+                        ) : (
+                          <XCircle className="text-red-600" size={18} />
+                        )}
+                      </div>
+                    </button>
+                    
+                    {/* Expanded Question Card - appears after last item in row */}
+                    {shouldShowExpanded && expandedQuestionId && expandedRow === currentRow && isLastInRow && (() => {
+                      const expandedIdx = filteredQuestions.findIndex((_, i) => `${selectedTopic}-${i}` === expandedQuestionId);
+                      if (expandedIdx === -1) return null;
+                      const expandedQuestion = filteredQuestions[expandedIdx];
+                      const expandedWasCorrect = answeredQuestions[expandedQuestionId];
+                      
+                      return (
+                        <div className="col-span-4 mt-1">
+                          <div className={`p-5 rounded-2xl border-2 ${
+                            expandedWasCorrect 
+                              ? 'border-green-300 bg-green-50' 
+                              : 'border-red-300 bg-red-50'
+                          }`}>
+                            <div className="flex items-start gap-3 mb-3">
+                              <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
+                                expandedWasCorrect ? 'bg-green-500' : 'bg-red-500'
+                              }`}>
+                                {expandedWasCorrect ? (
+                                  <CheckCircle className="text-white" size={18} />
+                                ) : (
+                                  <XCircle className="text-white" size={18} />
+                                )}
+                              </div>
+                              <div className="flex-1">
+                                <div className="flex items-center gap-2 mb-2">
+                                  <span className={`text-xs font-semibold px-2 py-1 rounded-full ${
+                                    expandedWasCorrect ? 'bg-green-200 text-green-800' : 'bg-red-200 text-red-800'
+                                  }`}>
+                                    Question {expandedIdx + 1}
+                                  </span>
+                                  <span className="text-xs font-semibold text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+                                    {expandedQuestion.topic}
+                                  </span>
+                                </div>
+                                <p className={`text-sm font-semibold leading-relaxed ${
+                                  expandedWasCorrect ? 'text-green-900' : 'text-red-900'
+                                }`}>
+                                  {expandedQuestion.question}
+                                </p>
+                              </div>
+                            </div>
+                            <div className="text-xs text-gray-600 bg-white px-3 py-2 rounded-lg">
+                              <span className="font-semibold">Click again to jump to this question</span>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })()}
+                  </React.Fragment>
+                );
+              })}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
