@@ -515,8 +515,8 @@ const ExamPrepApp = () => {
                       }}
                       className="py-2 px-3 transition-all text-left hover:bg-gray-100 rounded-lg w-full"
                     >
-                      <div className="flex items-center gap-2">
-                        <span className="text-sm font-bold text-gray-900 w-12 flex-shrink-0">
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-sm font-bold text-gray-900 flex-shrink-0">
                           Q{index + 1}
                         </span>
                         {wasSkipped ? (
