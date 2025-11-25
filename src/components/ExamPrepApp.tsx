@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, ArrowRight, RotateCcw, BookOpen, ChevronDown, Check, SkipForward } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaGlobe } from 'react-icons/fa';
 import { questions } from '../data/questions';
 import { Question } from '../types/Question';
 import { checkAnswer } from '../utils/answerChecker';
@@ -591,6 +592,40 @@ const ExamPrepApp = () => {
             </div>
           </div>
         )}
+        
+        {/* Social Media Panel */}
+        <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-6 mt-6">
+          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4 text-center">Connect With Me</h3>
+          <div className="flex items-center justify-center gap-6">
+            <a
+              href="https://github.com/EdwardZehuaZhang"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900 transition-colors"
+              title="GitHub"
+            >
+              <FaGithub size={28} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/edwardzehuazhang/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900 transition-colors"
+              title="LinkedIn"
+            >
+              <FaLinkedin size={28} />
+            </a>
+            <a
+              href="https://www.edwardzehuazhang.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900 transition-colors"
+              title="Website"
+            >
+              <FaGlobe size={28} />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
