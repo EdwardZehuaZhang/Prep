@@ -1527,5 +1527,249 @@ export const questions: Question[] = [
     answer: 'tip stays cool, clean head',
     acceptableAnswers: ['cool tip', 'stays cool', 'minimal sticking', 'no stringing'],
     hint: 'Results in better quality and less mess'
+  },
+
+  // Complex Short-Answer Questions - Joining Processes
+  {
+    topic: 'Joining Processes',
+    question: 'Why is the tongue and groove joint preferred over a butt joint in spin welding?',
+    type: 'short',
+    answer: 'minimizes linear speed differential across weld area',
+    acceptableAnswers: ['speed differential', 'linear speed difference', 'reduces speed variation', 'uniform speed'],
+    hint: 'Consider rotational mechanics and bond strength'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Explain why molding-in inserts creates high stress despite being a permanent installation method.',
+    type: 'short',
+    answer: 'different coefficients of thermal expansion between metal and plastic',
+    acceptableAnswers: ['thermal expansion mismatch', 'CTE difference', 'thermal expansion coefficient', 'expansion difference'],
+    hint: 'Think about cooling from melt temperature'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why are adhesive joints designed to resist shear and compression but avoid peeling forces?',
+    type: 'short',
+    answer: 'adhesives are weak under peeling due to stress concentration at separation edge',
+    acceptableAnswers: ['peeling concentrates stress', 'stress concentration', 'poor peel strength', 'edge stress'],
+    hint: 'Consider how force is distributed across the bond area'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What physical principle causes ferromagnetic particles to generate heat in electromagnetic welding?',
+    type: 'short',
+    answer: 'oscillating magnetic field excites particles causing hysteresis losses',
+    acceptableAnswers: ['magnetic hysteresis', 'hysteresis', 'magnetic field excitation', 'eddy currents'],
+    hint: 'Related to magnetic domain alignment and energy dissipation'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why does vibration welding push surface contaminants out of the weld zone?',
+    type: 'short',
+    answer: 'reciprocating motion displaces mold release and coatings from interface',
+    acceptableAnswers: ['reciprocating motion', 'vibration displaces contaminants', 'mechanical displacement', 'oscillation removes'],
+    hint: 'Consider the direction of movement'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why must thread cutting screws be carefully aligned during reinsertion?',
+    type: 'short',
+    answer: 'may form second thread set if misaligned',
+    acceptableAnswers: ['creates new threads', 'double threading', 'second thread', 'thread mismatch'],
+    hint: 'Think about the cutting action on existing threads'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What causes cyanoacrylate adhesives to cure rapidly at room temperature?',
+    type: 'short',
+    answer: 'surface moisture initiates anionic polymerization reaction',
+    acceptableAnswers: ['moisture', 'surface moisture', 'humidity triggers', 'water initiated'],
+    hint: 'Even ambient humidity is sufficient'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why is ultrasonic insertion stronger than press-fit insertion for threaded inserts?',
+    type: 'short',
+    answer: 'melted plastic flows into undercuts creating mechanical interlock',
+    acceptableAnswers: ['melt flows into features', 'mechanical interlock', 'plastic flows undercuts', 'undercut bonding'],
+    hint: 'Consider what happens at the interface during vibration'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why do anaerobics only cure after assembly rather than in the bottle?',
+    type: 'short',
+    answer: 'oxygen presence inhibits polymerization',
+    acceptableAnswers: ['oxygen inhibits', 'oxygen prevents cure', 'air prevents', 'oxygen blocks'],
+    hint: 'Consider the atmospheric conditions in the bottle versus the joint'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why does hot plate welding require fixtures with stops?',
+    type: 'short',
+    answer: 'controls melt displacement and final joint thickness',
+    acceptableAnswers: ['control displacement', 'control thickness', 'limit material flow', 'set joint height'],
+    hint: 'Think about the molten material being squeezed'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is the mechanical limitation of press-fit joints for sealing applications?',
+    type: 'short',
+    answer: 'no physical bond at interface prevents hermetic seal',
+    acceptableAnswers: ['no bond', 'only friction', 'no hermetic seal', 'mechanical only'],
+    hint: 'Consider the nature of the connection'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why must rivet holes be reamed or expanded for critical applications?',
+    type: 'short',
+    answer: 'induces compressive stress preventing fatigue crack initiation',
+    acceptableAnswers: ['compressive stress', 'prevent fatigue', 'reduce stress concentration', 'anti-fatigue'],
+    hint: 'Think about residual stress state'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why does solvent bonding of amorphous thermoplastics create a stronger joint than adhesives?',
+    type: 'short',
+    answer: 'molecular diffusion creates pure material-to-material bond',
+    acceptableAnswers: ['molecular diffusion', 'material bond', 'chain entanglement', 'no adhesive layer'],
+    hint: 'Consider what remains after the solvent evaporates'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why are aluminum rivets preferred over steel when joining plastics?',
+    type: 'short',
+    answer: 'aluminum deforms more readily reducing stress on plastic',
+    acceptableAnswers: ['more ductile', 'deforms easier', 'less stress', 'softer material'],
+    hint: 'Think about material hardness and stress distribution'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What makes acrylics advantageous over epoxies for field assembly?',
+    type: 'short',
+    answer: 'rarely require primers and cure rapidly at room temperature',
+    acceptableAnswers: ['no primer', 'fast cure', 'rapid room temp cure', 'primer-less'],
+    hint: 'Consider preparation time and cure conditions'
+  },
+  
+  // Complex Short-Answer Questions - Materials Science
+  {
+    topic: 'Materials Properties',
+    question: 'Why does increasing carbon content above 2% make iron unsuitable for most fabrication processes?',
+    type: 'short',
+    answer: 'excessive carbide formation causes brittleness',
+    acceptableAnswers: ['brittleness', 'too brittle', 'carbide makes brittle', 'loses ductility'],
+    hint: 'Think about the microstructure changes'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Why can thermoplastics be remelted but thermosets cannot?',
+    type: 'short',
+    answer: 'thermosets have cross-linked molecular structure that decomposes under heat',
+    acceptableAnswers: ['cross-linking', 'crosslinked structure', 'covalent crosslinks', 'chemical bonds'],
+    hint: 'Consider the molecular architecture'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What structural characteristic makes amorphous thermoplastics suitable for solvent bonding?',
+    type: 'short',
+    answer: 'random molecular chains allow solvent penetration and chain diffusion',
+    acceptableAnswers: ['random structure', 'no crystallinity', 'molecular mobility', 'chain diffusion'],
+    hint: 'Consider molecular arrangement and mobility'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why is uniform wall thickness critical for successful ultrasonic welding?',
+    type: 'short',
+    answer: 'ensures consistent energy transmission and uniform melting',
+    acceptableAnswers: ['uniform energy', 'consistent melting', 'even energy distribution', 'uniform transmission'],
+    hint: 'Think about acoustic wave propagation'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why does electromagnetic welding require the gasket material to match the base resin?',
+    type: 'short',
+    answer: 'ensures compatible melting and fusion at interface',
+    acceptableAnswers: ['compatible fusion', 'matching melt', 'same material fusion', 'compatible melt'],
+    hint: 'Consider thermal compatibility'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What stress-related advantage do adhesives have over mechanical fasteners?',
+    type: 'short',
+    answer: 'distribute stress uniformly across bond area without stress concentrations',
+    acceptableAnswers: ['uniform stress', 'no stress concentration', 'distributed stress', 'even stress'],
+    hint: 'Compare to point loading of fasteners'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why is weld time a critical parameter in ultrasonic welding?',
+    type: 'short',
+    answer: 'controls melt depth and energy input to joint',
+    acceptableAnswers: ['controls melt depth', 'energy control', 'melt penetration', 'heat input'],
+    hint: 'Too little or too much affects bond quality'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why does plasma treatment improve adhesive bonding of plastics?',
+    type: 'short',
+    answer: 'electron bombardment oxidizes surface increasing surface energy',
+    acceptableAnswers: ['surface oxidation', 'increases surface energy', 'surface activation', 'oxidizes surface'],
+    hint: 'Think about surface chemistry modification'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What mechanical principle allows snap fits to work without permanent deformation?',
+    type: 'short',
+    answer: 'elastic deformation within yield stress limit',
+    acceptableAnswers: ['elastic deformation', 'stays below yield', 'elastic flexing', 'recoverable strain'],
+    hint: 'Consider the stress-strain behavior'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why is hold time important after ultrasonic welding stops?',
+    type: 'short',
+    answer: 'maintains pressure during solidification preventing voids',
+    acceptableAnswers: ['solidification pressure', 'prevent voids', 'consolidation', 'cooling under pressure'],
+    hint: 'Think about what happens as the melt cools'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why does chemical etching improve adhesive bond strength?',
+    type: 'short',
+    answer: 'creates oxidized surface layer with increased mechanical interlocking',
+    acceptableAnswers: ['surface oxidation', 'mechanical interlocking', 'rough surface', 'surface texture'],
+    hint: 'Consider both chemical and mechanical effects'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What causes the flash formation in vibration welding?',
+    type: 'short',
+    answer: 'molten material displaced from interface by oscillating motion',
+    acceptableAnswers: ['material displacement', 'melt squeezed out', 'displaced melt', 'friction melt flow'],
+    hint: 'Think about where the molten material goes'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why is clamping pressure a key factor in ultrasonic welding success?',
+    type: 'short',
+    answer: 'ensures intimate contact and energy coupling at interface',
+    acceptableAnswers: ['interface contact', 'energy coupling', 'acoustic coupling', 'contact pressure'],
+    hint: 'Consider how vibrations are transmitted'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why do epoxies not cure by solvent evaporation?',
+    type: 'short',
+    answer: 'polymerization occurs through chemical cross-linking reaction',
+    acceptableAnswers: ['chemical reaction', 'cross-linking', 'polymerization', 'chemical cure'],
+    hint: 'They are not solvent-based systems'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What limits the geometry of parts that can be vibration welded?',
+    type: 'short',
+    answer: 'mating surfaces must be parallel in single plane',
+    acceptableAnswers: ['parallel surfaces', 'single plane', 'flat surfaces', 'planar joint'],
+    hint: 'Consider the reciprocating motion direction'
   }
 ];

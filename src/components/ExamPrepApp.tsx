@@ -473,7 +473,7 @@ const ExamPrepApp = () => {
             </div>
             
             {/* Grid of Question Numbers */}
-            <div className="grid grid-cols-4 gap-2">
+            <div className="grid grid-cols-4 gap-2 items-start -ml-3">
               {filteredQuestions.map((question, index) => {
                 const questionId = `${selectedTopic}-${index}`;
                 const isAnswered = answeredQuestions[questionId] !== undefined;
@@ -513,10 +513,10 @@ const ExamPrepApp = () => {
                           setExpandedQuestionId(questionId);
                         }
                       }}
-                      className="py-2 px-3 transition-all text-left hover:bg-gray-100 rounded-lg"
+                      className="py-2 px-3 transition-all text-left hover:bg-gray-100 rounded-lg w-full"
                     >
                       <div className="flex items-center gap-2">
-                        <span className="text-sm font-bold text-gray-900">
+                        <span className="text-sm font-bold text-gray-900 w-12 flex-shrink-0">
                           Q{index + 1}
                         </span>
                         {wasSkipped ? (
