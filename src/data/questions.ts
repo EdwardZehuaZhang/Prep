@@ -4419,5 +4419,688 @@ export const questions: Question[] = [
     type: 'fill',
     answer: ['temperatures'],
     hint: 'Turbine blade problem'
+  },
+
+  // Additional Metals and Machining Questions
+  {
+    topic: 'Metals',
+    question: 'Metals in molten state have atoms in a state of ________.',
+    type: 'fill',
+    answer: ['randomness', 'disarray'],
+    hint: 'Opposite of crystalline order'
+  },
+  {
+    topic: 'Metals',
+    question: 'In solid state metals have ________ structure.',
+    type: 'fill',
+    answer: ['crystal'],
+    hint: 'Orderly atomic arrangement'
+  },
+  {
+    topic: 'Metals',
+    question: 'Columnar grain structure is usually ________.',
+    type: 'fill',
+    answer: ['undesirable'],
+    hint: 'Makes properties directional'
+  },
+  {
+    topic: 'Metals',
+    question: 'What do progressive foundries use to ensure proper solidification?',
+    type: 'short',
+    answer: 'computer simulation software',
+    acceptableAnswers: ['simulation', 'heat transfer calculations', 'modeling'],
+    hint: 'Based on heat transfer'
+  },
+  {
+    topic: 'Metals',
+    question: 'Cast-iron pipes are usually ________ cast.',
+    type: 'fill',
+    answer: ['centrifugally'],
+    hint: 'Long continuous products'
+  },
+  {
+    topic: 'Metals',
+    question: 'Typical centrifugal cast pipe length is ________ ft.',
+    type: 'fill',
+    answer: ['20'],
+    hint: '6 meters standard'
+  },
+  {
+    topic: 'Metals',
+    question: 'Centrifugal cast pipe diameters up to ________ inches are common.',
+    type: 'fill',
+    answer: ['24'],
+    hint: '600mm diameter'
+  },
+  {
+    topic: 'Metals',
+    question: 'Tungsten and molybdenum cause casting problems due to high ________ temperature.',
+    type: 'fill',
+    answer: ['melting'],
+    hint: 'Difficult to melt'
+  },
+  {
+    topic: 'Metals',
+    question: 'Aluminum relative electrical conductivity is ________.',
+    type: 'fill',
+    answer: ['63'],
+    hint: 'Compared to copper at 100'
+  },
+  {
+    topic: 'Metals',
+    question: 'Gold relative electrical conductivity is ________.',
+    type: 'fill',
+    answer: ['65'],
+    hint: 'Between aluminum and copper'
+  },
+  {
+    topic: 'Metals',
+    question: 'Steel relative conductivity is ________ to ________.',
+    type: 'fill',
+    answer: ['3', '15'],
+    hint: 'Much lower than copper'
+  },
+
+  // Additional Machining Questions
+  {
+    topic: 'Machining',
+    question: 'Machining is usually a ________ process.',
+    type: 'fill',
+    answer: ['secondary'],
+    hint: 'Follows forming processes'
+  },
+  {
+    topic: 'Machining',
+    question: 'What precaution is needed when machining composites?',
+    type: 'short',
+    answer: 'ruptures bonding near holes',
+    acceptableAnswers: ['disturbs bonds', 'damages structure', 'weakens material'],
+    hint: 'Hole drilling problem'
+  },
+  {
+    topic: 'Machining',
+    question: 'Threads in composites have low ________ and wear resistance.',
+    type: 'fill',
+    answer: ['strength'],
+    hint: 'Limitation of polymer materials'
+  },
+
+  // Additional Forging Questions
+  {
+    topic: 'Forging',
+    question: 'Deformation methods require sufficient ________.',
+    type: 'fill',
+    answer: ['ductility'],
+    hint: 'Material must be formable'
+  },
+  {
+    topic: 'Forging',
+    question: 'Glasses are suited to great variety of ________ methods.',
+    type: 'fill',
+    answer: ['deformation'],
+    hint: 'Unique forming capability'
+  },
+  {
+    topic: 'Forging',
+    question: 'Oxide ceramics are ________ and must use powder methods.',
+    type: 'fill',
+    answer: ['brittle'],
+    hint: 'Cannot be deformed'
+  },
+  {
+    topic: 'Forging',
+    question: 'Thermoplastics have excellent ________.',
+    type: 'fill',
+    answer: ['formability'],
+    hint: 'Easy to shape when heated'
+  },
+
+  // Additional Ceramics Questions
+  {
+    topic: 'Ceramics',
+    question: 'The term ceramic comes from Greek word meaning ________ ________.',
+    type: 'fill',
+    answer: ['burnt', 'stuff'],
+    hint: 'Keramikos origin'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Ceramic firing is a high-temperature heat treatment also called ________.',
+    type: 'fill',
+    answer: ['firing'],
+    hint: 'Achieves desired properties'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Ceramic engine components eliminate need for ________ system.',
+    type: 'fill',
+    answer: ['cooling'],
+    hint: 'High temperature advantage'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'What are the three main types of engineering ceramics?',
+    type: 'short',
+    answer: 'metal oxide glass ceramics carbides nitrides',
+    acceptableAnswers: ['oxides glass carbides', 'alumina glass silicon'],
+    hint: 'Three material categories'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Aluminas can serve at ________ °C.',
+    type: 'fill',
+    answer: ['1650'],
+    hint: 'Very high temperature capability'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Zirconia has highest strength to ________ °C.',
+    type: 'fill',
+    answer: ['2204'],
+    hint: 'Extreme temperature material'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Glass ceramics have near-________ coefficient of thermal expansion.',
+    type: 'fill',
+    answer: ['zero'],
+    hint: 'No expansion with temperature'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Macor by Corning can be machined with ________ tools.',
+    type: 'fill',
+    answer: ['conventional'],
+    hint: 'Unusual for ceramic material'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Boron carbide has very high ________ and low density.',
+    type: 'fill',
+    answer: ['hardness'],
+    hint: 'Used for bulletproof armor'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'What are the three basic ceramic forming processes?',
+    type: 'short',
+    answer: 'casting plastic forming pressing',
+    acceptableAnswers: ['slip casting plastic pressing', 'liquid plastic solid'],
+    hint: 'LSF PSF SSF categories'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Slip casting uses a ________ mold.',
+    type: 'fill',
+    answer: ['porous', 'plaster'],
+    hint: 'Absorbs water from slip'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Ceramic shrinkage can be up to ________ percent.',
+    type: 'fill',
+    answer: ['20'],
+    hint: 'Large dimensional change'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Jiggering is used to make ________ parts.',
+    type: 'fill',
+    answer: ['symmetrical'],
+    hint: 'Rotating mold process'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Hot pressing applies ________ and temperature simultaneously.',
+    type: 'fill',
+    answer: ['pressure'],
+    hint: 'Reduces porosity'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'What gives ceramic parts final strength and hardness?',
+    type: 'short',
+    answer: 'firing sintering',
+    acceptableAnswers: ['firing', 'sintering', 'heat treatment'],
+    hint: 'Elevated temperature process'
+  },
+  {
+    topic: 'Ceramics',
+    question: 'Glazing gives ceramic a final ________ coat.',
+    type: 'fill',
+    answer: ['glassy'],
+    hint: 'Improves appearance and impermeability'
+  },
+
+  // Additional Joining Process Details
+  {
+    topic: 'Joining Processes',
+    question: 'More than ________ percent of production time is spent on assembly.',
+    type: 'fill',
+    answer: ['50'],
+    hint: 'Major manufacturing cost'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Mechanical fasteners represent less than ________ percent of product cost.',
+    type: 'fill',
+    answer: ['5'],
+    hint: 'But assembly is expensive'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Standardization is recommended to lower ________ costs.',
+    type: 'fill',
+    answer: ['assembly'],
+    hint: 'Reduce variety of fasteners'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'In brazing temperature is above ________ °C or ________ °F.',
+    type: 'fill',
+    answer: ['455', '850'],
+    hint: 'Higher than soldering'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Brazing has more strength than soldering due to ________ penetration.',
+    type: 'fill',
+    answer: ['intergranular'],
+    hint: 'Atomic forces at joint'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Brazing filler metal temperature range is ________ to ________ °C.',
+    type: 'fill',
+    answer: ['620', '1200'],
+    hint: 'Depends on base metal'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Flux residue must be removed because it is ________.',
+    type: 'fill',
+    answer: ['corrosive'],
+    hint: 'Water quench into hot bath'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Dip brazing uses molten ________ bath as heat source.',
+    type: 'fill',
+    answer: ['salt'],
+    hint: 'For aluminum assemblies'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Furnace brazing uses ________ atmosphere.',
+    type: 'fill',
+    answer: ['hydrogen'],
+    hint: 'No flux necessary'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why is no flux needed in furnace brazing?',
+    type: 'short',
+    answer: 'no oxygen present',
+    acceptableAnswers: ['oxygen free', 'inert atmosphere', 'hydrogen atmosphere'],
+    hint: 'Prevents oxidation'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Oxyacetylene welding mixes ________ and ________ gases.',
+    type: 'fill',
+    answer: ['oxygen', 'acetylene'],
+    hint: 'Gas welding fuel mixture'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'SMAW stands for ________-________ ________ ________.',
+    type: 'fill',
+    answer: ['shielded', 'metal', 'arc', 'welding'],
+    hint: 'Stick welding full name'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'GMAW stands for ________ ________ ________ ________.',
+    type: 'fill',
+    answer: ['gas', 'metal', 'arc', 'welding'],
+    hint: 'Also called MIG welding'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'MIG stands for ________ ________ ________.',
+    type: 'fill',
+    answer: ['metal', 'inert', 'gas'],
+    hint: 'Same as GMAW'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'GTAW stands for ________-________ ________ ________.',
+    type: 'fill',
+    answer: ['gas', 'tungsten', 'arc', 'welding'],
+    hint: 'Also called TIG welding'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'TIG stands for ________ ________ ________.',
+    type: 'fill',
+    answer: ['tungsten', 'inert', 'gas'],
+    hint: 'Same as GTAW'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Tungsten electrode does not ________ during welding.',
+    type: 'fill',
+    answer: ['melt'],
+    hint: 'Very high melt temperature'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Plasma arc welding current reaches ________ °C.',
+    type: 'fill',
+    answer: ['33315', '60000'],
+    hint: 'Extremely high temperature'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Plasma arc is constricted by forcing through small ________.',
+    type: 'fill',
+    answer: ['orifice'],
+    hint: 'Creates energy concentration'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'RESW stands for ________ ________ ________.',
+    type: 'fill',
+    answer: ['resistance', 'spot', 'welding'],
+    hint: 'Sheet metal process'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Resistance spot welding is widely used in ________ industry.',
+    type: 'fill',
+    answer: ['automotive'],
+    hint: 'Sheet metal fabrication'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'High-frequency welding uses ________ kHz frequency.',
+    type: 'fill',
+    answer: ['450'],
+    hint: 'Creates inductance for seam welding'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Flash welding uses ________-________ amp current.',
+    type: 'fill',
+    answer: ['2000', '5000'],
+    hint: 'Very high amperage'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Ultrasonic bonding frequency is ________ to ________ kHz.',
+    type: 'fill',
+    answer: ['10', '75'],
+    hint: 'Mechanical vibration range'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is friction bonding used for?',
+    type: 'short',
+    answer: 'cylindrical parts',
+    acceptableAnswers: ['round parts', 'rotating parts', 'shafts'],
+    hint: 'Rotation creates heat'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'LBW stands for ________ ________ ________.',
+    type: 'fill',
+    answer: ['laser', 'beam', 'welding'],
+    hint: 'High-tech welding method'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Gillette Mach3 has ________ pinpoint welds.',
+    type: 'fill',
+    answer: ['33'],
+    hint: '0.5mm diameter laser welds'
+  },
+
+  // Additional Adhesives Questions
+  {
+    topic: 'Adhesives',
+    question: 'Adhesives distribute stresses over entire ________ area.',
+    type: 'fill',
+    answer: ['bond'],
+    hint: 'Not point concentrated'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Good joints should withstand shear compressive and ________ forces.',
+    type: 'fill',
+    answer: ['tensile'],
+    hint: 'Three force types'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Joints should not be subjected to ________ force.',
+    type: 'fill',
+    answer: ['peeling'],
+    hint: 'Weakest stress mode'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Labels adhesive is weak when subjected to ________.',
+    type: 'fill',
+    answer: ['peeling'],
+    hint: 'Patient removal method'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Advantages of adhesives include joining ________ materials.',
+    type: 'fill',
+    answer: ['dissimilar'],
+    hint: 'No metallurgical compatibility needed'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Adhesives provide ________ dampening.',
+    type: 'fill',
+    answer: ['mechanical'],
+    hint: 'Vibration absorption'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Adhesives have limited ________ life.',
+    type: 'fill',
+    answer: ['shelf'],
+    hint: 'Disadvantage of adhesives'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Two-part systems limit ________ used.',
+    type: 'fill',
+    answer: ['time'],
+    hint: 'Pot life limitation'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'What type of testing is required for adhesives?',
+    type: 'short',
+    answer: 'destructive',
+    acceptableAnswers: ['destructive testing', 'break testing'],
+    hint: 'Cannot test non-destructively'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Solvent bonding is common for ________ thermoplastic resins.',
+    type: 'fill',
+    answer: ['amorphous'],
+    hint: 'Non-crystalline polymers'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Effective solvents for ABS include acetone methylene chloride and ________.',
+    type: 'fill',
+    answer: ['MEK'],
+    hint: 'Methyl ethyl ketone'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'After solvent evaporates what is left is pure ________-to-________ bond.',
+    type: 'fill',
+    answer: ['material', 'material'],
+    hint: 'No foreign substance'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Epoxies temperature limit is ________ °C plus.',
+    type: 'fill',
+    answer: ['200'],
+    hint: 'High temperature capability'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Urethanes temperature limit is ________ °C.',
+    type: 'fill',
+    answer: ['100'],
+    hint: 'Moderate temperature'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Anaerobics cure time is ________ seconds set.',
+    type: 'fill',
+    answer: ['15'],
+    hint: 'Very fast initial set'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Anaerobic full cure time is ________ to ________ hours.',
+    type: 'fill',
+    answer: ['2', '24'],
+    hint: 'Complete polymerization time'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'What triggers anaerobic curing?',
+    type: 'short',
+    answer: 'absence of oxygen',
+    acceptableAnswers: ['no oxygen', 'oxygen free', 'anaerobic conditions'],
+    hint: 'One-part system mechanism'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Cyanoacrylate setting time is ________ or ________ seconds.',
+    type: 'fill',
+    answer: ['2', '3'],
+    hint: 'Super glue speed'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'What initiates cyanoacrylate curing?',
+    type: 'short',
+    answer: 'surface moisture',
+    acceptableAnswers: ['moisture', 'humidity', 'water'],
+    hint: 'Even air humidity works'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'UV curing is typically ________ to ________ seconds.',
+    type: 'fill',
+    answer: ['3', '10'],
+    hint: 'Extremely fast process'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Acrylics full cure is within ________ minutes or less.',
+    type: 'fill',
+    answer: ['30'],
+    hint: 'Rapid room temperature cure'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'What surface preparation exposes material to oxidizing flame?',
+    type: 'short',
+    answer: 'flame treatment',
+    acceptableAnswers: ['flame', 'flame oxidation'],
+    hint: 'Blue not yellow area'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Corona discharge uses bombardment of ________ and ions.',
+    type: 'fill',
+    answer: ['electrons'],
+    hint: 'Electrical surface treatment'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Plasma treatment places substrate in ________ chamber.',
+    type: 'fill',
+    answer: ['vacuum'],
+    hint: 'Inert gas environment'
+  },
+  {
+    topic: 'Adhesives',
+    question: 'Chemical etch uses ________ solution.',
+    type: 'fill',
+    answer: ['acid'],
+    hint: 'Wet dipping process'
+  },
+
+  // Additional Fasteners Questions
+  {
+    topic: 'Joining Processes',
+    question: 'Typically ________ percent of total production time is on fastening.',
+    type: 'fill',
+    answer: ['50'],
+    hint: 'Major cost component'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Penn Engineering and Manufacturing Company developed ________.',
+    type: 'fill',
+    answer: ['pems'],
+    hint: 'Sheet metal insert fasteners'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'The most common mechanical fastener is the ________.',
+    type: 'fill',
+    answer: ['rivet'],
+    hint: 'Pre-dates welding technology'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Rivets were used before ________ technology was invented.',
+    type: 'fill',
+    answer: ['welding'],
+    hint: 'Historical joining method'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Hole edges should be ________ to remove stress raisers.',
+    type: 'fill',
+    answer: ['deburred'],
+    hint: 'Prevents fatigue failure'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'For critical applications holes are slightly ________.',
+    type: 'fill',
+    answer: ['expanded'],
+    hint: 'Induces compressive stresses'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Stapling is used to fasten sheet to ________ backing.',
+    type: 'fill',
+    answer: ['wooden'],
+    hint: 'No pre-drilling needed'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Lock seams can be made impermeable with ________ or solder.',
+    type: 'fill',
+    answer: ['adhesives'],
+    hint: 'Bending sequence sealing'
   }
 ];
