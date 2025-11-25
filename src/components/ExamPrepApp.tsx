@@ -325,7 +325,7 @@ const ExamPrepApp = () => {
                   <XCircle className="text-red-600 flex-shrink-0" size={24} />
                 )}
                 <div className="flex-1">
-                  <span className={`font-bold text-base block mb-2 ${isCorrect ? 'text-green-800' : 'text-red-800'}`}>
+                  <span className={`font-bold text-base block ${!isCorrect ? 'mb-2' : ''} ${isCorrect ? 'text-green-800' : 'text-red-800'}`}>
                     {isCorrect ? 'Correct! 🎉' : 'Not quite right'}
                   </span>
                   {!isCorrect && (

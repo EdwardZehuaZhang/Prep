@@ -883,5 +883,649 @@ export const questions: Question[] = [
     options: ['Polyester resin', 'Epoxy resin', 'Vinyl ester', 'Phenolic resin'],
     answer: 'Epoxy resin',
     hint: 'Used in high-precision composite applications'
+  },
+
+  // Expanded questions - using alternative correct answers from related topics
+  {
+    topic: 'Material Selection',
+    question: 'For permanent joints where disassembly is NOT required, which method would be MOST appropriate?',
+    type: 'multiple-choice',
+    options: ['Mechanical fasteners', 'Snap fits', 'Adhesive bonding', 'Press fits'],
+    answer: 'Adhesive bonding',
+    hint: 'This method can provide hermetic seals and distributes stress uniformly'
+  },
+  {
+    topic: 'Material Selection',
+    question: 'Which welding method is BEST suited for very fast cycle times with customized horns?',
+    type: 'multiple-choice',
+    options: ['Vibration welding', 'Hot plate welding', 'Ultrasonic welding', 'Spin welding'],
+    answer: 'Ultrasonic welding',
+    hint: 'One of the most common methods of assembling thermoplastic parts'
+  },
+  {
+    topic: 'Material Selection',
+    question: 'For joining thermoplastic parts that are circular or cylindrical, which method is ideal?',
+    type: 'multiple-choice',
+    options: ['Vibration welding', 'Ultrasonic welding', 'Electromagnetic welding', 'Spin welding'],
+    answer: 'Spin welding',
+    hint: 'This method involves rotating one part against a fixed part'
+  },
+  {
+    topic: 'Material Selection',
+    question: 'When a hermetic seal is required without repeated disassembly, which method is preferred?',
+    type: 'multiple-choice',
+    options: ['Press fits', 'Mechanical fasteners', 'Solvent bonding', 'Snap fits'],
+    answer: 'Solvent bonding',
+    hint: 'Creates a pure material-to-material bond for amorphous thermoplastics'
+  },
+  {
+    topic: 'Method Selection',
+    question: 'The strongest insert installation method for thermoplastics is:',
+    type: 'multiple-choice',
+    options: ['Press fit insertion', 'Expansion insertion', 'Thermal insertion', 'Ultrasonic insertion'],
+    answer: 'Ultrasonic insertion',
+    hint: 'Press fit and expansion are the weakest methods'
+  },
+  {
+    topic: 'Method Selection',
+    question: 'Which insert installation method involves placing inserts on core pins during molding?',
+    type: 'multiple-choice',
+    options: ['Ultrasonic insertion', 'Thermal insertion', 'Molding-in insertion', 'Press fit insertion'],
+    answer: 'Molding-in insertion',
+    hint: 'Can create high molded-in stresses due to thermal expansion differences'
+  },
+  {
+    topic: 'Method Selection',
+    question: 'For applications where a primer is difficult to apply, which adhesive family is BEST?',
+    type: 'multiple-choice',
+    options: ['Epoxy', 'Cyanoacrylate', 'Acrylic', 'Urethane'],
+    answer: 'Acrylic',
+    hint: 'This adhesive rarely needs primers'
+  },
+  {
+    topic: 'Method Selection',
+    question: 'Which adhesive cures FASTEST with UV light exposure (3-10 seconds)?',
+    type: 'multiple-choice',
+    options: ['Epoxy', 'Anaerobic', 'UV curable adhesive', 'Urethane'],
+    answer: 'UV curable adhesive',
+    hint: 'Uses light energy to initiate polymerization'
+  },
+  {
+    topic: 'Method Selection',
+    question: 'For joining metals that require heat curing at 148°C for one hour, which adhesive is appropriate?',
+    type: 'multiple-choice',
+    options: ['Two-part epoxy', 'One-part epoxy', 'Cyanoacrylate', 'Acrylic'],
+    answer: 'One-part epoxy',
+    hint: 'Two-part epoxies cure at room temperature through chemical reaction'
+  },
+  {
+    topic: 'Material Selection',
+    question: 'Which welding method is BEST when parts cannot be exposed to high contact temperatures?',
+    type: 'multiple-choice',
+    options: ['Hot plate welding', 'Thermal staking', 'Spin welding', 'Ultrasonic staking'],
+    answer: 'Ultrasonic staking',
+    hint: 'The contact tip stays relatively cool and forms a clean head'
+  },
+  {
+    topic: 'Material Selection',
+    question: 'For butt joints in flat thermoplastic parts, which welding method is commonly used?',
+    type: 'multiple-choice',
+    options: ['Spin welding', 'Vibration welding', 'Hot plate welding', 'Electromagnetic welding'],
+    answer: 'Hot plate welding',
+    hint: 'Flat platens heat the surfaces; cycle time is 15-20 seconds'
+  },
+  {
+    topic: 'Method Selection',
+    question: 'Which welding process completes in the FASTEST time (3-10 seconds)?',
+    type: 'multiple-choice',
+    options: ['Hot plate welding (15-20 sec)', 'Vibration welding', 'Electromagnetic welding (3-10 sec)', 'Spin welding'],
+    answer: 'Electromagnetic welding (3-10 sec)',
+    hint: 'Uses ferromagnetic particles in a thermoplastic matrix'
+  },
+  {
+    topic: 'Method Selection',
+    question: 'For parts with internal walls that need welding simultaneously with external walls, which method is BEST?',
+    type: 'multiple-choice',
+    options: ['Spin welding', 'Ultrasonic welding', 'Vibration welding', 'Hot plate welding'],
+    answer: 'Vibration welding',
+    hint: 'This is listed as one of the advantages of vibration welding'
+  },
+  {
+    topic: 'Material Selection',
+    question: 'Which joint design provides the STRONGEST spin weld?',
+    type: 'multiple-choice',
+    options: ['Butt joint', 'Tongue and groove joint', 'Simple overlap', 'Step joint'],
+    answer: 'Tongue and groove joint',
+    hint: 'Butt joints are weak; tongue and groove, scarf, and shear joints are suggested'
+  },
+  {
+    topic: 'Method Selection',
+    question: 'For self-tapping applications in softer, more ductile plastics, which screw type is acceptable?',
+    type: 'multiple-choice',
+    options: ['Thread cutting screws', 'Wood screws', 'Thread forming screws', 'Machine screws'],
+    answer: 'Thread forming screws',
+    hint: 'Can induce high residual stresses but these subside in ductile plastics'
+  },
+  {
+    topic: 'Method Selection',
+    question: 'Which fastener type is best for distributing load and preventing stress concentration?',
+    type: 'multiple-choice',
+    options: ['Flat head screws', 'Countersunk screws', 'Pan head or truss head screws', 'Socket head screws'],
+    answer: 'Pan head or truss head screws',
+    hint: 'Recommended for clamped fastener designs with washers'
+  },
+  {
+    topic: 'Material Selection',
+    question: 'For one-sided access during assembly, which fastener is MOST appropriate?',
+    type: 'multiple-choice',
+    options: ['Solid rivets', 'Bolts and nuts', 'Blind rivets (pop rivets)', 'Through-bolts'],
+    answer: 'Blind rivets (pop rivets)',
+    hint: 'Can be inserted from one side only'
+  },
+  {
+    topic: 'Method Selection',
+    question: 'Which surface preparation method uses a wet acid solution for adhesive bonding?',
+    type: 'multiple-choice',
+    options: ['Flame treatment', 'Corona discharge', 'Chemical etch', 'Plasma treatment'],
+    answer: 'Chemical etch',
+    hint: 'Forms highly oxidized or complex inorganic surface layers'
+  },
+  {
+    topic: 'Method Selection',
+    question: 'Which surface preparation uses vacuum chamber with inert gas for adhesive bonding?',
+    type: 'multiple-choice',
+    options: ['Flame treatment', 'Corona discharge', 'Plasma treatment', 'Abrasion'],
+    answer: 'Plasma treatment',
+    hint: 'High electrical tension causes electron bombardment and surface oxidation'
+  },
+  {
+    topic: 'Method Selection',
+    question: 'For oxidizing surfaces between two electrodes before bonding, which method is used?',
+    type: 'multiple-choice',
+    options: ['Flame treatment', 'Corona discharge', 'Plasma treatment', 'Chemical etch'],
+    answer: 'Corona discharge',
+    hint: 'Bombardment of electrons and ions causes surface oxidation'
+  },
+  {
+    topic: 'Material Selection',
+    question: 'Which adhesive family provides the most versatility in modifying bond strength and electrical conductivity?',
+    type: 'multiple-choice',
+    options: ['Urethane', 'Epoxy', 'Cyanoacrylate', 'Anaerobic'],
+    answer: 'Epoxy',
+    hint: 'Known for versatility and available in one- or two-part formulations'
+  },
+  {
+    topic: 'Method Selection',
+    question: 'For applications requiring moisture resistance with good impact resistance, which adhesive is BEST?',
+    type: 'multiple-choice',
+    options: ['Cyanoacrylate (Fair moisture/Fair impact)', 'Anaerobic (Good/Good)', 'Epoxy (Excellent/Good)', 'Acrylic (Good/Good)'],
+    answer: 'Anaerobic (Good/Good)',
+    hint: 'Check the adhesive families comparison table'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'The expansion insert installation method works by:',
+    type: 'multiple-choice',
+    options: ['Pressing into undersized hole', 'Expanding flanges when screw is driven', 'Ultrasonic vibration', 'Heat melting plastic'],
+    answer: 'Expanding flanges when screw is driven',
+    hint: 'Insert is placed in slightly larger hole than its major diameter'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Self-tapping insert installation is characterized by:',
+    type: 'multiple-choice',
+    options: ['Weakest bond strength', 'Uses ultrasonic energy', 'Threads cut into plastic', 'Requires heat source'],
+    answer: 'Threads cut into plastic',
+    hint: 'Different from press fit and expansion methods'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Thermal insert installation works by:',
+    type: 'multiple-choice',
+    options: ['Ultrasonic vibrations melt plastic', 'Heat source applied to insert melts thin layer', 'Press fit with friction', 'Molding part around insert'],
+    answer: 'Heat source applied to insert melts thin layer',
+    hint: 'A less expensive alternative to ultrasonics'
+  },
+  {
+    topic: 'Material Selection',
+    question: 'For hermetic seals in large flat thermoplastic assemblies, which method is ideal?',
+    type: 'multiple-choice',
+    options: ['Spin welding', 'Snap fits', 'Vibration welding', 'Mechanical fasteners'],
+    answer: 'Vibration welding',
+    hint: 'Standard equipment handles up to 610mm x 305mm parts with hermetic seals'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Which joint configuration should be AVOIDED in adhesive bonding?',
+    type: 'multiple-choice',
+    options: ['Shear joints', 'Compressive joints', 'Tensile joints', 'Peeling joints'],
+    answer: 'Peeling joints',
+    hint: 'Joints should withstand shear, compressive, and tensile forces, but not this'
+  },
+  {
+    topic: 'Method Selection',
+    question: 'For very fast setting (2-3 seconds) triggered by surface moisture, which adhesive is used?',
+    type: 'multiple-choice',
+    options: ['Epoxy', 'Urethane', 'Cyanoacrylate', 'Anaerobic'],
+    answer: 'Cyanoacrylate',
+    hint: 'Also known as super glue; full cure in 24 hours'
+  },
+  {
+    topic: 'Method Selection',
+    question: 'Which adhesive has the SHORTEST full cure time (30 minutes or less) at room temperature?',
+    type: 'multiple-choice',
+    options: ['Cyanoacrylate (24 hours)', 'Epoxy (varies)', 'Acrylic (30 min or less)', 'Urethane (varies)'],
+    answer: 'Acrylic (30 min or less)',
+    hint: 'Setting time is 60-90 seconds, full cure within 30 minutes'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'For creating a pure material-to-material bond in amorphous thermoplastics, which method is used?',
+    type: 'multiple-choice',
+    options: ['Adhesive bonding', 'Mechanical fastening', 'Solvent bonding', 'Thermal welding'],
+    answer: 'Solvent bonding',
+    hint: 'Solvent dissolves surfaces and allows material to flow together'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Which welding method uses reciprocating motion to push contaminants out of the weld area?',
+    type: 'multiple-choice',
+    options: ['Ultrasonic welding', 'Spin welding', 'Vibration welding', 'Hot plate welding'],
+    answer: 'Vibration welding',
+    hint: 'Can handle mold releases, coatings, and even paint'
+  },
+
+  // Additional short answer questions
+  {
+    topic: 'Joining Processes',
+    question: 'What is the main advantage of ultrasonic welding over heat staking?',
+    type: 'short',
+    answer: 'contact tip stays cool',
+    acceptableAnswers: ['tip stays cool', 'cool tip', 'clean head', 'minimal sticking', 'no stringing'],
+    hint: 'Think about temperature of the contact surface'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why are aluminum rivets preferred over steel for plastic assemblies?',
+    type: 'short',
+    answer: 'deforms more readily',
+    acceptableAnswers: ['more readily deforms', 'deforms easier', 'more ductile', 'easier to deform'],
+    hint: 'Consider material properties under high stress'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What type of joint design provides the weakest spin weld?',
+    type: 'short',
+    answer: 'butt joint',
+    acceptableAnswers: ['butt', 'butt joint'],
+    hint: 'Tongue and groove, scarf, and shear are stronger'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What triggers the curing of anaerobic adhesives?',
+    type: 'short',
+    answer: 'absence of oxygen',
+    acceptableAnswers: ['no oxygen', 'oxygen absence', 'lack of oxygen', 'anaerobic conditions'],
+    hint: 'The name gives you a clue'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What triggers the curing of cyanoacrylate adhesives?',
+    type: 'short',
+    answer: 'surface moisture',
+    acceptableAnswers: ['moisture', 'humidity', 'water', 'surface water'],
+    hint: 'Even humidity in the air can trigger it'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is the typical cost of an ultrasonic welding unit?',
+    type: 'short',
+    answer: '$20,000',
+    acceptableAnswers: ['20000', '20,000', 'twenty thousand', '$20000'],
+    hint: 'Plus additional expense for horn and fixturing'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'How long does the electromagnetic welding process typically take?',
+    type: 'short',
+    answer: '3 to 10 seconds',
+    acceptableAnswers: ['3-10 seconds', '3 to 10 sec', '3-10 sec', 'three to ten seconds'],
+    hint: 'Very fast and efficient process'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What matrix material is used in electromagnetic welding gaskets?',
+    type: 'short',
+    answer: 'thermoplastic',
+    acceptableAnswers: ['thermoplastic', 'plastic', 'same as parts being joined'],
+    hint: 'Contains ferromagnetic particles in this material'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What percentage of production time is typically spent on mechanical fastening?',
+    type: 'short',
+    answer: 'more than 50%',
+    acceptableAnswers: ['over 50%', '50%+', 'majority', 'more than half'],
+    hint: 'It\'s the majority of manufacturing time'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What percentage of total in-place cost do mechanical fasteners represent?',
+    type: 'short',
+    answer: 'less than 5%',
+    acceptableAnswers: ['under 5%', 'below 5%', '5% or less', 'less than five percent'],
+    hint: 'The parts are cheap, but assembly is expensive'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is the maximum temperature limit for epoxy adhesives?',
+    type: 'short',
+    answer: 'over 200°C',
+    acceptableAnswers: ['200+', '200 degrees', 'above 200', '200°C+'],
+    hint: 'Highest temperature resistance among common adhesive families'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is the maximum temperature limit for cyanoacrylate adhesives?',
+    type: 'short',
+    answer: '80°C',
+    acceptableAnswers: ['80', '80 degrees', 'eighty degrees celsius'],
+    hint: 'Lowest temperature resistance among common adhesive families'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is the main advantage of acrylic adhesives over other types?',
+    type: 'short',
+    answer: 'rarely needs primers',
+    acceptableAnswers: ['no primers needed', 'primer not needed', 'no primer', 'does not need primer'],
+    hint: 'Simplifies surface preparation'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is the primary use case for urethane adhesives?',
+    type: 'short',
+    answer: 'high strength and flexibility',
+    acceptableAnswers: ['strength and flexibility', 'strong and flexible', 'flexibility with strength'],
+    hint: 'Combines two important mechanical properties'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What type of seal can properly designed vibration weld joints provide?',
+    type: 'short',
+    answer: 'hermetic seal',
+    acceptableAnswers: ['hermetic', 'airtight', 'watertight', 'hermetic seals'],
+    hint: 'A completely sealed joint'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What type of seal do press fits NOT provide?',
+    type: 'short',
+    answer: 'hermetic seal',
+    acceptableAnswers: ['hermetic', 'hermetic seal', 'airtight seal'],
+    hint: 'No physical bond at the interface'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is the setting time for cyanoacrylate adhesives?',
+    type: 'short',
+    answer: '2 or 3 seconds',
+    acceptableAnswers: ['2-3 seconds', '2 to 3 seconds', 'two to three seconds', '2-3 sec'],
+    hint: 'One of the fastest setting adhesives'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is the full cure time for cyanoacrylate adhesives?',
+    type: 'short',
+    answer: '24 hours',
+    acceptableAnswers: ['24 hrs', 'one day', '1 day', 'twenty-four hours'],
+    hint: 'Much longer than setting time'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is the setting time for acrylic adhesives?',
+    type: 'short',
+    answer: '60 to 90 seconds',
+    acceptableAnswers: ['60-90 seconds', '60-90 sec', 'one to one and a half minutes'],
+    hint: 'Around 1 to 1.5 minutes'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is the full cure time for acrylic adhesives?',
+    type: 'short',
+    answer: '30 minutes or less',
+    acceptableAnswers: ['30 min or less', 'under 30 minutes', 'less than 30 min', 'half hour'],
+    hint: 'Very rapid at room temperature'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is the typical cure time for UV curable adhesives?',
+    type: 'short',
+    answer: '3 to 10 seconds',
+    acceptableAnswers: ['3-10 seconds', '3-10 sec', 'three to ten seconds'],
+    hint: 'Uses light energy for polymerization'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is the main disadvantage of molding-in inserts?',
+    type: 'short',
+    answer: 'high molded-in stress',
+    acceptableAnswers: ['high stress', 'molded in stress', 'thermal expansion mismatch', 'increased cycle time'],
+    hint: 'Due to different coefficients of thermal expansion'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What are the two weakest insert installation methods?',
+    type: 'short',
+    answer: 'press fit and expansion',
+    acceptableAnswers: ['press and expansion', 'press fit expansion', 'expansion and press fit'],
+    hint: 'These are the fastest and easiest but least strong'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What alternative name is given to blind rivets?',
+    type: 'short',
+    answer: 'pop rivets',
+    acceptableAnswers: ['pop', 'pop rivet'],
+    hint: 'Named after the sound they make when installed'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Can vibration welding handle parts with complex or irregular surfaces?',
+    type: 'short',
+    answer: 'no',
+    acceptableAnswers: ['no', 'cannot', 'no it cannot', 'not possible'],
+    hint: 'Mating surfaces must be parallel'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Can vibration welding weld internal walls simultaneously with external walls?',
+    type: 'short',
+    answer: 'yes',
+    acceptableAnswers: ['yes', 'yes it can', 'can', 'possible'],
+    hint: 'This is one of the advantages of vibration welding'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is the frequency range for vibration welding?',
+    type: 'short',
+    answer: '100 to 250 Hz',
+    acceptableAnswers: ['100-250 Hz', '100-250', 'one hundred to two hundred fifty'],
+    hint: 'Low frequency compared to ultrasonic'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is the frequency range for ultrasonic welding?',
+    type: 'short',
+    answer: '10-75 kHz',
+    acceptableAnswers: ['10-75 khz', '10 to 75 khz', 'ten to seventy-five kilohertz'],
+    hint: 'Much higher than vibration welding'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What joint designs are suggested for spin welding to minimize linear speed differential?',
+    type: 'short',
+    answer: 'tongue and groove, scarf, shear',
+    acceptableAnswers: ['tongue groove scarf shear', 'not butt joint', 'tongue and groove scarf shear'],
+    hint: 'Butt joints are weak for this process'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is the typical cycle time for hot plate welding?',
+    type: 'short',
+    answer: '15 to 20 seconds',
+    acceptableAnswers: ['15-20 seconds', '15-20 sec', 'fifteen to twenty seconds'],
+    hint: 'Faster than you might expect'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What are the two types of self-tapping screws?',
+    type: 'short',
+    answer: 'thread forming and thread cutting',
+    acceptableAnswers: ['TF and TC', 'thread forming thread cutting', 'forming and cutting'],
+    hint: 'One forms threads, the other cuts them'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Why are thread cutting screws NOT suggested for repeated assembly and disassembly?',
+    type: 'short',
+    answer: 'may form second set of threads',
+    acceptableAnswers: ['second threads', 'creates new threads', 'double threading', 'forms new threads'],
+    hint: 'Reinsertion can cause problems'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What type of stress do thread forming screws induce in plastics?',
+    type: 'short',
+    answer: 'high residual stresses',
+    acceptableAnswers: ['residual stress', 'high stress', 'residual stresses'],
+    hint: 'Acceptable in ductile plastics due to stress relaxation'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What happens to the surface when solvent bonding is used?',
+    type: 'short',
+    answer: 'solvent dissolves surface',
+    acceptableAnswers: ['surface dissolves', 'surfaces dissolve', 'dissolved', 'melted'],
+    hint: 'Allows material to flow together'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What type of bond is left after solvent evaporates in solvent bonding?',
+    type: 'short',
+    answer: 'material-to-material bond',
+    acceptableAnswers: ['pure material bond', 'material bond', 'pure bond'],
+    hint: 'No adhesive remains, just the base material'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'For what type of thermoplastics is solvent bonding commonly used?',
+    type: 'short',
+    answer: 'amorphous',
+    acceptableAnswers: ['amorphous thermoplastics', 'amorphous resins'],
+    hint: 'Not semi-crystalline materials'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What are the two main types of rivets based on structure?',
+    type: 'short',
+    answer: 'solid and hollow',
+    acceptableAnswers: ['solid hollow', 'hollow and solid'],
+    hint: 'Based on whether they have an internal cavity'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What surface preparation uses the oxidizing area of a flame?',
+    type: 'short',
+    answer: 'flame treatment',
+    acceptableAnswers: ['flame', 'flame treating'],
+    hint: 'Uses the blue part of the flame, not yellow'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is the main design consideration for adhesive joints to avoid failure?',
+    type: 'short',
+    answer: 'avoid peeling forces',
+    acceptableAnswers: ['no peeling', 'prevent peeling', 'avoid peeling', 'no peel forces'],
+    hint: 'Joints should withstand shear, compression, and tension instead'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What advantage does adhesive bonding provide for thin or fragile parts?',
+    type: 'short',
+    answer: 'can join without damage',
+    acceptableAnswers: ['joins thin parts', 'no damage', 'gentle joining', 'safe for fragile parts'],
+    hint: 'Unlike mechanical fasteners that require holes'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Can adhesive bonding join dissimilar materials with different thermal expansion?',
+    type: 'short',
+    answer: 'yes',
+    acceptableAnswers: ['yes', 'yes it can', 'can', 'possible'],
+    hint: 'This is one of the nine advantages of adhesives'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What curing mechanism do epoxies use?',
+    type: 'short',
+    answer: 'chemical reaction',
+    acceptableAnswers: ['chemical', 'chemical reaction', 'reaction'],
+    hint: 'Not solvent evaporation'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What temperature is required for one-part epoxy curing?',
+    type: 'short',
+    answer: 'around 148°C',
+    acceptableAnswers: ['148', '148°C', '148 degrees', '300°F'],
+    hint: 'Usually for one hour or more'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'How do two-part epoxies cure?',
+    type: 'short',
+    answer: 'room temperature chemical reaction',
+    acceptableAnswers: ['room temp', 'at room temperature', 'chemical reaction', 'no heat needed'],
+    hint: 'Resin and hardener must be mixed'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What is the maximum part size for standard vibration welding equipment?',
+    type: 'short',
+    answer: '610 mm x 305 mm',
+    acceptableAnswers: ['610x305', '610 by 305', '610mm x 305mm'],
+    hint: 'Relatively large parts can be welded'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What advantage does snap fit assembly have over fasteners regarding part count?',
+    type: 'short',
+    answer: 'eliminates fasteners',
+    acceptableAnswers: ['no fasteners', 'eliminates fasteners', 'no additional parts', 'zero fasteners'],
+    hint: 'Uses inherent flexibility of plastic'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'Can snap fits be designed for multiple insertion and removal?',
+    type: 'short',
+    answer: 'yes',
+    acceptableAnswers: ['yes', 'yes they can', 'can', 'possible'],
+    hint: 'Or they can be designed for permanent assembly'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What cure time range does anaerobic adhesive have for full cure?',
+    type: 'short',
+    answer: '2-24 hours',
+    acceptableAnswers: ['2 to 24 hours', '2-24 hrs', 'two to twenty-four hours'],
+    hint: 'Set time can be as short as 15 seconds'
+  },
+  {
+    topic: 'Joining Processes',
+    question: 'What advantage does ultrasonic staking have over heat staking?',
+    type: 'short',
+    answer: 'tip stays cool, clean head',
+    acceptableAnswers: ['cool tip', 'stays cool', 'minimal sticking', 'no stringing'],
+    hint: 'Results in better quality and less mess'
   }
 ];
