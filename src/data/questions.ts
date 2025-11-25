@@ -3652,5 +3652,772 @@ export const questions: Question[] = [
     answer: 'diamond',
     acceptableAnswers: ['diamond', 'industrial diamond'],
     hint: 'Hardest natural substance'
+  },
+
+  // Additional Casting Questions from Course Content
+  {
+    topic: 'Casting',
+    question: 'Cast iron dates back to at least the ________ century.',
+    type: 'fill',
+    answer: ['14th', '14'],
+    hint: 'Medieval period engineering material'
+  },
+  {
+    topic: 'Casting',
+    question: 'Wrought iron contains less than ________ percent carbon.',
+    type: 'fill',
+    answer: ['0.08'],
+    hint: 'Very low carbon content compared to cast iron'
+  },
+  {
+    topic: 'Casting',
+    question: 'Cast iron has carbon content from ___ to ___ percent.',
+    type: 'fill',
+    answer: ['2.1', '4'],
+    hint: 'Much higher than steel'
+  },
+  {
+    topic: 'Casting',
+    question: 'What is the purpose of a riser in sand casting?',
+    type: 'short',
+    answer: 'feed molten metal and prevent shrinkage voids',
+    acceptableAnswers: ['prevent voids', 'compensate shrinkage', 'feed metal during solidification'],
+    hint: 'Extra void containing excess material'
+  },
+  {
+    topic: 'Casting',
+    question: 'The upper half of a two-part mold is called the ________.',
+    type: 'fill',
+    answer: ['cope'],
+    hint: 'Opposite of drag'
+  },
+  {
+    topic: 'Casting',
+    question: 'The lower half of a two-part mold is called the ________.',
+    type: 'fill',
+    answer: ['drag'],
+    hint: 'Opposite of cope'
+  },
+  {
+    topic: 'Casting',
+    question: 'What minimum draft angle is required for pattern removal?',
+    type: 'short',
+    answer: '1 degree',
+    acceptableAnswers: ['1°', 'one degree', 'minimum 1'],
+    hint: 'Small angular offset from vertical'
+  },
+  {
+    topic: 'Casting',
+    question: 'Gray iron is outstanding for ________-to-________ wear characteristics.',
+    type: 'fill',
+    answer: ['metal', 'metal'],
+    hint: 'Self-lubricating property'
+  },
+  {
+    topic: 'Casting',
+    question: 'Ductile iron is also called ________ iron.',
+    type: 'fill',
+    answer: ['nodular'],
+    hint: 'Named for graphite structure'
+  },
+  {
+    topic: 'Casting',
+    question: 'What type of iron is best for production quantity parts?',
+    type: 'short',
+    answer: 'malleable iron',
+    acceptableAnswers: ['malleable', 'malleable cast iron'],
+    hint: 'Best machinability and stability combination'
+  },
+  {
+    topic: 'Casting',
+    question: 'White iron is used for tough ________ problems.',
+    type: 'fill',
+    answer: ['wear', 'abrasion'],
+    hint: 'Extreme hardness application'
+  },
+  {
+    topic: 'Casting',
+    question: 'Dendrites grow in a ________-like form during solidification.',
+    type: 'fill',
+    answer: ['tree'],
+    hint: 'Branching crystal structure'
+  },
+  {
+    topic: 'Casting',
+    question: 'What causes solidification porosity?',
+    type: 'short',
+    answer: 'gas bubbles and shrinkage',
+    acceptableAnswers: ['trapped gas', 'shrinkage voids', 'gas entrapment'],
+    hint: 'Two main sources of defects'
+  },
+  {
+    topic: 'Casting',
+    question: 'Investment casting is also called ________ ________ casting.',
+    type: 'fill',
+    answer: ['lost', 'wax'],
+    hint: 'Ancient precision process'
+  },
+  {
+    topic: 'Casting',
+    question: 'What percentage of plaster mold is gypsum?',
+    type: 'short',
+    answer: '70-80 percent',
+    acceptableAnswers: ['70-80', '70 to 80', 'seventy to eighty'],
+    hint: 'Major component in investment molds'
+  },
+  {
+    topic: 'Casting',
+    question: 'Permanent molds are often made of ________ ________ iron.',
+    type: 'fill',
+    answer: ['gray', 'cast'],
+    hint: 'Best thermal fatigue resistance'
+  },
+  {
+    topic: 'Casting',
+    question: 'What is the melting point range of gray cast iron?',
+    type: 'short',
+    answer: '1127-1204 celsius',
+    acceptableAnswers: ['1127-1204', '1127 to 1204', 'eleven hundred degrees'],
+    hint: 'Used for permanent molds'
+  },
+  {
+    topic: 'Casting',
+    question: 'Die casting produces parts up to ________ kg weight.',
+    type: 'fill',
+    answer: ['18'],
+    hint: 'Limited to smaller parts'
+  },
+  {
+    topic: 'Casting',
+    question: 'Investment castings seldom exceed ________ kg.',
+    type: 'fill',
+    answer: ['13'],
+    hint: 'Weight limitation of precision process'
+  },
+  {
+    topic: 'Casting',
+    question: 'What material cannot be die cast due to high melting temperature?',
+    type: 'short',
+    answer: 'ferrous metals',
+    acceptableAnswers: ['steel', 'iron', 'ferrous', 'tungsten molybdenum'],
+    hint: 'Would destroy steel cavities'
+  },
+  {
+    topic: 'Casting',
+    question: 'Die casting cycle times may be as short as ________ seconds.',
+    type: 'fill',
+    answer: ['10'],
+    hint: 'Fastest casting process'
+  },
+  {
+    topic: 'Casting',
+    question: 'Sand castings may take ________ month to get.',
+    type: 'fill',
+    answer: ['1', 'one'],
+    hint: 'Shortest lead time process'
+  },
+  {
+    topic: 'Casting',
+    question: 'Die castings may require ________ months lead time.',
+    type: 'fill',
+    answer: ['6', 'six'],
+    hint: 'Longest tooling development'
+  },
+
+  // Additional Polymers Processing Questions
+  {
+    topic: 'Polymers',
+    question: 'What is the most limiting factor in plastic applications?',
+    type: 'short',
+    answer: 'fabricability',
+    acceptableAnswers: ['processing', 'manufacturing capability', 'moldability'],
+    hint: 'Some plastics very difficult to form'
+  },
+  {
+    topic: 'Polymers',
+    question: 'PTFE parts can only be made by ________.',
+    type: 'fill',
+    answer: ['sintering'],
+    hint: 'Teflon fabrication limitation'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What are the six major steps in injection molding?',
+    type: 'short',
+    answer: 'clamping injection dwelling cooling opening ejection',
+    acceptableAnswers: ['clamp inject dwell cool open eject', 'clamping to ejection'],
+    hint: 'Complete cycle sequence'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Bi-injection is done to achieve ________ effect or alter use properties.',
+    type: 'fill',
+    answer: ['cosmetic'],
+    hint: 'Two materials for appearance'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Co-injection creates a ________ effect.',
+    type: 'fill',
+    answer: ['sandwich'],
+    hint: 'Skin-core structure'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What makes structural foam molding different?',
+    type: 'short',
+    answer: 'cellular core dense skin',
+    acceptableAnswers: ['foam core', 'lightweight structure', 'porous interior'],
+    hint: 'Expands during molding'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Extrusion blow molding uses ________ to expand parison.',
+    type: 'fill',
+    answer: ['compressed air'],
+    hint: 'Inflates hollow shape'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What extends shelf life of PET bottles?',
+    type: 'short',
+    answer: 'bairocade coatings',
+    acceptableAnswers: ['barrier coatings', 'protective coating'],
+    hint: 'Special surface treatment'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Film extrusion uses a ________ die.',
+    type: 'fill',
+    answer: ['slit'],
+    hint: 'Thin sheet formation'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Rotational molding uses ________ force to push material.',
+    type: 'fill',
+    answer: ['centrifugal'],
+    hint: 'Rotation in heated oven'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What items are commonly rotational molded?',
+    type: 'short',
+    answer: 'tanks floats boat hulls',
+    acceptableAnswers: ['fuel tanks', 'water tanks', 'large hollow containers'],
+    hint: 'Large hollow products'
+  },
+  {
+    topic: 'Polymers',
+    question: 'Thermoforming heats plastic to ________ point.',
+    type: 'fill',
+    answer: ['softening'],
+    hint: 'Below melting temperature'
+  },
+  {
+    topic: 'Polymers',
+    question: 'What draws sheet over mold in vacuum forming?',
+    type: 'short',
+    answer: 'vacuum negative pressure',
+    acceptableAnswers: ['vacuum', 'suction', 'negative force'],
+    hint: 'Air pressure differential'
+  },
+  {
+    topic: 'Polymers',
+    question: 'An injection molding machine can cost in excess of $________.',
+    type: 'fill',
+    answer: ['100,000', '100000'],
+    hint: 'Very expensive equipment'
+  },
+
+  // Additional Thermoset Questions
+  {
+    topic: 'Thermosets',
+    question: 'Phenolic was discovered in ________ by Leo Baekeland.',
+    type: 'fill',
+    answer: ['1907'],
+    hint: 'First synthetic plastic'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'True Bakelite is limited to black and dark shades of ________, ________, ________, and blue.',
+    type: 'fill',
+    answer: ['brown', 'green', 'red'],
+    hint: 'Phenolic color limitations'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'The GPO Telephone No.162 was the first all-________ telephone made in 1935.',
+    type: 'fill',
+    answer: ['plastic'],
+    hint: 'Phenolic formaldehyde material'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'Urea Formaldehyde was developed in ________.',
+    type: 'fill',
+    answer: ['1925'],
+    hint: 'British Cyanides improvement'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'What advantage does Urea Formaldehyde have over Phenolic?',
+    type: 'short',
+    answer: 'bright colors decorative patterns',
+    acceptableAnswers: ['colors', 'can be colored', 'decorative capability'],
+    hint: 'Not limited to dark shades'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'Once thermosets are formed they cannot be ________.',
+    type: 'fill',
+    answer: ['remelted'],
+    hint: 'Irreversible cross-linking'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'Why are thermoset screws expensive?',
+    type: 'short',
+    answer: 'can cost 50000 dollars',
+    acceptableAnswers: ['very expensive', 'high cost', 'tens of thousands'],
+    hint: 'Become part of barrel if not removed'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'Compression molding cycle times are ________ to ________ times longer than injection molding.',
+    type: 'fill',
+    answer: ['2', '3'],
+    hint: 'Time-dependent curing reaction'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'What thermoset process is fastest?',
+    type: 'short',
+    answer: 'injection molding',
+    acceptableAnswers: ['thermoset injection', 'injection'],
+    hint: '2-3 times faster than compression'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'Foam molding increases part ________ without more material.',
+    type: 'fill',
+    answer: ['stiffness'],
+    hint: 'High porosity core advantage'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'RIM cycle times are usually less than ________ minutes.',
+    type: 'fill',
+    answer: ['2', 'two'],
+    hint: 'Reaction injection molding speed'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'What are common RIM parts in automobiles?',
+    type: 'short',
+    answer: 'bezels dashboards fenders',
+    acceptableAnswers: ['auto body parts', 'large panels', 'bumpers'],
+    hint: 'Polyurethane foam applications'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'Transfer molding is a modification of ________ molding.',
+    type: 'fill',
+    answer: ['compression'],
+    hint: 'Material transferred under pressure'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'RTM stands for ________ ________ ________.',
+    type: 'fill',
+    answer: ['resin', 'transfer', 'molding'],
+    hint: 'Resin pumped into closed mold'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'Sintering is used on ________ and ________.',
+    type: 'fill',
+    answer: ['fluorocarbons', 'polyimides'],
+    hint: 'High-temperature plastics'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'Vulcanization is an ________ process.',
+    type: 'fill',
+    answer: ['irreversible'],
+    hint: 'Permanent cross-linking'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'Who first used sulfur to vulcanize rubber?',
+    type: 'short',
+    answer: 'charles goodyear',
+    acceptableAnswers: ['goodyear', 'c goodyear'],
+    hint: 'Famous American inventor 1800-1860'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'Thermosets have better ________ resistance than thermoplastics.',
+    type: 'fill',
+    answer: ['heat'],
+    hint: 'Do not melt when overheated'
+  },
+  {
+    topic: 'Thermosets',
+    question: 'What happens when thermosets are overheated?',
+    type: 'short',
+    answer: 'they char',
+    acceptableAnswers: ['char', 'burn', 'carbonize'],
+    hint: 'Still may be usable'
+  },
+
+  // Additional Composites Questions
+  {
+    topic: 'Composites',
+    question: 'Wood is a natural ________ with cellulose fibers.',
+    type: 'fill',
+    answer: ['composite'],
+    hint: 'Fiber reinforcement in nature'
+  },
+  {
+    topic: 'Composites',
+    question: 'Discontinuous reinforcements are ________ effective at increasing creep strength.',
+    type: 'fill',
+    answer: ['not', 'less'],
+    hint: 'Compared to continuous fibers'
+  },
+  {
+    topic: 'Composites',
+    question: 'What advantage do polymer composites have over metals for aircraft?',
+    type: 'short',
+    answer: 'lower weight corrosion resistance',
+    acceptableAnswers: ['lightweight', 'no rust', 'weight reduction'],
+    hint: 'Replacing aluminum and steel'
+  },
+  {
+    topic: 'Composites',
+    question: 'Phenolics have one of the highest ________ of elasticity.',
+    type: 'fill',
+    answer: ['moduli', 'modulus'],
+    hint: 'Very stiff material'
+  },
+  {
+    topic: 'Composites',
+    question: 'What is a familiar trade name for decorative laminate?',
+    type: 'short',
+    answer: 'formica',
+    acceptableAnswers: ['formica'],
+    hint: 'Kitchen counter material'
+  },
+  {
+    topic: 'Composites',
+    question: 'Epoxy shrink rate can be as low as ________ percent.',
+    type: 'fill',
+    answer: ['0.01'],
+    hint: 'Minimal size change on curing'
+  },
+  {
+    topic: 'Composites',
+    question: 'What is the most important matrix for high-performance composites?',
+    type: 'short',
+    answer: 'epoxy',
+    acceptableAnswers: ['epoxy resin', 'epoxies'],
+    hint: 'High strength low viscosity'
+  },
+  {
+    topic: 'Composites',
+    question: 'Unsaturated polyester is used for ________ boats.',
+    type: 'fill',
+    answer: ['fiberglass'],
+    hint: 'Most common general-purpose composite'
+  },
+  {
+    topic: 'Composites',
+    question: 'The Corvette automobile is made from ________ composite.',
+    type: 'fill',
+    answer: ['fiberglass', 'polyester'],
+    hint: 'Unsaturated polyester application'
+  },
+  {
+    topic: 'Composites',
+    question: 'What are the two types of glass reinforcement?',
+    type: 'short',
+    answer: 'e glass s glass',
+    acceptableAnswers: ['e and s', 'electrical and strength'],
+    hint: 'Named for applications'
+  },
+  {
+    topic: 'Composites',
+    question: 'E glass is named for ________ applications.',
+    type: 'fill',
+    answer: ['electrical'],
+    hint: 'Borosilicate composition'
+  },
+  {
+    topic: 'Composites',
+    question: 'Kevlar has tensile strength of about ________ MPa.',
+    type: 'fill',
+    answer: ['3102'],
+    hint: 'Much higher than steel 420 MPa'
+  },
+  {
+    topic: 'Composites',
+    question: 'A 5m Kevlar canoe weighs only ________ kg.',
+    type: 'fill',
+    answer: ['7'],
+    hint: 'Extremely lightweight'
+  },
+  {
+    topic: 'Composites',
+    question: 'PAN carbon fiber modulus can exceed ________ million psi.',
+    type: 'fill',
+    answer: ['100'],
+    hint: 'Extremely stiff material'
+  },
+  {
+    topic: 'Composites',
+    question: 'Glass fiber diameters range from ________ to ________ mm.',
+    type: 'fill',
+    answer: ['0.005', '0.025'],
+    hint: 'Very fine filaments'
+  },
+  {
+    topic: 'Composites',
+    question: 'What is glass roving?',
+    type: 'short',
+    answer: 'bundles of strands continuous',
+    acceptableAnswers: ['continuous strand bundle', 'large strand', 'woven bundle'],
+    hint: 'For heavy composites'
+  },
+  {
+    topic: 'Composites',
+    question: 'Contact molding maximum thickness is usually ________ mm.',
+    type: 'fill',
+    answer: ['9'],
+    hint: 'Hand lay-up limitation'
+  },
+  {
+    topic: 'Composites',
+    question: 'Filament winding is used for ________ and ________.',
+    type: 'fill',
+    answer: ['pipes', 'tanks'],
+    hint: 'Continuous strand applications'
+  },
+  {
+    topic: 'Composites',
+    question: 'SMC stands for ________ ________ ________.',
+    type: 'fill',
+    answer: ['sheet', 'molding', 'compound'],
+    hint: 'Catalyzed resin with glass'
+  },
+  {
+    topic: 'Composites',
+    question: 'BMC resembles a glob of ________.',
+    type: 'fill',
+    answer: ['dough'],
+    hint: 'Bulk molding compound consistency'
+  },
+  {
+    topic: 'Composites',
+    question: 'Pultrusion makes shapes by ________ through a die.',
+    type: 'fill',
+    answer: ['pulling'],
+    hint: 'Continuous extrusion process'
+  },
+  {
+    topic: 'Composites',
+    question: 'What does chopped fiber spraying replace?',
+    type: 'short',
+    answer: 'hand lay-up',
+    acceptableAnswers: ['hand layup', 'manual laying'],
+    hint: 'Much faster process'
+  },
+
+  // Additional Materials Properties Questions
+  {
+    topic: 'Materials Properties',
+    question: 'Copper is used for electrical wires because of excellent ________ conductivity.',
+    type: 'fill',
+    answer: ['electrical'],
+    hint: 'Example from course introduction'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Polyethylene wire coating provides electrical ________ and flexibility.',
+    type: 'fill',
+    answer: ['insulation'],
+    hint: 'Opposite of conduction'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What are the six major property groups?',
+    type: 'short',
+    answer: 'physical mechanical technological chemical economic aesthetic',
+    acceptableAnswers: ['physical mechanical tech chemical economic aesthetic'],
+    hint: 'Complete property categories'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Density equals ________ divided by volume.',
+    type: 'fill',
+    answer: ['mass'],
+    hint: 'ρ = m/V formula'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Copper thermal conductivity is ________ W/mK.',
+    type: 'fill',
+    answer: ['401'],
+    hint: 'High heat conductor value'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Silver relative electrical conductivity is ________.',
+    type: 'fill',
+    answer: ['106'],
+    hint: 'Highest conductor standard'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Annealed copper relative conductivity is ________.',
+    type: 'fill',
+    answer: ['100'],
+    hint: 'Reference standard value'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Thermal expansion coefficient is inversely proportional to ________ ________.',
+    type: 'fill',
+    answer: ['melting', 'point'],
+    hint: 'Higher melt = less expansion'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Unit stress is symbolized as ________ sigma.',
+    type: 'fill',
+    answer: ['σ'],
+    hint: 'Greek letter for stress'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Strain is symbolized as ________ epsilon.',
+    type: 'fill',
+    answer: ['ε'],
+    hint: 'Greek letter for deformation'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Rubber is an ________ material.',
+    type: 'fill',
+    answer: ['elastic'],
+    hint: 'Returns to original shape'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What happens to bubble gum when stretched?',
+    type: 'short',
+    answer: 'plastic deformation necking',
+    acceptableAnswers: ['necks', 'thins out', 'permanent deformation'],
+    hint: 'Example of plastic behavior'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Point A on stress-strain curve is called ________ limit.',
+    type: 'fill',
+    answer: ['elastic', 'proportional'],
+    hint: 'Linear region ends here'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Point B on stress-strain curve is called ________ stress.',
+    type: 'fill',
+    answer: ['yield'],
+    hint: 'Permanent deformation begins'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Point D on stress-strain curve is called ________ strength.',
+    type: 'fill',
+    answer: ['tensile', 'ultimate'],
+    hint: 'Maximum stress before fracture'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Modulus of elasticity E measures material ________.',
+    type: 'fill',
+    answer: ['stiffness'],
+    hint: 'Slope of stress-strain curve'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Ductility is measured by ________ deformation.',
+    type: 'fill',
+    answer: ['tensile'],
+    hint: 'Stretching without fracture'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Malleability is measured by ________ deformation.',
+    type: 'fill',
+    answer: ['compressive'],
+    hint: 'Flattening without fracture'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Lead is ________ but not ductile.',
+    type: 'fill',
+    answer: ['malleable'],
+    hint: 'Exception to general rule'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What are the three common hardness scales?',
+    type: 'short',
+    answer: 'brinell vickers rockwell',
+    acceptableAnswers: ['brinell vickers rockwell'],
+    hint: 'Indentation test methods'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Brittleness is associated with extreme ________.',
+    type: 'fill',
+    answer: ['hardness'],
+    hint: 'Opposite of ductility'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Toughness depends on ________ and ________.',
+    type: 'fill',
+    answer: ['ductility', 'strength'],
+    hint: 'Combination properties'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'What two impact tests are commonly used?',
+    type: 'short',
+    answer: 'charpy izod',
+    acceptableAnswers: ['charpy and izod'],
+    hint: 'Pendulum test methods'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Fatigue failure occurs from ________ or cyclic stressing.',
+    type: 'fill',
+    answer: ['repeated'],
+    hint: 'Vibration causes fracture'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Creep is plastic deformation from ________ stressing.',
+    type: 'fill',
+    answer: ['prolonged'],
+    hint: 'Time-dependent deformation'
+  },
+  {
+    topic: 'Materials Properties',
+    question: 'Creep is common at high ________.',
+    type: 'fill',
+    answer: ['temperatures'],
+    hint: 'Turbine blade problem'
   }
 ];
