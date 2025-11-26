@@ -1,6 +1,1047 @@
 import { Question } from '../types/Question';
 
 export const questions: Question[] = [
+
+
+  // Week 1 – Natural Materials (Wood, Bamboo, Cork)
+  {
+    topic: 'Week 1 - Natural Materials',
+    question: 'Wood is a highly _____ material, meaning its properties differ in the longitudinal, radial and tangential directions.',
+    type: 'short',
+    answer: 'anisotropic',
+    acceptableAnswers: ['anisotropic'],
+    hint: 'Opposite of isotropic; properties depend on grain direction.'
+  },
+  {
+    topic: 'Week 1 - Natural Materials',
+    question: 'The growth rings in wood are caused by seasonal variations between earlywood and _____ formed during each year.',
+    type: 'fill',
+    answer: 'latewood',
+    acceptableAnswers: ['latewood'],
+    hint: 'It is the denser, darker band formed later in the growing season.'
+  },
+  {
+    topic: 'Week 1 - Natural Materials',
+    question: 'The mechanical properties of wood are generally highest when loaded parallel to the _____.',
+    type: 'short',
+    answer: 'grain',
+    acceptableAnswers: ['grain', 'fibre direction', 'fiber direction'],
+    hint: 'Think about how easy it is to split a log along its length.'
+  },
+  {
+    topic: 'Week 1 - Natural Materials',
+    question: 'The moisture content of wood is usually expressed as a percentage of the oven-dry _____.',
+    type: 'short',
+    answer: 'mass',
+    acceptableAnswers: ['mass', 'weight'],
+    hint: 'It is (water mass ÷ dry mass) × 100%.'
+  },
+  {
+    topic: 'Week 1 - Natural Materials',
+    question: 'Below the fibre saturation point, a decrease in moisture content generally causes wood to _____ and shrink.',
+    type: 'fill',
+    answer: 'stiffen',
+    acceptableAnswers: ['stiffen', 'increase in stiffness'],
+    hint: 'Strength and stiffness increase but dimensional stability can worsen.'
+  },
+  {
+    topic: 'Week 1 - Natural Materials',
+    question: 'Bamboo is often considered a sustainable structural material because of its rapid growth rate and high specific _____.',
+    type: 'short',
+    answer: 'strength',
+    acceptableAnswers: ['strength'],
+    hint: 'This property divided by density is important in lightweight design.'
+  },
+  {
+    topic: 'Week 1 - Natural Materials',
+    question: 'Cork is valued in design applications for its low density, high energy absorption, and excellent _____ properties.',
+    type: 'short',
+    answer: 'insulation',
+    acceptableAnswers: ['insulation', 'thermal insulation', 'acoustic insulation'],
+    hint: 'It is often used to reduce heat transfer or noise.'
+  },
+
+  // Week 2 – Engineering Materials
+  {
+    topic: 'Week 2 - Engineering Materials',
+    question: 'The four main classes of engineering materials are metals, polymers, ceramics and _____.',
+    type: 'short',
+    answer: 'composites',
+    acceptableAnswers: ['composites', 'composite'],
+    hint: 'Think of materials made from two or more distinct constituents.'
+  },
+  {
+    topic: 'Week 2 - Engineering Materials',
+    question: 'A metal is an alloy when two or more _____ are combined together.',
+    type: 'fill',
+    answer: 'metals',
+    acceptableAnswers: ['metals', 'metal'],
+    hint: 'The components of an alloy are usually different pure metallic elements.'
+  },
+  {
+    topic: 'Week 2 - Engineering Materials',
+    question: 'Steel is an alloy of iron and _____.',
+    type: 'short',
+    answer: 'carbon',
+    acceptableAnswers: ['carbon'],
+    hint: 'This element strongly increases hardness and strength in steels.'
+  },
+  {
+    topic: 'Week 2 - Engineering Materials',
+    question: 'Steels generally contain between about 0.06% and _____% carbon by weight.',
+    type: 'fill',
+    answer: '2.0',
+    acceptableAnswers: ['2.0', '2', '2%'],
+    hint: 'Above this percentage, the alloy is normally classified as cast iron.'
+  },
+  {
+    topic: 'Week 2 - Engineering Materials',
+    question: 'Iron–carbon alloys with more than about 2% carbon are called _____.',
+    type: 'short',
+    answer: 'cast irons',
+    acceptableAnswers: ['cast irons', 'cast iron'],
+    hint: 'These alloys are usually too brittle for forging or rolling.'
+  },
+  {
+    topic: 'Week 2 - Engineering Materials',
+    question: 'Aluminum is popular because of its high _____-to-weight ratio.',
+    type: 'fill',
+    answer: 'strength',
+    acceptableAnswers: ['strength'],
+    hint: 'This mechanical property divided by weight is often key in aerospace.'
+  },
+  {
+    topic: 'Week 2 - Engineering Materials',
+    question: 'Brass is an alloy of copper and _____.',
+    type: 'short',
+    answer: 'zinc',
+    acceptableAnswers: ['zinc'],
+    hint: 'This same metal is commonly used to galvanize steel.'
+  },
+  {
+    topic: 'Week 2 - Engineering Materials',
+    question: 'Magnesium is valued as the lightest structural metal and therefore heavily used in the _____ industry.',
+    type: 'fill',
+    answer: 'transportation',
+    acceptableAnswers: ['transportation', 'transport'],
+    hint: 'Think cars, aircraft and other vehicles.'
+  },
+  {
+    topic: 'Week 2 - Engineering Materials',
+    question: 'Zinc is commonly used to coat steel, producing _____ steel.',
+    type: 'fill',
+    answer: 'galvanized',
+    acceptableAnswers: ['galvanized', 'galvanised'],
+    hint: 'This type of steel is protected from corrosion by a zinc layer.'
+  },
+
+  // Week 3 – Properties & Material Selection
+  {
+    topic: 'Week 3 - Properties of Materials & Selection',
+    question: 'In a face-centred cubic (FCC) structure, atoms sit at the cube corners and at the centre of each _____.',
+    type: 'short',
+    answer: 'face',
+    acceptableAnswers: ['face', 'faces'],
+    hint: 'The extra atoms are located in the middle of each square side of the cube.'
+  },
+  {
+    topic: 'Week 3 - Properties of Materials & Selection',
+    question: 'Density is defined as mass divided by _____.',
+    type: 'short',
+    answer: 'volume',
+    acceptableAnswers: ['volume'],
+    hint: 'It is the quantity in the denominator of the familiar m/V expression.'
+  },
+  {
+    topic: 'Week 3 - Properties of Materials & Selection',
+    question: 'The six main groups of properties are physical, mechanical, technological, chemical, economic and _____ properties.',
+    type: 'fill',
+    answer: 'aesthetic',
+    acceptableAnswers: ['aesthetic', 'aesthetics'],
+    hint: 'This group relates to appearance and how the product looks to users.'
+  },
+  {
+    topic: 'Week 3 - Properties of Materials & Selection',
+    question: 'The ability of a material to conduct heat is called thermal _____.',
+    type: 'short',
+    answer: 'conductivity',
+    acceptableAnswers: ['conductivity', 'thermal conductivity'],
+    hint: 'The same word is used for heat flow and electric current flow.'
+  },
+  {
+    topic: 'Week 3 - Properties of Materials & Selection',
+    question: 'The ability of a material to return to its original shape after unloading is called _____.',
+    type: 'short',
+    answer: 'elasticity',
+    acceptableAnswers: ['elasticity'],
+    hint: 'It describes reversible, non-permanent deformation.'
+  },
+  {
+    topic: 'Week 3 - Properties of Materials & Selection',
+    question: 'The stress at which permanent (plastic) deformation starts is called the _____ strength.',
+    type: 'fill',
+    answer: 'yield',
+    acceptableAnswers: ['yield', 'yield strength'],
+    hint: 'On the stress–strain curve this is where elastic behaviour stops.'
+  },
+  {
+    topic: 'Week 3 - Properties of Materials & Selection',
+    question: 'The slope of the linear part of the stress–strain curve is the modulus of _____.',
+    type: 'short',
+    answer: 'elasticity',
+    acceptableAnswers: ['elasticity'],
+    hint: 'This modulus is often denoted by the letter E.'
+  },
+  {
+    topic: 'Week 3 - Properties of Materials & Selection',
+    question: 'Ductility describes the ability to deform plastically in _____ without fracture.',
+    type: 'fill',
+    answer: 'tension',
+    acceptableAnswers: ['tension', 'tensile'],
+    hint: 'It is usually measured in a uniaxial pulling test.'
+  },
+  {
+    topic: 'Week 3 - Properties of Materials & Selection',
+    question: 'Malleability is plastic deformability under _____ loading.',
+    type: 'fill',
+    answer: 'compressive',
+    acceptableAnswers: ['compressive', 'compression'],
+    hint: 'This is the type of loading used in forging and rolling.'
+  },
+  {
+    topic: 'Week 3 - Properties of Materials & Selection',
+    question: 'Brittleness is the opposite of _____.',
+    type: 'short',
+    answer: 'ductility',
+    acceptableAnswers: ['ductility', 'ductile'],
+    hint: 'Highly brittle materials have very low capacity for plastic deformation.'
+  },
+  {
+    topic: 'Week 3 - Properties of Materials & Selection',
+    question: 'Failure under many repeated low-level stresses is called _____ failure.',
+    type: 'fill',
+    answer: 'fatigue',
+    acceptableAnswers: ['fatigue'],
+    hint: 'This type of failure often occurs at stress levels below the yield strength.'
+  },
+  {
+    topic: 'Week 3 - Properties of Materials & Selection',
+    question: 'Time-dependent plastic deformation under constant load at high temperature is called _____.',
+    type: 'short',
+    answer: 'creep',
+    acceptableAnswers: ['creep'],
+    hint: 'This effect is important in turbines and high temperature components.'
+  },
+  {
+    topic: 'Week 3 - Properties of Materials & Selection',
+    question: 'Machinability, castability and weldability are examples of _____ properties.',
+    type: 'fill',
+    answer: 'technological',
+    acceptableAnswers: ['technological'],
+    hint: 'These properties describe how a material responds to manufacturing processes.'
+  },
+
+    // Week 3 – Material Selection (Ashby)
+  {
+    topic: 'Week 3 - Properties of Materials & Selection',
+    question: 'In systematic material selection, we usually start by defining the design _____ such as stiffness, weight or cost.',
+    type: 'short',
+    answer: 'objectives',
+    acceptableAnswers: ['objectives', 'objective'],
+    hint: 'These are what we want to minimise or maximise in the final design.'
+  },
+  {
+    topic: 'Week 3 - Properties of Materials & Selection',
+    question: 'Constraints in material selection specify minimum or maximum acceptable property _____ that must be satisfied.',
+    type: 'fill',
+    answer: 'values',
+    acceptableAnswers: ['values', 'limits'],
+    hint: 'For example, density < 1.5 g/cm³ or yield strength > 200 MPa.'
+  },
+  {
+    topic: 'Week 3 - Properties of Materials & Selection',
+    question: 'Material indices are combinations of properties that help rank materials for a given design _____ and constraint set.',
+    type: 'short',
+    answer: 'objective',
+    acceptableAnswers: ['objective', 'objectives'],
+    hint: 'For a light, stiff beam, an example is E¹ᐟ²/ρ.'
+  },
+  {
+    topic: 'Week 3 - Properties of Materials & Selection',
+    question: 'Ashby charts plot pairs of material properties, such as strength versus _____, on logarithmic scales.',
+    type: 'fill',
+    answer: 'density',
+    acceptableAnswers: ['density'],
+    hint: 'These charts help identify materials with high specific strength or stiffness.'
+  },
+
+  // Week 4 – Metals: Casting Processes
+  {
+    topic: 'Week 4 - Metals: Liquid State Forming',
+    question: 'Liquid state forming of metals is more commonly called _____.',
+    type: 'short',
+    answer: 'casting',
+    acceptableAnswers: ['casting'],
+    hint: 'Molten metal is poured into a mould in this process.'
+  },
+  {
+    topic: 'Week 4 - Metals: Liquid State Forming',
+    question: 'Casting is especially economical for manufacturing parts with _____ shapes.',
+    type: 'fill',
+    answer: 'complex',
+    acceptableAnswers: ['complex'],
+    hint: 'It is well suited for shapes that are difficult to machine.'
+  },
+  {
+    topic: 'Week 4 - Metals: Liquid State Forming',
+    question: 'A common problem in castings caused by trapped gas or shrinkage is called _____.',
+    type: 'short',
+    answer: 'porosity',
+    acceptableAnswers: ['porosity'],
+    hint: 'It shows up as small voids or holes in the solidified metal.'
+  },
+  {
+    topic: 'Week 4 - Metals: Liquid State Forming',
+    question: 'In sand casting, the upper half of the mould is called the _____ and the lower half the drag.',
+    type: 'fill',
+    answer: 'cope',
+    acceptableAnswers: ['cope'],
+    hint: 'The opposite half is called the drag.'
+  },
+  {
+    topic: 'Week 4 - Metals: Liquid State Forming',
+    question: 'The extra reservoir of molten metal that feeds the casting during solidification is called a _____.',
+    type: 'short',
+    answer: 'riser',
+    acceptableAnswers: ['riser', 'feeder'],
+    hint: 'It compensates for shrinkage as the casting solidifies.'
+  },
+  {
+    topic: 'Week 4 - Metals: Liquid State Forming',
+    question: 'The slight taper added to vertical faces of a pattern to aid removal is called _____ angle.',
+    type: 'fill',
+    answer: 'draft',
+    acceptableAnswers: ['draft'],
+    hint: 'This angle prevents the pattern from scraping the sand during withdrawal.'
+  },
+  {
+    topic: 'Week 4 - Metals: Liquid State Forming',
+    question: 'Gray iron should be considered for parts requiring good machinability but not involving _____ loads.',
+    type: 'fill',
+    answer: 'shock',
+    acceptableAnswers: ['shock', 'impact'],
+    hint: 'These sudden loads can cause brittle fracture in gray iron.'
+  },
+  {
+    topic: 'Week 4 - Metals: Liquid State Forming',
+    question: 'Ductile (nodular) irons are preferred for machine frames and gears that may see occasional _____ loads.',
+    type: 'fill',
+    answer: 'shock',
+    acceptableAnswers: ['shock', 'impact'],
+    hint: 'These irons have nodular graphite that improves toughness.'
+  },
+  {
+    topic: 'Week 4 - Metals: Liquid State Forming',
+    question: 'White iron is mainly used for severe _____ resistance.',
+    type: 'fill',
+    answer: 'abrasion',
+    acceptableAnswers: ['abrasion', 'wear'],
+    hint: 'High hardness makes this material useful where surfaces are worn away.'
+  },
+  {
+    topic: 'Week 4 - Metals: Liquid State Forming',
+    question: 'Investment casting is also known as _____ wax casting.',
+    type: 'fill',
+    answer: 'lost',
+    acceptableAnswers: ['lost'],
+    hint: 'The wax pattern is melted out of the ceramic shell in this process.'
+  },
+  {
+    topic: 'Week 4 - Metals: Liquid State Forming',
+    question: 'Investment casting is particularly good for parts with _____ walls and intricate details.',
+    type: 'fill',
+    answer: 'thin',
+    acceptableAnswers: ['thin'],
+    hint: 'This process can achieve very fine sections and accurate features.'
+  },
+  {
+    topic: 'Week 4 - Metals: Liquid State Forming',
+    question: 'Die casting is generally limited to _____ metals such as aluminium and zinc.',
+    type: 'fill',
+    answer: 'nonferrous',
+    acceptableAnswers: ['nonferrous', 'non-ferrous'],
+    hint: 'These metals have relatively low melting temperatures compared to steels.'
+  },
+  {
+    topic: 'Week 4 - Metals: Liquid State Forming',
+    question: 'When comparing casting processes, we must consider tolerance, surface finish, size limits, materials, cost and _____.',
+    type: 'short',
+    answer: 'availability',
+    acceptableAnswers: ['availability'],
+    hint: 'This factor asks whether suitable foundries and processes actually exist.'
+  },
+
+  // Week 5 – Metals: Plastic & Solid-State Forming
+  {
+    topic: 'Week 5 - Metals: Plastic & Solid-State Forming',
+    question: 'Plastic state forming operates on solid metal at elevated temperature but below the _____ temperature.',
+    type: 'fill',
+    answer: 'melting',
+    acceptableAnswers: ['melting'],
+    hint: 'The solid has not yet turned fully into liquid during this forming.'
+  },
+  {
+    topic: 'Week 5 - Metals: Plastic & Solid-State Forming',
+    question: 'A key benefit of forging is that the grain flow follows the _____ of the part, improving strength.',
+    type: 'fill',
+    answer: 'shape',
+    acceptableAnswers: ['shape'],
+    hint: 'Material flow lines tend to align with the final geometry.'
+  },
+  {
+    topic: 'Week 5 - Metals: Plastic & Solid-State Forming',
+    question: 'In upset forging, the diameter increases while the _____ decreases.',
+    type: 'fill',
+    answer: 'length',
+    acceptableAnswers: ['length'],
+    hint: 'The workpiece becomes shorter and thicker.'
+  },
+  {
+    topic: 'Week 5 - Metals: Plastic & Solid-State Forming',
+    question: 'Hot rolling is carried out just below the _____ temperature.',
+    type: 'fill',
+    answer: 'critical',
+    acceptableAnswers: ['critical'],
+    hint: 'This temperature is related to phase transformations in steels.'
+  },
+  {
+    topic: 'Week 5 - Metals: Plastic & Solid-State Forming',
+    question: 'Cold rolling typically results in a smoother, finer surface but increases cost by roughly _____ percent.',
+    type: 'fill',
+    answer: '20',
+    acceptableAnswers: ['20', '20.0'],
+    hint: 'It increases cost by about one fifth compared to hot rolling.'
+  },
+  {
+    topic: 'Week 5 - Metals: Plastic & Solid-State Forming',
+    question: 'In extrusion, a heated billet is forced through a _____ to produce a long profile.',
+    type: 'short',
+    answer: 'die',
+    acceptableAnswers: ['die'],
+    hint: 'The opening in this tool defines the cross-sectional shape.'
+  },
+  {
+    topic: 'Week 5 - Metals: Plastic & Solid-State Forming',
+    question: 'Solid state forming is usually done at or near room temperature on sheet, rod, wire or _____.',
+    type: 'short',
+    answer: 'tube',
+    acceptableAnswers: ['tube', 'tubing'],
+    hint: 'This hollow product form is often bent or hydroformed.'
+  },
+  {
+    topic: 'Week 5 - Metals: Plastic & Solid-State Forming',
+    question: 'Sheet thickness is generally defined as less than _____ mm.',
+    type: 'fill',
+    answer: '6',
+    acceptableAnswers: ['6', '6.0'],
+    hint: 'Above this thickness the product is usually classified as plate.'
+  },
+  {
+    topic: 'Week 5 - Metals: Plastic & Solid-State Forming',
+    question: 'Tube bending requires an internal support called a _____ to prevent buckling.',
+    type: 'short',
+    answer: 'mandrel',
+    acceptableAnswers: ['mandrel'],
+    hint: 'This tool fits inside the tube during bending.'
+  },
+  {
+    topic: 'Week 5 - Metals: Plastic & Solid-State Forming',
+    question: 'Simple bends are attractive because they are low cost, high strength and can take:',
+    type: 'short',
+    answer: 'abuse',
+    acceptableAnswers: ['abuse', 'rough handling'],
+    hint: 'They tolerate rough use in service without failing easily.'
+  },
+  {
+    topic: 'Week 5 - Metals: Plastic & Solid-State Forming',
+    question: 'In air bending, there is a gap of ____ between the sheet and the bottom of the V-opening.',
+    type: 'fill',
+    answer: 'air',
+    acceptableAnswers: ['air'],
+    hint: 'The sheet does not fully contact the die bottom in this bending method.'
+  },
+  {
+    topic: 'Week 5 - Metals: Plastic & Solid-State Forming',
+    question: 'Spinning is typically used to make symmetrical _____-like or disc-like shapes.',
+    type: 'fill',
+    answer: 'cup',
+    acceptableAnswers: ['cup'],
+    hint: 'It is commonly used to form bowls, lampshades and similar products.'
+  },
+  {
+    topic: 'Week 5 - Metals: Plastic & Solid-State Forming',
+    question: 'Hydroforming uses fluid pressure and a flexible _____ instead of a matching die cavity.',
+    type: 'fill',
+    answer: 'diaphragm',
+    acceptableAnswers: ['diaphragm'],
+    hint: 'A rubber-like membrane and fluid pressure shape the metal sheet or tube.'
+  },
+  {
+    topic: 'Week 5 - Metals: Plastic & Solid-State Forming',
+    question: 'Closed-die forging is most economical for relatively _____ production quantities because of the cost of precision dies.',
+    type: 'short',
+    answer: 'high',
+    acceptableAnswers: ['high', 'large'],
+    hint: 'The more parts you make, the less each die set costs per part.'
+  },
+  {
+    topic: 'Week 5 - Metals: Plastic & Solid-State Forming',
+    question: 'Forged components often have better fatigue performance than cast ones because the deformation aligns the _____ flow with the part geometry.',
+    type: 'fill',
+    answer: 'grain',
+    acceptableAnswers: ['grain', 'grain flow'],
+    hint: 'These flow lines follow the part shape like bent fibres in wood.'
+  },
+
+  // Week 6 – Polymers: Thermoplastic Processing
+  {
+    topic: 'Week 6 - Polymers: Thermoplastic Processes',
+    question: 'Thermoplastics can be repeatedly softened by heating and _____ by cooling.',
+    type: 'fill',
+    answer: 'hardened',
+    acceptableAnswers: ['hardened', 'solidified'],
+    hint: 'They soften on heating and solidify again without chemical change.'
+  },
+  {
+    topic: 'Week 6 - Polymers: Thermoplastic Processes',
+    question: 'In injection molding, plastic pellets are melted and then _____ into a closed mould.',
+    type: 'fill',
+    answer: 'injected',
+    acceptableAnswers: ['injected', 'shot'],
+    hint: 'A screw forces the melt into the mould cavity.'
+  },
+  {
+    topic: 'Week 6 - Polymers: Thermoplastic Processes',
+    question: 'One major advantage of injection molding is very high _____ rates.',
+    type: 'fill',
+    answer: 'production',
+    acceptableAnswers: ['production', 'throughput'],
+    hint: 'This makes the process ideal for mass manufacturing of plastic parts.'
+  },
+  {
+    topic: 'Week 6 - Polymers: Thermoplastic Processes',
+    question: 'Blow molding forms hollow parts such as bottles by inflating a hot tube of plastic called a _____.',
+    type: 'short',
+    answer: 'parison',
+    acceptableAnswers: ['parison'],
+    hint: 'This hanging tube of molten plastic is inflated inside a mould.'
+  },
+  {
+    topic: 'Week 6 - Polymers: Thermoplastic Processes',
+    question: 'Calendering forms sheet or film by passing material through a series of heated _____.',
+    type: 'short',
+    answer: 'rolls',
+    acceptableAnswers: ['rolls', 'rollers'],
+    hint: 'Three or more of these rotating elements form the desired thickness.'
+  },
+  {
+    topic: 'Week 6 - Polymers: Thermoplastic Processes',
+    question: 'Rotational molding is especially suited to large _____ parts like tanks or kayaks.',
+    type: 'fill',
+    answer: 'hollow',
+    acceptableAnswers: ['hollow'],
+    hint: 'The interior is empty and there are no joints or welds.'
+  },
+  {
+    topic: 'Week 6 - Polymers: Thermoplastic Processes',
+    question: 'Thermoforming heats a sheet and uses vacuum or pressure to pull it over a _____.',
+    type: 'short',
+    answer: 'mould',
+    acceptableAnswers: ['mould', 'mold'],
+    hint: 'The hot sheet conforms to this tool surface under vacuum or pressure.'
+  },
+
+  // Week 7 – Thermosets & Polymer Composites
+  {
+    topic: 'Week 7 - Polymers: Thermosets & Composites Processes',
+    question: 'Thermoset polymers, once cured, cannot be _____ and reshaped.',
+    type: 'fill',
+    answer: 'remelted',
+    acceptableAnswers: ['remelted', 'melted again'],
+    hint: 'Cross-linking locks their structure and prevents repeated melting.'
+  },
+  {
+    topic: 'Week 7 - Polymers: Thermosets & Composites Processes',
+    question: 'In compression molding, a pre-measured charge is placed in an open cavity and the mould is closed under heat and _____.',
+    type: 'short',
+    answer: 'pressure',
+    acceptableAnswers: ['pressure'],
+    hint: 'Both temperature and this mechanical action are needed to cure the part.'
+  },
+  {
+    topic: 'Week 7 - Polymers: Thermosets & Composites Processes',
+    question: 'Foam molding uses chemical blowing agents to create a dense skin and a porous _____.',
+    type: 'short',
+    answer: 'core',
+    acceptableAnswers: ['core'],
+    hint: 'The interior region is less dense and contains many cells or bubbles.'
+  },
+  {
+    topic: 'Week 7 - Polymers: Thermosets & Composites Processes',
+    question: 'Reaction injection molding mixes liquid reactants that _____ in the mould to form a polymer.',
+    type: 'fill',
+    answer: 'polymerize',
+    acceptableAnswers: ['polymerize', 'polymerise', 'cure'],
+    hint: 'The low-viscosity liquids react chemically to form a solid network.'
+  },
+  {
+    topic: 'Week 7 - Polymers: Thermosets & Composites Processes',
+    question: 'The process of bonding adjacent polymer powder surfaces by heat without full melting is called _____.',
+    type: 'short',
+    answer: 'sintering',
+    acceptableAnswers: ['sintering'],
+    hint: 'This step is also used in powder metallurgy to bond particles together.'
+  },
+  {
+    topic: 'Week 7 - Polymers: Thermosets & Composites Processes',
+    question: 'In rubber processing, cross-linking of polymer chains to make them elastic and durable is called _____.',
+    type: 'short',
+    answer: 'vulcanization',
+    acceptableAnswers: ['vulcanization', 'vulcanisation'],
+    hint: 'This process was historically discovered by Charles Goodyear.'
+  },
+  {
+    topic: 'Week 7 - Polymers: Thermosets & Composites Processes',
+    question: 'A composite is made from at least two different materials: a matrix and a _____.',
+    type: 'short',
+    answer: 'reinforcement',
+    acceptableAnswers: ['reinforcement', 'reinforcing phase'],
+    hint: 'Glass fibres in a polymer are a common example of this second phase.'
+  },
+  {
+    topic: 'Week 7 - Polymers: Thermosets & Composites Processes',
+    question: 'Continuous fibre-reinforced composites are especially good for carrying structural _____.',
+    type: 'short',
+    answer: 'loads',
+    acceptableAnswers: ['loads'],
+    hint: 'These are the forces or stresses applied to a structure.'
+  },
+  {
+    topic: 'Week 7 - Polymers: Thermosets & Composites Processes',
+    question: 'Epoxy resins are valued in high-performance composites for high strength and very low _____ during curing.',
+    type: 'short',
+    answer: 'shrinkage',
+    acceptableAnswers: ['shrinkage'],
+    hint: 'Low dimensional change helps maintain accurate part geometry.'
+  },
+  {
+    topic: 'Week 7 - Polymers: Thermosets & Composites Processes',
+    question: 'Fiberglass boat hulls typically use glass fibre in an unsaturated _____ resin matrix.',
+    type: 'fill',
+    answer: 'polyester',
+    acceptableAnswers: ['polyester', 'polyester resin'],
+    hint: 'This thermoset resin is cheaper and more common than epoxy.'
+  },
+
+  // Week 8 – Metals: Cutting & Machining
+  {
+    topic: 'Week 8 - Metals: Cutting & Machining',
+    question: 'The four cutting subgroups are sheet cutting, chip-forming, nonchip forming and _____/thermal cutting.',
+    type: 'fill',
+    answer: 'flame',
+    acceptableAnswers: ['flame'],
+    hint: 'This subgroup includes oxy-fuel cutting processes.'
+  },
+  {
+    topic: 'Week 8 - Metals: Cutting & Machining',
+    question: 'In sheet metal, making a hole is called punching, while cutting out the part from sheet is called _____.',
+    type: 'short',
+    answer: 'blanking',
+    acceptableAnswers: ['blanking'],
+    hint: 'The slug removed is actually the final part in this operation.'
+  },
+  {
+    topic: 'Week 8 - Metals: Cutting & Machining',
+    question: 'The scissor-like cutting of sheet between punch and die is called _____.',
+    type: 'short',
+    answer: 'shearing',
+    acceptableAnswers: ['shearing'],
+    hint: 'This process can be done with hand tools or large presses.'
+  },
+  {
+    topic: 'Week 8 - Metals: Cutting & Machining',
+    question: 'The rough, sharp edge left after shearing that often must be removed is called a _____.',
+    type: 'short',
+    answer: 'burr',
+    acceptableAnswers: ['burr'],
+    hint: 'Deburring operations are used to remove this unwanted edge.'
+  },
+  {
+    topic: 'Week 8 - Metals: Cutting & Machining',
+    question: 'Removing chips with a cutting tool on a machine to tight tolerances is called _____.',
+    type: 'short',
+    answer: 'machining',
+    acceptableAnswers: ['machining'],
+    hint: 'Turning, milling and drilling are all examples of this general process.'
+  },
+  {
+    topic: 'Week 8 - Metals: Cutting & Machining',
+    question: 'Drilling uses a twist drill to make a hole along one _____.',
+    type: 'short',
+    answer: 'axis',
+    acceptableAnswers: ['axis'],
+    hint: 'The tool advances in a single straight direction into the workpiece.'
+  },
+  {
+    topic: 'Week 8 - Metals: Cutting & Machining',
+    question: 'Reaming is used to slightly enlarge a drilled hole and improve surface _____.',
+    type: 'short',
+    answer: 'finish',
+    acceptableAnswers: ['finish', 'surface finish'],
+    hint: 'It improves both size accuracy and smoothness inside the hole.'
+  },
+  {
+    topic: 'Week 8 - Metals: Cutting & Machining',
+    question: 'Turning operations are carried out on a _____.',
+    type: 'short',
+    answer: 'lathe',
+    acceptableAnswers: ['lathe'],
+    hint: 'In this machine, the workpiece rotates while the tool feeds.'
+  },
+  {
+    topic: 'Week 8 - Metals: Cutting & Machining',
+    question: 'Grinding uses a wheel made of hard _____ grains bonded together.',
+    type: 'fill',
+    answer: 'abrasive',
+    acceptableAnswers: ['abrasive'],
+    hint: 'These very hard particles remove small chips and produce fine finishes.'
+  },
+  {
+    topic: 'Week 8 - Metals: Cutting & Machining',
+    question: 'Chemical machining removes material by selective attack in a _____ solution.',
+    type: 'fill',
+    answer: 'chemical',
+    acceptableAnswers: ['chemical', 'etchant'],
+    hint: 'The workpiece is masked and then exposed to this reactive liquid.'
+  },
+  {
+    topic: 'Week 8 - Metals: Cutting & Machining',
+    question: 'In electrochemical machining (ECM), material removal is essentially the reverse of _____.',
+    type: 'short',
+    answer: 'electroplating',
+    acceptableAnswers: ['electroplating', 'electro plating'],
+    hint: 'Instead of depositing metal on a surface, metal is dissolved away.'
+  },
+  {
+    topic: 'Week 8 - Metals: Cutting & Machining',
+    question: 'Electrical discharge machining (EDM) erodes metal by rapid spark _____.',
+    type: 'short',
+    answer: 'discharges',
+    acceptableAnswers: ['discharges'],
+    hint: 'A series of tiny electrical events remove material from hard metals.'
+  },
+  {
+    topic: 'Week 8 - Metals: Cutting & Machining',
+    question: 'Abrasive jet machining accelerates grit particles in a high-speed stream of air or _____.',
+    type: 'short',
+    answer: 'gas',
+    acceptableAnswers: ['gas'],
+    hint: 'The cutting medium is a jet of small particles in air or another fluid.'
+  },
+  {
+    topic: 'Week 8 - Metals: Cutting & Machining',
+    question: 'Water-jet or hydrodynamic machining can cut almost any material with very little _____ affected zone.',
+    type: 'fill',
+    answer: 'heat',
+    acceptableAnswers: ['heat'],
+    hint: 'Because there is minimal temperature rise, thermal damage is small.'
+  },
+  {
+    topic: 'Week 8 - Metals: Cutting & Machining',
+    question: 'Oxygen-acetylene cutting of steel relies on heating to a critical temperature and then rapid _____ of the metal.',
+    type: 'short',
+    answer: 'oxidation',
+    acceptableAnswers: ['oxidation', 'burning'],
+    hint: 'Once the steel is hot, pure oxygen causes it to react vigorously.'
+  },
+  {
+    topic: 'Week 8 - Metals: Cutting & Machining',
+    question: 'Plasma-arc cutting produces higher _____ than oxy-acetylene and can cut stainless and non-ferrous metals.',
+    type: 'short',
+    answer: 'temperatures',
+    acceptableAnswers: ['temperatures', 'temperature'],
+    hint: 'The ionized gas in this process reaches extremely high heat levels.'
+  },
+
+
+
+{
+  topic: 'Week 9 – Joining Processes (Soldering, Brazing, Welding)',
+  question: 'Welded joints are usually considered _____ joints because they cannot be separated without damaging the components.',
+  type: 'short',
+  answer: 'permanent',
+  acceptableAnswers: ['permanent'],
+  hint: 'Opposite of “detachable” or “demountable”.'
+},
+{
+  topic: 'Week 9 – Joining Processes (Soldering, Brazing, Welding)',
+  question: 'In a lap joint loaded in tension, the load path is offset from the mid-thickness of the plates, creating a _____ moment that tends to bend the joint.',
+  type: 'fill',
+  answer: 'peel',
+  acceptableAnswers: ['peel', 'peeling'],
+  hint: 'This type of moment tries to open the joint like a sticker.'
+},
+{
+  topic: 'Week 9 – Joining Processes (Soldering, Brazing, Welding)',
+  question: 'Spot welding is most commonly used to join overlapping _____ sheets in automotive body structures.',
+  type: 'fill',
+  answer: 'steel',
+  acceptableAnswers: ['steel', 'sheet steel'],
+  hint: 'Think of car body panels and white-body assemblies.'
+},
+{
+  topic: 'Week 9 – Joining Processes (Soldering, Brazing, Welding)',
+  question: 'Soldering and brazing both use a filler metal, but brazing occurs at a _____ temperature than soldering.',
+  type: 'fill',
+  answer: 'higher',
+  acceptableAnswers: ['higher'],
+  hint: 'One of them uses temperatures above about 450 °C.'
+},
+{
+  topic: 'Week 9 – Joining Processes (Soldering, Brazing, Welding)',
+  question: 'In brazing, the base metals are not melted; instead, a molten filler metal is drawn into the joint by _____ action.',
+  type: 'short',
+  answer: 'capillary',
+  acceptableAnswers: ['capillary', 'capillary action'],
+  hint: 'Same phenomenon that lets water rise in a thin glass tube.'
+},
+{
+  topic: 'Week 9 – Joining Processes (Soldering, Brazing, Welding)',
+  question: 'Riveted or bolted lap joints usually place the fasteners in _____ to the applied tensile load to share the load between multiple fasteners.',
+  type: 'short',
+  answer: 'shear',
+  acceptableAnswers: ['shear'],
+  hint: 'The shank of the fastener is mainly loaded sideways, not in tension.'
+},
+{
+  topic: 'Week 9 – Joining Processes (Soldering, Brazing, Welding)',
+  question: 'Compared to welding, adhesive bonding can distribute load more evenly over a larger area, reducing local _____ concentrations.',
+  type: 'fill',
+  answer: 'stress',
+  acceptableAnswers: ['stress', 'stress concentration'],
+  hint: 'Sharp peaks of this quantity can cause joint failure.'
+},
+
+{
+  topic: 'Week 10 – Joining Processes (Thermoplastic Fusion, Mechanical Assembly, Adhesives, Fasteners)',
+  question: 'Mechanical fasteners like bolts, screws and rivets are best for joints that may need to be _____ for maintenance or disassembly.',
+  type: 'short',
+  answer: 'removed',
+  acceptableAnswers: ['removed', 'taken apart', 'disassembled'],
+  hint: 'Think about re-openable joints compared to permanent welding.'
+},
+{
+  topic: 'Week 10 – Joining Processes (Thermoplastic Fusion, Mechanical Assembly, Adhesives, Fasteners)',
+  question: 'For structural adhesive joints, the best loading mode is in-plane _____ rather than peel or cleavage.',
+  type: 'short',
+  answer: 'shear',
+  acceptableAnswers: ['shear', 'in-plane shear'],
+  hint: 'We want the joint to slide rather than be peeled open.'
+},
+{
+  topic: 'Week 10 – Joining Processes (Thermoplastic Fusion, Mechanical Assembly, Adhesives, Fasteners)',
+  question: 'Anaerobic adhesives are triggered by the absence of _____ and the presence of metal ions at the joint interface.',
+  type: 'short',
+  answer: 'oxygen',
+  acceptableAnswers: ['oxygen'],
+  hint: 'They cure when sealed in tight metal-metal gaps like thread lockers.'
+},
+{
+  topic: 'Week 10 – Joining Processes (Thermoplastic Fusion, Mechanical Assembly, Adhesives, Fasteners)',
+  question: 'Epoxy structural adhesives usually require careful _____ preparation, such as degreasing and abrasion, to reach full bond strength.',
+  type: 'fill',
+  answer: 'surface',
+  acceptableAnswers: ['surface'],
+  hint: 'Poor preparation here is one of the most common causes of adhesive failure.'
+},
+{
+  topic: 'Week 10 – Joining Processes (Thermoplastic Fusion, Mechanical Assembly, Adhesives, Fasteners)',
+  question: 'In a single-lap adhesive joint, the effective overlap length is limited by shear and _____ stresses that concentrate near the ends of the overlap.',
+  type: 'fill',
+  answer: 'peel',
+  acceptableAnswers: ['peel', 'peeling'],
+  hint: 'These opening stresses are highest right at the joint ends.'
+},
+{
+  topic: 'Week 10 – Joining Processes (Thermoplastic Fusion, Mechanical Assembly, Adhesives, Fasteners)',
+  question: 'Lap-shear tests report the apparent shear _____ of an adhesive joint, usually in MPa.',
+  type: 'short',
+  answer: 'strength',
+  acceptableAnswers: ['strength', 'shear strength'],
+  hint: 'It is the failure load divided by the bonded area.'
+},
+{
+  topic: 'Week 10 – Joining Processes (Thermoplastic Fusion, Mechanical Assembly, Adhesives, Fasteners)',
+  question: 'Compared to mechanical fasteners, an adhesive joint can reduce component weight because it does not require drilled _____ or extra overlap for bolts.',
+  type: 'fill',
+  answer: 'holes',
+  acceptableAnswers: ['holes', 'fastener holes'],
+  hint: 'These features remove material and also act as stress raisers.'
+},
+{
+  topic: 'Week 10 – Joining Processes (Thermoplastic Fusion, Mechanical Assembly, Adhesives, Fasteners)',
+  question: 'One limitation of many polymer-based adhesives is a relatively low maximum service _____.',
+  type: 'short',
+  answer: 'temperature',
+  acceptableAnswers: ['temperature'],
+  hint: 'They may soften or degrade if used too close to their glass transition.'
+},
+{
+  topic: 'Week 10 – Joining Processes (Thermoplastic Fusion, Mechanical Assembly, Adhesives, Fasteners)',
+  question: 'When selecting a manufacturing method, we must check whether the process can achieve the required tolerances, surface finish and _____ limits.',
+  type: 'fill',
+  answer: 'size',
+  acceptableAnswers: ['size', 'dimensional'],
+  hint: 'Think about maximum casting weight or minimum wall thickness.'
+},
+{
+  topic: 'Week 10 – Joining Processes (Thermoplastic Fusion, Mechanical Assembly, Adhesives, Fasteners)',
+  question: 'High fixed-cost, high-automation processes such as die casting or injection molding are usually justified only at _____ production volumes.',
+  type: 'short',
+  answer: 'high',
+  acceptableAnswers: ['high', 'large'],
+  hint: 'You need many parts to amortise the tooling cost.'
+},
+{
+  topic: 'Week 10 – Joining Processes (Thermoplastic Fusion, Mechanical Assembly, Adhesives, Fasteners)',
+  question: 'Low-volume production often prefers flexible processes like CNC machining because they require less dedicated _____.',
+  type: 'short',
+  answer: 'tooling',
+  acceptableAnswers: ['tooling', 'tools'],
+  hint: 'No need for custom moulds or dies for each design.'
+},
+
+  
+
+
+
+  {
+    topic: 'Week 4 - Metals: Liquid State Forming',
+    question: 'Chills are pieces of metal inserted in the mould to locally increase cooling rate and control the _____ structure of the casting.',
+    type: 'fill',
+    answer: 'micro',
+    acceptableAnswers: ['micro', 'microstructure'],
+    hint: 'They help refine grain size and avoid hot spots or shrinkage.'
+  },
+  {
+    topic: 'Week 4 - Metals: Liquid State Forming',
+    question: 'Gating design in casting aims to ensure smooth, non-turbulent metal flow into the cavity to minimise oxide formation and _____ of gas.',
+    type: 'fill',
+    answer: 'entrainment',
+    acceptableAnswers: ['entrainment', 'entrapment'],
+    hint: 'We want to avoid air being dragged into the metal stream.'
+  },
+      // Week 13 – Ceramics & Glass
+  {
+    topic: 'Week 13 - Ceramics, Glass, Carbon, RHMs',
+    question: 'Ceramic materials are inorganic, _____ materials, often with ionic or covalent bonding.',
+    type: 'fill',
+    answer: 'nonmetallic',
+    acceptableAnswers: ['nonmetallic', 'non-metallic'],
+    hint: 'They are different in bonding and structure from metals.'
+  },
+  {
+    topic: 'Week 13 - Ceramics, Glass, Carbon, RHMs',
+    question: 'A major drawback of ceramics in structural design is their _____.',
+    type: 'short',
+    answer: 'brittleness',
+    acceptableAnswers: ['brittleness'],
+    hint: 'They tend to fail suddenly without much plastic deformation.'
+  },
+  {
+    topic: 'Week 13 - Ceramics, Glass, Carbon, RHMs',
+    question: 'Three main types of engineering ceramics are metal oxide ceramics, glass ceramics and _____ and nitrides.',
+    type: 'fill',
+    answer: 'carbides',
+    acceptableAnswers: ['carbides'],
+    hint: 'Silicon of this type is widely used as a cutting tool material.'
+  },
+  {
+    topic: 'Week 13 - Ceramics, Glass, Carbon, RHMs',
+    question: 'In slip casting, a suspension of ceramic particles in water is called a _____.',
+    type: 'short',
+    answer: 'slip',
+    acceptableAnswers: ['slip'],
+    hint: 'This term is also used in pottery for a fluid clay mixture.'
+  },
+  {
+    topic: 'Week 13 - Ceramics, Glass, Carbon, RHMs',
+    question: 'The firing step in ceramics reduces _____ and bonds the particles, giving strength and hardness.',
+    type: 'short',
+    answer: 'porosity',
+    acceptableAnswers: ['porosity'],
+    hint: 'Closing internal voids improves strength and impermeability.'
+  },
+  {
+    topic: 'Week 13 - Ceramics, Glass, Carbon, RHMs',
+    question: 'Glass is an _____ transparent solid with a non-crystalline atomic structure.',
+    type: 'fill',
+    answer: 'amorphous',
+    acceptableAnswers: ['amorphous'],
+    hint: 'It lacks the ordered lattice structure of crystalline solids.'
+  },
+  {
+    topic: 'Week 13 - Ceramics, Glass, Carbon, RHMs',
+    question: 'The most common glass type, used for bottles and windows, is soda-lime glass, a type of _____ glass.',
+    type: 'fill',
+    answer: 'soft',
+    acceptableAnswers: ['soft'],
+    hint: 'This category has lower softening temperatures than borosilicate glass.'
+  },
+  {
+    topic: 'Week 13 - Ceramics, Glass, Carbon, RHMs',
+    question: 'Borosilicate glass is resistant to thermal _____ and high temperatures.',
+    type: 'fill',
+    answer: 'shock',
+    acceptableAnswers: ['shock'],
+    hint: 'It can go from hot to cold without cracking easily.'
+  },
+  {
+    topic: 'Week 13 - Ceramics, Glass, Carbon, RHMs',
+    question: 'In the float process, molten glass solidifies while floating on a bath of molten _____.',
+    type: 'short',
+    answer: 'tin',
+    acceptableAnswers: ['tin'],
+    hint: 'This low-melting-point metal supports a flat glass surface.'
+  },
+  {
+    topic: 'Week 13 - Ceramics, Glass, Carbon, RHMs',
+    question: 'Blowing of glass uses air pressure to expand a hot _____ of glass into a mould.',
+    type: 'fill',
+    answer: 'gob',
+    acceptableAnswers: ['gob', 'blob', 'parison'],
+    hint: 'It is a small, hot mass of glass that is inflated.'
+  },
+  {
+    topic: 'Week 13 - Ceramics, Glass, Carbon, RHMs',
+    question: 'Tempered glass is strengthened by rapidly _____ the surfaces to create residual stresses.',
+    type: 'fill',
+    answer: 'cooling',
+    acceptableAnswers: ['cooling', 'quenching'],
+    hint: 'The outer layers solidify first and go into compression.'
+  },
+  {
+    topic: 'Week 13 - Ceramics, Glass, Carbon, RHMs',
+    question: 'Laminated glass sandwiches a layer of tough _____ between two glass sheets.',
+    type: 'fill',
+    answer: 'plastic',
+    acceptableAnswers: ['plastic'],
+    hint: 'This interlayer holds the glass fragments together on impact.'
+  },
+
+
+
+
   // Joining Processes
   {
     topic: 'Joining Processes',
@@ -645,14 +1686,7 @@ export const questions: Question[] = [
     answer: ['glass ceramics', 'carbides and nitrides'],
     hint: 'One includes glass-based materials, the other includes boron and silicon compounds'
   },
-  {
-    topic: 'Ceramics',
-    question: 'What is the main disadvantage of ceramic materials?',
-    type: 'short',
-    answer: 'brittleness',
-    acceptableAnswers: ['brittleness', 'brittle', 'fragile', 'low toughness'],
-    hint: 'They break easily under impact'
-  },
+
 
   // Composites
   {
@@ -2177,9 +3211,9 @@ export const questions: Question[] = [
   },
   {
     topic: 'Materials Properties',
-    question: 'Strain is expressed as ________ per ________ of length.',
+    question: 'Strain is expressed as change in length per original ________.',
     type: 'fill',
-    answer: ['millimetre', 'millimetre'],
+    answer: ['length'],
     hint: 'Deformation measurement'
   },
   {
@@ -2484,6 +3518,19 @@ export const questions: Question[] = [
     hint: 'Reduces porosity'
   },
 
+
+
+
+
+
+
+
+
+
+
+
+
+  
   // Composites - Additional Questions
   {
     topic: 'Composites',
@@ -5050,5 +6097,6 @@ export const questions: Question[] = [
     type: 'fill',
     answer: ['adhesives'],
     hint: 'Bending sequence sealing'
-  }
+  },
+  
 ];
