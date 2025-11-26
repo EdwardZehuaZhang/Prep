@@ -8,7 +8,6 @@ import { fillQuestions } from '../data/fillQuestions';
 import { multipleChoiceQuestions } from '../data/multiple-choiceQuestions';
 import { Question } from '../types/Question';
 import { checkAnswer, normalizeAnswer } from '../utils/answerChecker';
-import contentSummaryMd from './ContentSummary.md?raw';
 
 // Combine all question types
 const questions = [...shortQuestions, ...fillQuestions, ...multipleChoiceQuestions];
@@ -27,6 +26,7 @@ interface SavedProgress {
     customAcceptableAnswers?: string[];
   }>;
   deletedQuestions?: string[];
+  selectedQuestionTypes?: string[];
 }
 
 const ExamPrepApp = () => {
@@ -56,6 +56,7 @@ const ExamPrepApp = () => {
     return saved ? JSON.parse(saved).answeredQuestions : {};
   });
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isQuestionTypeDropdownOpen, setIsQuestionTypeDropdownOpen] = useState(false);
   const [expandedQuestionId, setExpandedQuestionId] = useState<string | null>(null);
   const [showHint, setShowHint] = useState(false);
   const [questionCustomizations, setQuestionCustomizations] = useState<Record<string, {
@@ -69,9 +70,13 @@ const ExamPrepApp = () => {
     const saved = localStorage.getItem(STORAGE_KEY);
     return saved ? (JSON.parse(saved).deletedQuestions || []) : [];
   });
+  const [selectedQuestionTypes, setSelectedQuestionTypes] = useState<string[]>(() => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved ? (JSON.parse(saved).selectedQuestionTypes || ['multiple-choice']) : ['multiple-choice'];
+  });
   const [editingQuestion, setEditingQuestion] = useState(false);
   const [editedQuestionText, setEditedQuestionText] = useState('');
-  const [markdownContent, setMarkdownContent] = useState(contentSummaryMd);
+  const [markdownContent, setMarkdownContent] = useState('');
   const [showMarkdownPanel, setShowMarkdownPanel] = useState(true);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -103,9 +108,10 @@ const ExamPrepApp = () => {
       lastUpdated: new Date().toISOString(),
       questionCustomizations,
       deletedQuestions,
+      selectedQuestionTypes,
     };
     localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
-  }, [currentQuestion, score, attempted, selectedTopic, answeredQuestions, questionCustomizations, deletedQuestions]);
+  }, [currentQuestion, score, attempted, selectedTopic, answeredQuestions, questionCustomizations, deletedQuestions, selectedQuestionTypes]);
 
   const topics = ['all', ...new Set(questions.map(q => q.topic))];
 
@@ -130,7 +136,8 @@ const ExamPrepApp = () => {
     .filter((q, index) => {
       const qId = `${q.topic}-${q.question.substring(0, 50)}`;
       return !deletedQuestions.includes(qId);
-    });
+    })
+    .filter(q => selectedQuestionTypes.includes(q.type));
 
   const currentQ = filteredQuestions[currentQuestion];
   
@@ -140,9 +147,9 @@ const ExamPrepApp = () => {
     return `${q.topic}-${q.question.substring(0, 50)}`;
   };
 
-  const currentQuestionId = getQuestionId(currentQuestion);
+  const currentQuestionId = currentQ ? getQuestionId(currentQuestion) : '';
   const currentCustomizations = questionCustomizations[currentQuestionId] || {};
-  const displayedQuestion = currentCustomizations.customQuestion || currentQ.question;
+  const displayedQuestion = currentQ ? (currentCustomizations.customQuestion || currentQ.question) : '';
   
   // Function to save question edit
   const handleSaveQuestionEdit = () => {
@@ -331,59 +338,162 @@ const ExamPrepApp = () => {
           </div>
         </div>
 
-        {/* Topic Filter */}
+        {/* Filters Panel */}
         <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-6 sm:p-8 mb-6">
-          <div className="mb-3">
-            <label className="text-sm font-semibold text-gray-500 uppercase tracking-wide block mb-3">
-              Filter by Topic
-            </label>
+          {/* Topic Filter */}
+          <div className="mb-6">
+            <div className="mb-3">
+              <label className="text-sm font-semibold text-gray-500 uppercase tracking-wide block mb-3">
+                Filter by Topic
+              </label>
+            </div>
+            <div className="relative">
+              <button
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="w-full p-5 pr-12 border-2 border-gray-200 bg-white rounded-2xl focus:ring-2 focus:ring-black focus:border-black focus:outline-none text-gray-900 font-semibold text-base transition-all cursor-pointer hover:border-gray-300 text-left"
+              >
+                {selectedTopic === 'all' ? 'All Topics' : selectedTopic}
+              </button>
+              <ChevronDown 
+                size={20} 
+                className={`absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`}
+              />
+              
+              {isDropdownOpen && (
+                <>
+                  <div 
+                    className="fixed inset-0 z-10" 
+                    onClick={() => setIsDropdownOpen(false)}
+                  />
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl border-2 border-gray-200 shadow-lg overflow-hidden z-20 max-h-80 overflow-y-auto scrollbar-hide" style={{ width: 'calc(100% + 4px)', marginLeft: '-2px' }}>
+                    {topics.map(topic => (
+                      <button
+                        key={topic}
+                        onClick={() => {
+                          setSelectedTopic(topic);
+                          setIsDropdownOpen(false);
+                          resetQuiz();
+                        }}
+                        className="w-full px-5 py-4 text-left font-semibold bg-white text-gray-900 hover:bg-gray-50 transition-colors flex items-center justify-between"
+                      >
+                        <span>{topic === 'all' ? 'All Topics' : topic}</span>
+                        {selectedTopic === topic && (
+                          <Check size={18} className="text-black" />
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
           </div>
-          <div className="relative">
-            <button
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="w-full p-5 pr-12 border-2 border-gray-200 bg-white rounded-2xl focus:ring-2 focus:ring-black focus:border-black focus:outline-none text-gray-900 font-semibold text-base transition-all cursor-pointer hover:border-gray-300 text-left"
-            >
-              {selectedTopic === 'all' ? 'All Topics' : selectedTopic}
-            </button>
-            <ChevronDown 
-              size={20} 
-              className={`absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`}
-            />
-            
-            {isDropdownOpen && (
-              <>
-                <div 
-                  className="fixed inset-0 z-10" 
-                  onClick={() => setIsDropdownOpen(false)}
-                />
-                <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl border-2 border-gray-200 shadow-lg overflow-hidden z-20 max-h-80 overflow-y-auto scrollbar-hide" style={{ width: 'calc(100% + 4px)', marginLeft: '-2px' }}>
-                  {topics.map(topic => (
-                    <button
-                      key={topic}
-                      onClick={() => {
-                        setSelectedTopic(topic);
-                        setIsDropdownOpen(false);
-                        resetQuiz();
-                      }}
-                      className={`w-full px-5 py-4 text-left font-semibold transition-colors flex items-center justify-between ${
-                        selectedTopic === topic 
-                          ? 'bg-gray-900 text-white' 
-                          : 'bg-white text-gray-900 hover:bg-gray-50'
-                      }`}
-                    >
-                      <span>{topic === 'all' ? 'All Topics' : topic}</span>
-                      {selectedTopic === topic && (
-                        <Check size={18} className="text-white" />
-                      )}
-                    </button>
-                  ))}
+
+          {/* Question Type Filter */}
+          <div>
+            <div className="mb-3">
+              <label className="text-sm font-semibold text-gray-500 uppercase tracking-wide block mb-3">
+                Filter by Question Type
+              </label>
+            </div>
+            <div className="relative">
+              <button
+                onClick={() => setIsQuestionTypeDropdownOpen(!isQuestionTypeDropdownOpen)}
+                className="w-full border-2 border-gray-200 bg-white rounded-2xl focus:ring-2 focus:ring-black focus:border-black focus:outline-none transition-all cursor-pointer hover:border-gray-300 text-left h-[68px] flex items-center px-5 pr-12"
+              >
+                <div className="flex flex-wrap gap-2">
+                  {selectedQuestionTypes.length === 3 ? (
+                    <span className="text-gray-900 font-semibold text-base">All Question Types</span>
+                  ) : selectedQuestionTypes.length === 0 ? (
+                    <span className="text-gray-400 font-medium text-base">Select question types...</span>
+                  ) : (
+                    selectedQuestionTypes.map(type => {
+                      const typeLabels: Record<string, string> = {
+                        'short': 'Short Answer',
+                        'fill': 'Fill in the Blank',
+                        'multiple-choice': 'Multiple Choice'
+                      };
+                      const label = typeLabels[type];
+                      if (!label) return null;
+                      return (
+                        <span
+                          key={type}
+                          className="bg-black text-white text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wide"
+                        >
+                          {label}
+                        </span>
+                      );
+                    })
+                  )}
                 </div>
-              </>
-            )}
+              </button>
+              <ChevronDown 
+                size={20} 
+                className={`absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none transition-transform ${
+                  isQuestionTypeDropdownOpen ? 'rotate-180' : ''
+                }`}
+              />
+              
+              {isQuestionTypeDropdownOpen && (
+                <>
+                  <div 
+                    className="fixed inset-0 z-10" 
+                    onClick={() => setIsQuestionTypeDropdownOpen(false)}
+                  />
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl border-2 border-gray-200 shadow-lg overflow-hidden z-20" style={{ width: 'calc(100% + 4px)', marginLeft: '-2px' }}>
+                    {['short', 'fill', 'multiple-choice'].map(type => {
+                      const isSelected = selectedQuestionTypes.includes(type);
+                      const typeLabels: Record<string, string> = {
+                        'short': 'Short Answer',
+                        'fill': 'Fill in the Blank',
+                        'multiple-choice': 'Multiple Choice'
+                      };
+                      
+                      return (
+                        <button
+                          key={type}
+                          onClick={() => {
+                            const newSelectedTypes = isSelected
+                              ? selectedQuestionTypes.filter(t => t !== type)
+                              : [...selectedQuestionTypes, type];
+                            
+                            // Prevent deselecting all types
+                            if (newSelectedTypes.length === 0) return;
+                            
+                            setSelectedQuestionTypes(newSelectedTypes);
+                            // Reset to first question when filter changes
+                            setCurrentQuestion(0);
+                            setShowFeedback(false);
+                            setUserAnswer('');
+                            setSelectedOption('');
+                          }}
+                          className="w-full px-5 py-4 text-left font-semibold bg-white text-gray-900 hover:bg-gray-50 transition-colors flex items-center justify-between"
+                        >
+                          <span>{typeLabels[type]}</span>
+                          {isSelected && (
+                            <Check size={18} className="text-black" />
+                          )}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </>
+              )}
+            </div>
           </div>
         </div>
 
         {/* Question Card */}
+        {filteredQuestions.length === 0 ? (
+          <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-6 sm:p-8 mb-6">
+            <div className="text-center py-12">
+              <div className="text-gray-400 mb-4">
+                <BookOpen size={48} className="mx-auto" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">No questions match your filters</h3>
+              <p className="text-gray-600">Try adjusting your topic or question type filters</p>
+            </div>
+          </div>
+        ) : (
         <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-6 sm:p-8 mb-6">
           <div className="flex items-center justify-between mb-6">
             <span className="inline-block bg-black text-white text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wide">
@@ -637,8 +747,10 @@ const ExamPrepApp = () => {
             )}
           </div>
         </div>
+        )}
 
         {/* Progress Bar */}
+        {filteredQuestions.length > 0 && (
         <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-6 mb-6">
           <div className="mb-3 flex justify-between items-center">
             <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Overall Progress</span>
@@ -655,8 +767,7 @@ const ExamPrepApp = () => {
             />
           </div>
         </div>
-
-        {/* Answered Questions List */}
+        )}        {/* Answered Questions List */}
         {Object.keys(answeredQuestions).length > 0 && (
           <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-6">
             <div className="mb-4 flex items-center justify-between">
