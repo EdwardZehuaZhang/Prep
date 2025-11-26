@@ -938,8 +938,8 @@ const ExamPrepApp = () => {
           </div>
         </div>
 
-        {/* Markdown Content Panel */}
-        <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-6 mt-6">
+        {/* Markdown Content Panel - Temporarily Hidden */}
+        {/* <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-6 mt-6">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Study Notes & Summary</h3>
           </div>
@@ -962,7 +962,7 @@ const ExamPrepApp = () => {
               {markdownContent}
             </ReactMarkdown>
           </div>
-        </div>
+        </div> */}
 
         {/* SEO Content Section */}
         <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-8 mt-6">
