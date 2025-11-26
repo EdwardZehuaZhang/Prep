@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, ArrowRight, RotateCcw, BookOpen, ChevronDown, Check, SkipForward } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { CheckCircle, XCircle, ArrowRight, RotateCcw, BookOpen, ChevronDown, Check, SkipForward, Trash2 } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaGlobe } from 'react-icons/fa';
 import { questions } from '../data/questions';
 import { Question } from '../types/Question';
-import { checkAnswer } from '../utils/answerChecker';
+import { checkAnswer, normalizeAnswer } from '../utils/answerChecker';
 
 const STORAGE_KEY = 'examPrepProgress';
 
@@ -14,6 +14,11 @@ interface SavedProgress {
   selectedTopic: string;
   answeredQuestions: Record<string, boolean | 'skipped'>;
   lastUpdated: string;
+  questionCustomizations?: Record<string, {
+    customQuestion?: string;
+    customAcceptableAnswers?: string[];
+  }>;
+  deletedQuestions?: string[];
 }
 
 const ExamPrepApp = () => {
@@ -45,6 +50,37 @@ const ExamPrepApp = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [expandedQuestionId, setExpandedQuestionId] = useState<string | null>(null);
   const [showHint, setShowHint] = useState(false);
+  const [questionCustomizations, setQuestionCustomizations] = useState<Record<string, {
+    customQuestion?: string;
+    customAcceptableAnswers?: string[];
+  }>>(() => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved ? (JSON.parse(saved).questionCustomizations || {}) : {};
+  });
+  const [deletedQuestions, setDeletedQuestions] = useState<string[]>(() => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved ? (JSON.parse(saved).deletedQuestions || []) : [];
+  });
+  const [editingQuestion, setEditingQuestion] = useState(false);
+  const [editedQuestionText, setEditedQuestionText] = useState('');
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Auto-resize textarea when editing mode is entered
+  useEffect(() => {
+    if (editingQuestion && textareaRef.current) {
+      const textarea = textareaRef.current;
+      textarea.style.height = 'auto';
+      textarea.style.height = textarea.scrollHeight + 'px';
+    }
+  }, [editingQuestion, editedQuestionText]);
+
+  // Auto-focus input field when moving to next question
+  useEffect(() => {
+    if (!showFeedback && inputRef.current && currentQ?.type !== 'multiple-choice') {
+      inputRef.current.focus();
+    }
+  }, [showFeedback, currentQuestion]);
 
   // Save progress to localStorage whenever key state changes
   useEffect(() => {
@@ -55,9 +91,11 @@ const ExamPrepApp = () => {
       selectedTopic,
       answeredQuestions,
       lastUpdated: new Date().toISOString(),
+      questionCustomizations,
+      deletedQuestions,
     };
     localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
-  }, [currentQuestion, score, attempted, selectedTopic, answeredQuestions]);
+  }, [currentQuestion, score, attempted, selectedTopic, answeredQuestions, questionCustomizations, deletedQuestions]);
 
   const topics = ['all', ...new Set(questions.map(q => q.topic))];
 
@@ -76,11 +114,78 @@ const ExamPrepApp = () => {
     return shuffleArray(questions);
   });
 
-  const filteredQuestions = selectedTopic === 'all' 
+  const filteredQuestions = (selectedTopic === 'all' 
     ? shuffledQuestions 
-    : questions.filter(q => q.topic === selectedTopic);
+    : questions.filter(q => q.topic === selectedTopic))
+    .filter((q, index) => {
+      const qId = `${q.topic}-${q.question.substring(0, 50)}`;
+      return !deletedQuestions.includes(qId);
+    });
 
   const currentQ = filteredQuestions[currentQuestion];
+  
+  // Get question ID for customizations
+  const getQuestionId = (qIndex: number) => {
+    const q = filteredQuestions[qIndex];
+    return `${q.topic}-${q.question.substring(0, 50)}`;
+  };
+
+  const currentQuestionId = getQuestionId(currentQuestion);
+  const currentCustomizations = questionCustomizations[currentQuestionId] || {};
+  const displayedQuestion = currentCustomizations.customQuestion || currentQ.question;
+  
+  // Function to save question edit
+  const handleSaveQuestionEdit = () => {
+    if (editedQuestionText.trim() && editedQuestionText !== currentQ.question) {
+      setQuestionCustomizations(prev => ({
+        ...prev,
+        [currentQuestionId]: {
+          ...prev[currentQuestionId],
+          customQuestion: editedQuestionText.trim(),
+        }
+      }));
+    }
+    setEditingQuestion(false);
+  };
+
+  // Function to delete question
+  const handleDeleteQuestion = () => {
+    // Add current question to deleted list
+    setDeletedQuestions(prev => [...prev, currentQuestionId]);
+    
+    // Close editing mode
+    setEditingQuestion(false);
+    
+    // If this was the last question, go back one
+    if (currentQuestion >= filteredQuestions.length - 1 && currentQuestion > 0) {
+      setCurrentQuestion(currentQuestion - 1);
+    }
+  };
+
+  // Function to add custom acceptable answer
+  const handleMarkAsCorrect = () => {
+    const userAnswerToAdd = currentQ.type === 'multiple-choice' ? selectedOption : userAnswer.trim();
+    if (!userAnswerToAdd) return;
+
+    setQuestionCustomizations(prev => {
+      const existing = prev[currentQuestionId]?.customAcceptableAnswers || [];
+      if (existing.includes(userAnswerToAdd)) return prev;
+      
+      return {
+        ...prev,
+        [currentQuestionId]: {
+          ...prev[currentQuestionId],
+          customAcceptableAnswers: [...existing, userAnswerToAdd],
+        }
+      };
+    });
+
+    // Re-check the answer with the new acceptable answer
+    setIsCorrect(true);
+    setScore(score + 1);
+    const questionId = `${selectedTopic}-${currentQuestion}`;
+    setAnsweredQuestions(prev => ({ ...prev, [questionId]: true }));
+  };
 
   const handleCheckAnswer = () => {
     const answerToCheck = currentQ.type === 'multiple-choice' ? selectedOption : userAnswer;
@@ -96,8 +201,14 @@ const ExamPrepApp = () => {
       const questionId = `${selectedTopic}-${currentQuestion}`;
       setAnsweredQuestions(prev => ({ ...prev, [questionId]: 'skipped' }));
     } else {
+      // Check against custom acceptable answers first
+      const customAnswers = currentCustomizations.customAcceptableAnswers || [];
+      const isCustomMatch = customAnswers.some(ca => 
+        normalizeAnswer(answerToCheck) === normalizeAnswer(ca)
+      );
+      
       // Normal answer checking
-      const correct = checkAnswer(answerToCheck, currentQ);
+      const correct = isCustomMatch || checkAnswer(answerToCheck, currentQ);
       setIsCorrect(correct);
       setShowFeedback(true);
       setAttempted(attempted + 1);
@@ -126,6 +237,7 @@ const ExamPrepApp = () => {
       setSelectedOption('');
       setShowFeedback(false);
       setShowHint(false);
+      setEditingQuestion(false);
     }
   };
 
@@ -137,6 +249,7 @@ const ExamPrepApp = () => {
     setScore(0);
     setAttempted(0);
     setAnsweredQuestions({});
+    setDeletedQuestions([]);
     // Re-shuffle questions when resetting on "all topics"
     if (selectedTopic === 'all') {
       setShuffledQuestions(shuffleArray(questions));
@@ -153,6 +266,18 @@ const ExamPrepApp = () => {
       }
     }
   };
+
+  // Add global keyboard listener for Enter key to go to next question after answering
+  useEffect(() => {
+    const handleGlobalKeyPress = (e: KeyboardEvent) => {
+      if (e.key === 'Enter' && showFeedback && currentQuestion < filteredQuestions.length - 1) {
+        nextQuestion();
+      }
+    };
+
+    window.addEventListener('keydown', handleGlobalKeyPress);
+    return () => window.removeEventListener('keydown', handleGlobalKeyPress);
+  }, [showFeedback, currentQuestion, filteredQuestions.length]);
 
   return (
     <div className="min-h-screen bg-gray-50 py-6 px-4 sm:px-6">
@@ -262,23 +387,75 @@ const ExamPrepApp = () => {
             </button>
           </div>
 
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-8 leading-relaxed">
-            {currentQ.question}
-          </h2>
+          {editingQuestion ? (
+            <>
+              <textarea
+                ref={textareaRef}
+                value={editedQuestionText}
+                onChange={(e) => setEditedQuestionText(e.target.value)}
+                className="w-full border-2 border-blue-300 bg-blue-50 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none text-gray-900 font-bold text-xl sm:text-2xl leading-relaxed resize-none overflow-hidden"
+                style={{ paddingTop: '1rem', paddingBottom: '1.25rem', paddingLeft: '1rem', paddingRight: '1rem' }}
+                rows={1}
+                autoFocus
+                onInput={(e) => {
+                  const target = e.target as HTMLTextAreaElement;
+                  target.style.height = 'auto';
+                  target.style.height = target.scrollHeight + 'px';
+                }}
+              />
+              <div className="flex gap-3 mb-8 mt-3">
+                <button
+                  onClick={handleSaveQuestionEdit}
+                  className="px-4 py-2 bg-black text-white rounded-2xl font-semibold text-sm hover:bg-gray-800 transition-all"
+                >
+                  Save
+                </button>
+                <button
+                  onClick={() => {
+                    setEditingQuestion(false);
+                    setEditedQuestionText(displayedQuestion);
+                  }}
+                  className="border-2 border-gray-200 text-gray-700 bg-white px-4 py-2 rounded-2xl font-semibold text-sm hover:border-gray-300 hover:bg-gray-50 transition-all"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={handleDeleteQuestion}
+                  className="ml-auto border-2 border-red-200 text-red-700 bg-white px-4 py-2 rounded-2xl font-semibold text-sm hover:border-red-300 hover:bg-red-50 transition-all flex items-center gap-2"
+                  title="Delete question"
+                >
+                  <Trash2 size={16} />
+                  Delete
+                </button>
+              </div>
+            </>
+          ) : (
+            <h2 
+              className="text-xl sm:text-2xl font-bold text-gray-900 mb-8 leading-relaxed cursor-pointer hover:bg-gray-50 rounded-xl transition-all"
+              onClick={() => {
+                setEditingQuestion(true);
+                setEditedQuestionText(displayedQuestion);
+              }}
+              title="Click to edit question"
+            >
+              {displayedQuestion}
+            </h2>
+          )}
 
           {/* Input for fill-in-the-blank and short answer */}
           {currentQ.type !== 'multiple-choice' && (
             <input
+              ref={inputRef}
               type="text"
               value={userAnswer}
               onChange={(e) => setUserAnswer(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder="Type your answer here..."
               disabled={showFeedback}
-              autoFocus={!showFeedback}
               className="w-full p-5 border-2 border-gray-200 bg-white rounded-2xl focus:ring-2 focus:ring-black focus:border-black focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed text-gray-900 font-medium text-lg transition-all placeholder:text-gray-400"
             />
           )}
+
 
           {/* Multiple choice options */}
           {currentQ.type === 'multiple-choice' && currentQ.options && (
@@ -365,7 +542,7 @@ const ExamPrepApp = () => {
                     <XCircle className="text-red-600 flex-shrink-0" size={24} />
                   )}
                   <div className="flex-1">
-                    <span className={`font-bold text-base block ${!isCorrect && !wasSkipped ? 'mb-2' : ''} ${
+                    <span className={`font-bold text-base block ${!isCorrect ? 'mb-2' : ''} ${
                       wasSkipped ? 'text-gray-700' : 
                       isCorrect ? 'text-green-800' : 'text-red-800'
                     }`}>
@@ -373,17 +550,33 @@ const ExamPrepApp = () => {
                     </span>
                     {!isCorrect && (
                       <div className="text-gray-800">
-                        <p className="font-semibold text-sm mb-2">Correct answer:</p>
-                        <p className="text-sm font-semibold bg-white px-3 py-2 rounded-lg inline-block">
-                          {currentQ.type === 'fill' 
-                            ? Array.isArray(currentQ.answer) ? currentQ.answer.join(', ') : currentQ.answer
-                            : typeof currentQ.answer === 'string' && currentQ.answer.includes(',')
-                              ? currentQ.answer
-                              : currentQ.acceptableAnswers?.[currentQ.acceptableAnswers.length > 1 ? 1 : 0] || currentQ.answer}
-                        </p>
+                        <p className="font-semibold text-sm mb-2">Correct answer{currentCustomizations.customAcceptableAnswers?.length ? 's' : ''}:</p>
+                        <div className="space-y-2">
+                          <p className="text-sm font-semibold bg-white px-3 py-2 rounded-lg inline-block">
+                            {currentQ.type === 'fill' 
+                              ? Array.isArray(currentQ.answer) ? currentQ.answer.join(', ') : currentQ.answer
+                              : typeof currentQ.answer === 'string' && currentQ.answer.includes(',')
+                                ? currentQ.answer
+                                : currentQ.acceptableAnswers?.[currentQ.acceptableAnswers.length > 1 ? 1 : 0] || currentQ.answer}
+                          </p>
+                          {currentCustomizations.customAcceptableAnswers?.map((customAnswer, idx) => (
+                            <p key={idx} className="text-sm font-semibold bg-blue-50 border border-blue-200 px-3 py-2 rounded-lg inline-block ml-2">
+                              {customAnswer} <span className="text-xs text-blue-600">(custom)</span>
+                            </p>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
+                  {!isCorrect && !wasSkipped && (
+                    <button
+                      onClick={handleMarkAsCorrect}
+                      className="border-2 border-gray-200 text-gray-700 bg-white px-4 py-2 rounded-xl font-semibold text-sm hover:border-gray-300 hover:bg-gray-50 transition-all flex-shrink-0 whitespace-nowrap"
+                      title="Mark your answer as correct"
+                    >
+                      Mark as Correct
+                    </button>
+                  )}
                 </div>
               </div>
             );
@@ -513,7 +706,15 @@ const ExamPrepApp = () => {
                           setExpandedQuestionId(questionId);
                         }
                       }}
-                      className="py-2 px-3 transition-all text-left hover:bg-gray-100 rounded-lg w-full"
+                      className={`py-2 px-3 transition-all text-left rounded-lg w-full ${
+                        isExpanded 
+                          ? wasSkipped 
+                            ? 'bg-gray-200 hover:bg-gray-300' 
+                            : wasCorrect 
+                            ? 'bg-green-200 hover:bg-green-300' 
+                            : 'bg-red-200 hover:bg-red-300'
+                          : 'hover:bg-gray-100'
+                      }`}
                     >
                       <div className="flex items-center gap-1.5">
                         <span className="text-sm font-bold text-gray-900 flex-shrink-0">
@@ -547,18 +748,6 @@ const ExamPrepApp = () => {
                               : 'border-red-300 bg-red-50'
                           }`}>
                             <div className="flex items-start gap-3 mb-3">
-                              <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
-                                expandedWasSkipped ? 'bg-gray-500' :
-                                expandedWasCorrect ? 'bg-green-500' : 'bg-red-500'
-                              }`}>
-                                {expandedWasSkipped ? (
-                                  <SkipForward className="text-white" size={20} />
-                                ) : expandedWasCorrect ? (
-                                  <CheckCircle className="text-white" size={20} />
-                                ) : (
-                                  <XCircle className="text-white" size={20} />
-                                )}
-                              </div>
                               <div className="flex-1">
                                 <div className="flex items-center gap-2 mb-2">
                                   <span className={`text-xs font-semibold px-2 py-1 rounded-full ${
