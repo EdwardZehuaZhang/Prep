@@ -377,7 +377,8 @@ const ExamPrepApp = () => {
         <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-6 sm:p-8 mb-6">
           <div className="flex items-center justify-between mb-6">
             <span className="inline-block bg-black text-white text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wide">
-              {currentQ.topic}
+              <span className="sm:hidden">{currentQ.topic.match(/Week \d+/)?.[0] || currentQ.topic}</span>
+              <span className="hidden sm:inline">{currentQ.topic}</span>
             </span>
             <button
               onClick={() => setShowHint(!showHint)}
