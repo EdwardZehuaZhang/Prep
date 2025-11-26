@@ -1,9 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { CheckCircle, XCircle, ArrowRight, RotateCcw, BookOpen, ChevronDown, Check, SkipForward, Trash2 } from 'lucide-react';
+import { CheckCircle, XCircle, ArrowRight, RotateCcw, BookOpen, ChevronDown, Check, SkipForward, Trash2, FileText } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaGlobe } from 'react-icons/fa';
-import { questions } from '../data/questions';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import { shortQuestions } from '../data/shortQuestions';
+import { fillQuestions } from '../data/fillQuestions';
+import { multipleChoiceQuestions } from '../data/multiple-choiceQuestions';
 import { Question } from '../types/Question';
 import { checkAnswer, normalizeAnswer } from '../utils/answerChecker';
+import contentSummaryMd from './ContentSummary.md?raw';
+
+// Combine all question types
+const questions = [...shortQuestions, ...fillQuestions, ...multipleChoiceQuestions];
 
 const STORAGE_KEY = 'examPrepProgress';
 
@@ -63,6 +71,8 @@ const ExamPrepApp = () => {
   });
   const [editingQuestion, setEditingQuestion] = useState(false);
   const [editedQuestionText, setEditedQuestionText] = useState('');
+  const [markdownContent, setMarkdownContent] = useState(contentSummaryMd);
+  const [showMarkdownPanel, setShowMarkdownPanel] = useState(true);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -814,6 +824,64 @@ const ExamPrepApp = () => {
             >
               <FaGlobe size={28} />
             </a>
+          </div>
+        </div>
+
+        {/* Markdown Content Panel */}
+        <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-6 mt-6">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Study Notes & Summary</h3>
+          </div>
+
+          <div className="markdown-content">
+            <ReactMarkdown 
+              remarkPlugins={[remarkGfm]}
+              components={{
+                h1: ({node, ...props}) => <h1 className="text-2xl font-bold text-gray-900 mb-4 mt-6" {...props} />,
+                h2: ({node, ...props}) => <h2 className="text-xl font-bold text-gray-900 mb-3 mt-5" {...props} />,
+                h3: ({node, ...props}) => <h3 className="text-l font-bold text-gray-900 mb-2 mt-4" {...props} />,
+                p: ({node, ...props}) => <p className="text-gray-700 mb-4 leading-relaxed" {...props} />,
+                ul: ({node, ...props}) => <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2" {...props} />,
+                ol: ({node, ...props}) => <ol className="list-decimal list-inside text-gray-700 mb-4 space-y-2" {...props} />,
+                li: ({node, ...props}) => <li className="text-gray-700" {...props} />,
+                strong: ({node, ...props}) => <strong className="font-bold text-gray-900" {...props} />,
+                code: ({node, ...props}) => <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-gray-800" {...props} />,
+              }}
+            >
+              {markdownContent}
+            </ReactMarkdown>
+          </div>
+        </div>
+
+        {/* SEO Content Section */}
+        <div className="bg-white rounded-[2rem] border-4 border-gray-100 p-8 mt-6">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">About ID2322 Exam Preparation</h2>
+          <div className="space-y-4 text-gray-700 leading-relaxed">
+            <p>
+              Welcome to the comprehensive <strong>ID2322 exam preparation platform</strong> designed specifically for 
+              <strong> NUS Industrial Design</strong> students. This interactive tool helps you prepare for the 
+              <strong> ID2322 Materials and Production</strong> course examination at the National University of Singapore (NUS).
+            </p>
+            <p>
+              Our platform features curated <strong>ID2322 past papers</strong>, practice questions, and study materials 
+              covering all key topics from the course. Whether you're looking for <strong>ID2322 exam</strong> practice, 
+              multiple choice questions, or comprehensive revision materials, this app provides everything you need 
+              to excel in your <strong>Industrial Design ID2322</strong> assessment.
+            </p>
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Features for NUS ID2322 Students:</h3>
+            <ul className="list-disc list-inside space-y-2 ml-4">
+              <li>Comprehensive <strong>ID2322 practice questions</strong> covering all course topics</li>
+              <li>Past paper questions from previous <strong>ID2322 exams</strong></li>
+              <li>Multiple choice, fill-in-the-blank, and short answer question formats</li>
+              <li>Topic-wise categorization for focused revision</li>
+              <li>Progress tracking to monitor your exam preparation</li>
+              <li>Instant feedback on answers with detailed explanations</li>
+            </ul>
+            <p className="mt-4">
+              Perfect for <strong>NUS Industrial Design</strong> students seeking comprehensive exam revision tools, 
+              this platform is continuously updated with new questions and materials to ensure you're well-prepared 
+              for your <strong>ID2322 Materials and Production</strong> examination.
+            </p>
           </div>
         </div>
       </div>
